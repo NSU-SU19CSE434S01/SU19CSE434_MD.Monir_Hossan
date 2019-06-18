@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 public class HTMLCode {
 	
 	
-	public void func(TextField field1 , TextField field2 , TextField field3 ,TextField field4 ,
+	public void func(TextField field1 , TextField field2 , TextField field3 ,
 						TextField field5, TextField field6,TextField field7,TextField field8,TextField field9,
 						TextField field10 ,TextField field11) {
 		
