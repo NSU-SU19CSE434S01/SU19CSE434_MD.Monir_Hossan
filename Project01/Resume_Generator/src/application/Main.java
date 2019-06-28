@@ -28,10 +28,12 @@ public class Main extends Application {
 	GridPane leftGrid = new GridPane();
 	VBox middleGrid = new VBox(10);
 	HBox titleContainer = new HBox();
+	HBox bottomAddInfo = new HBox(20);
 	HBox buttonContainer = new HBox(20);
 	HBox gpaContainer = new HBox(15);
 	HBox gpaContainer1 = new HBox(20);
 	HBox gpaContainer2 = new HBox(20);
+	HBox bottomcontainer = new HBox(20);
 	
 	HBox experience01_container = new HBox(10);
 	HBox experience02_container = new HBox(10);
@@ -55,14 +57,6 @@ public class Main extends Application {
 	Label skills = new Label("Your Skills");
 	Label programming = new Label("Programming");
 	Label others = new Label("Others");
-
-	
-	Label additionalInfo = new Label("Additional Information");
-	TextField addInfoTitle1 = new TextField();
-	TextField addInfoDescription1 = new TextField();
-	TextField addInfoTitle2 = new TextField();
-	TextField addInfoDescription2 = new TextField();
-	
 	
 	
 	TextField FName_field = new TextField();
@@ -79,10 +73,10 @@ public class Main extends Application {
 	
 	
 	Label title3 = new Label("EDUCATION");
-	Label ssc = new Label("SSC");
+	Label ssc = new Label("SSC/A Lavel");
 	Label gpa1 = new Label("GPA");
 	Label session1 = new Label("Session");
-	Label hsc = new Label("HSC");
+	Label hsc = new Label("HSC/O Lavel");
 	Label gpa2 = new Label("GPA");
 	Label session2 = new Label("Session");
 	Label undergraduate = new Label("Uudergraduate");
@@ -113,6 +107,15 @@ public class Main extends Application {
 	TextField point011_field = new TextField();
 	TextField point012_field = new TextField();
 	TextField point013_field = new TextField();
+	
+	
+	Label additionalInfo = new Label("Additional Information");
+	TextField addInfoTitle1 = new TextField();
+	TextField addInfoDescription1 = new TextField();
+	TextField addInfoTitle2 = new TextField();
+	TextField addInfoDescription2 = new TextField();
+	TextField addInfoTitle3 = new TextField();
+	TextField addInfoDescription3 = new TextField();
 	
 	ImageView imageView = new ImageView();
 	
@@ -303,8 +306,8 @@ public class Main extends Application {
 		DoBirth_Field.setEditable(false);
 		
 		programming_Skill_field1.setPromptText("Programming Skills");
-		language_skill_field.setPromptText("Languages");
-		others_Skill_field2.setPromptText("Others");
+		language_skill_field.setPromptText("Others");
+		others_Skill_field2.setPromptText("Languages");
 		
 		experience1_field.setPromptText("Experience 01");
 		experience1_field.setPrefWidth(250);
@@ -344,10 +347,11 @@ public class Main extends Application {
 		
 		rightContainer.getChildren().addAll(imageView , chooseFile);
 		
-		buttonContainer.getChildren().addAll(btn1, btn2 , btn3);	
+		buttonContainer.getChildren().addAll(bottomAddInfo,btn1, btn2 , btn3);	
+		bottomAddInfo.setAlignment(Pos.BOTTOM_LEFT);
+		bottomAddInfo.getChildren().addAll(addInfoTitle3,addInfoDescription3);
 		
 		
-
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
 		window.setScene(scene);
@@ -372,9 +376,14 @@ public class Main extends Application {
 		
 		HTMLCode html = new HTMLCode();
 		
-		html.func(FName_field, LName_field, DoBirth_Field,
-				Mailing_field, Nationality_field, Contact_field,
-								Email_field, programming_Skill_field1, others_Skill_field2);
+		html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
+				Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,
+				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
+				department3_field,
+				programming_Skill_field1,language_skill_field, others_Skill_field2,
+				experience1_field,duration1_field,point01_field,point02_field,point03_field,
+				experience2_field,duration2_field,point011_field,
+				point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 		
 		
 	}

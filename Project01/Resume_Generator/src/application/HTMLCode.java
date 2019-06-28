@@ -11,9 +11,19 @@ import javafx.scene.control.TextField;
 public class HTMLCode {
 	
 	
-	public void func(TextField field1 , TextField field2 , DatePicker field3 ,
-						 TextField field6,TextField field7,TextField field8,TextField field9,
-						TextField field10 ,TextField field11) {
+	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
+						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
+						 TextField sscDepartment, TextField HSC, TextField hscGPA, TextField hscSession,
+						 TextField hscDepartment, TextField undergraduate, TextField undergraduateCgpa, TextField undergraduateSession,
+						 TextField undergraduateDepartment,TextField programmingSkill,
+						 TextField languageSkill,TextField otherSkill,TextField experience01,
+						 TextField experience01Duration,TextField experience01_1,TextField experience01_2,
+						 TextField experience01_3,TextField experience02,TextField experience02Duration,
+						 TextField experience02_1 ,TextField experience02_2,TextField experience02_3,
+						 TextField additionalTitle1,TextField additionalDes1,TextField additionalTitle2,TextField additionalDes2
+						 ) {
+		
+		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(field3.getValue());
 		
 	String html =" <!DOCTYPE html>\n" + 
 			" <html>\n" + 
@@ -23,26 +33,27 @@ public class HTMLCode {
 			" <body style='background-color: lightgrey ;'>\n" + 
 			" 	<div style='margin: auto ; background-color:  whitesmoke;  width: 50%; padding: 30px;'>\n" + 
 			" 		<div style='text-align: center'>\n" + 
-			" 			<h2 style='margin: 0;'>Steb Alein</h2>\n" + 
-			" 			<span> 809 United Nation Plazza New York, NY 1001</span><br>\n" + 
-			" 			<span>stebalein@gmail.com \n" + 
-			" 				<span>0182033889934</span>\n" + 
+			" 			<h2 style='margin: 0;'>" + firstName.getText()+ " " + lastName.getText() + "</h2>\n" + 
+			" 			<span>"+ address.getText() +"</span><br>\n" + 
+			" 			<span>"+ email.getText() +"\n" + 
+			" 				<span>"+ contact.getText() +"</span>\n" + 
 			" 			</span>\n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
 			" 			<h3>\n" + 
 			" 				<u>Education</u>\n" + 
 			" 			</h3>\n" + 
-			" 			<h4 style='margin: 0'>University of wisconsin, Madison , WI \n" + 
-			" 				<span style='float: right ; font-size: 12px'> Aug 2014 - May 2015</span>\n" + 
+			" 			<h4 style='margin: 0'>"+ HSC.getText() + "\n" + 
+			" 				<span style='float: right ; font-size: 12px'>"+hscSession.getText() +"</span>\n" + 
 			" 			</h4>\n" + 
-			" 			<span>Non-degree Inteenational student, Computer Science</span>\n" + 
-			" 			<span style='float: right; font-size: 12px'>GPA: 3.33</span><br>\n" + 
-			" 			<span>Brazil Scientific Mobility Program, fully founded scholarship recipient</span>\n" + 
-			" 			<h5 style='margin-bottom: 0'>Federal University of Rio de Janerio, Brazil\n" + 
-			" 				<span style='float: right; font-size: 12px'>Expected Graduation : December 2016</span>\n" + 
+			" 			<span>"+hscDepartment.getText()+"</span>\n" + 
+			" 			<span style='float: right; font-size: 12px'>"+hscGPA.getText()+"</span><br>\n" + 
+			
+			" 			<h5 style='margin-bottom: 0'>"+undergraduate.getText()+"\n" + 
+			" 				<span style='float: right; font-size: 12px'>"+undergraduateSession.getText()+"</span>\n" + 
+			" 			<span style='float: right; font-size: 12px'>"+undergraduateCgpa.getText()+"</span><br>\n" +
 			" 			</h5>\n" + 
-			" 			<span>Bechelor of science, Computer Science</span>\n" + 
+			" 			<span>"+ undergraduateDepartment.getText()+"</span>\n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
 			" 			<h3>\n" + 
@@ -51,37 +62,35 @@ public class HTMLCode {
 			" 			<span>\n" + 
 			" 				<b>Programming :</b>\n" + 
 			" 			</span>\n" + 
-			" 			<span> C++ , Java , Paython , JS</span><br>\n" + 
+			" 			<span>"+programmingSkill.getText()+"</span><br>\n" + 
 			" 			<span>\n" + 
-			" 				<b>Lab : </b>\n" + 
+			" 				<b>Language: </b>\n" + 
 			" 			</span>\n" + 
-			" 			<span> Control System, Fluid Machanics, Solid Machanics, Conversatioinal French</span><br>\n" + 
+			" 			<span>"+languageSkill.getText()+"</span><br>\n" + 
 			" 			<span>\n" + 
-			" 				<b>Language : </b>\n" + 
+			" 				<b>Others : </b>\n" + 
 			" 			</span>\n" + 
-			" 			<span> Native Portuguese, Advanced English, Conversational French</span>\n" + 
+			" 			<span>"+otherSkill.getText()+"</span>\n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
 			" 			<h3>\n" + 
 			" 				<u>Experience</u>\n" + 
 			" 			</h3>\n" + 
-			" 			<h5 style='margin-bottom: 0'>IBM Brazil, Sao Paulo, Brazil \n" + 
-			" 				<span style='float: right;font-size: 12px'>May 2013 - Aug 2013</span>\n" + 
+			" 			<h5 style='margin-bottom: 0'>"+experience01.getText()+" \n" + 
+			" 				<span style='float: right;font-size: 12px'>"+experience01Duration.getText()+"</span>\n" + 
 			" 			</h5>\n" + 
-			" 			<span>Software Intern</span>\n" + 
 			" 			<ul style='margin-top: 0'>\n" + 
-			" 				<li>Creating new application for migration data between system</li>\n" + 
-			" 				<li>Tested five new software releases for kodak picture kiosk</li>\n" + 
-			" 				<li>Assisted a caseload of customers from seven states with IT issues</li>\n" + 
+			" 				<li>"+experience01_1.getText()+"</li>\n" + 
+			" 				<li>"+experience01_2.getText()+"</li>\n" + 
+			" 				<li>"+experience01_3.getText()+"</li>\n" + 
 			" 			</ul>\n" + 
-			" 			<h5 style='margin-bottom: 0'>Federal University of Rio de Janerio, Brazil \n" + 
-			" 				<span style='float: right;font-size: 12px'>Feb 2013 - May 2013</span>\n" + 
-			" 			</h5>\n" + 
-			" 			<span>Research Assistant</span>\n" + 
+			" 			<h5 style='margin-bottom: 0'>"+experience02.getText()+" \n" + 
+			" 				<span style='float: right;font-size: 12px'>"+experience02Duration.getText()+"</span>\n" + 
+			" 			</h5>\n" +  
 			" 			<ul style='margin-top: 0'>\n" + 
-			" 				<li>Collected and managed data</li>\n" + 
-			" 				<li>Examined pros and cons of existing programming language to develop new programming</li>\n" + 
-			" 				<li>Assisted a caseload of customers from seven states with IT issues</li>\n" + 
+			" 				<li>"+experience02_1.getText()+"</li>\n" + 
+			" 				<li>"+experience02_2.getText()+"</li>\n" + 
+			" 				<li>"+experience02_3.getText()+"</li>\n" + 
 			" 			</ul> \n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
@@ -89,13 +98,13 @@ public class HTMLCode {
 			" 				<u>Additional Information</u>\n" + 
 			" 			</h3>\n" + 
 			" 			<span>\n" + 
-			" 				<b>Work Authorization: </b>\n" + 
+			" 				<b>"+additionalTitle1.getText()+" : </b>\n" + 
 			" 			</span>\n" + 
-			" 			<span>J-1 visa holder: Sponsorship and work authorization provided by the Institution of International Education</span><br>\n" + 
+			" 			<span>"+additionalDes1.getText()+"</span><br>\n" + 
 			" 			<span>\n" + 
-			" 				<b>Honors : </b>\n" + 
+			" 				<b>"+additionalTitle2.getText()+": </b>\n" + 
 			" 			</span>\n" + 
-			" 			<span> PIBID recipient</span><br>\n" + 
+			" 			<span>"+additionalDes2.getText()+"</span><br>\n" + 
 			" 			<span>\n" + 
 			" 				<b>Seminars/Conferences: </b>\n" + 
 			" 			</span>\n" + 
@@ -122,7 +131,7 @@ public class HTMLCode {
 			e.printStackTrace();
 		}
 		
-		field1.setText("");
+		firstName.setText("");
 	}
 		
 	}
