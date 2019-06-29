@@ -105,21 +105,12 @@ public class HTMLCode {
 			" 				<b>"+additionalTitle2.getText()+": </b>\n" + 
 			" 			</span>\n" + 
 			" 			<span>"+additionalDes2.getText()+"</span><br>\n" + 
-			" 			<span>\n" + 
-			" 				<b>Seminars/Conferences: </b>\n" + 
-			" 			</span>\n" + 
-			" 			<span> IEEE International Conference on e-science</span>\n" + 
-			" 		</div>\n" + 
-			" 		\n" + 
-			" 		<span>\n" + 
-			" 			<b>Activities: </b>\n" + 
-			" 		</span>\n" + 
-			" 		<span>Founder, Brazil club of the University of Madison, Wisconsin</span>\n" + 
 			" 	</div>\n" + 
 			" </div>\n" + 
 			"</body>\n" + 
 			"</html>";
 		
+	
 		File filePath = new File("/Users/MDMONIRHOSSAN/Documents/CSE434/Project01/Resume.html");
 		
 		try {

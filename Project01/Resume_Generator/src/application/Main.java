@@ -4,6 +4,7 @@ package application;
 import java.io.File;
 import java.net.MalformedURLException;
 
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -11,13 +12,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -33,7 +37,7 @@ public class Main extends Application {
 	HBox gpaContainer = new HBox(15);
 	HBox gpaContainer1 = new HBox(20);
 	HBox gpaContainer2 = new HBox(20);
-	HBox bottomcontainer = new HBox(20);
+
 	
 	HBox experience01_container = new HBox(10);
 	HBox experience02_container = new HBox(10);
@@ -108,16 +112,24 @@ public class Main extends Application {
 	TextField point012_field = new TextField();
 	TextField point013_field = new TextField();
 	
+	Label reference = new Label("References");
+	TextField reference1 = new TextField();
+	TextField reference2 = new TextField();
+	
 	
 	Label additionalInfo = new Label("Additional Information");
 	TextField addInfoTitle1 = new TextField();
 	TextField addInfoDescription1 = new TextField();
 	TextField addInfoTitle2 = new TextField();
 	TextField addInfoDescription2 = new TextField();
-	TextField addInfoTitle3 = new TextField();
-	TextField addInfoDescription3 = new TextField();
 	
 	ImageView imageView = new ImageView();
+	
+	Label cvFormat = new Label("Resume Format");
+	RadioButton rb1 = new RadioButton("USA");
+	RadioButton rb2 = new RadioButton("Bangladesh");
+	
+	ToggleGroup group = new ToggleGroup();
 	
 //	Image image = new Image("file:/Users/MDMONIRHOSSAN/Downloads/Ashik.jpg ");
 	
@@ -128,7 +140,13 @@ public class Main extends Application {
 	
 	Button chooseFile = new Button("Choose Image");
 	
-	
+	Label[] allLabel = { firstName , lastName ,  birth ,
+			Mailing_address ,
+			nationality , contact,
+				 email , ssc, hsc,  undergraduate, 
+				session1 ,  session2 , 
+				 session3 };
+	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , cvFormat};
 	
 	public static void main(String[] args) {
 		
@@ -152,29 +170,29 @@ public class Main extends Application {
 		
 		Whole_container.setRight(rightContainer);
 
-		rightContainer.setPadding(new Insets (10));
-		rightContainer.setStyle("-fx-background-color : #336699");
+		rightContainer.setPadding(new Insets (40 , 20,10,10));
+		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
 		
 		
 		titleContainer.setAlignment(Pos.CENTER);
 		titleContainer.setPadding(new Insets(10));
-		titleContainer.setStyle("-fx-background-color : #336699");
+		titleContainer.setStyle("-fx-background-color : #1B4F72  ");
 		titleContainer.getChildren().add(title);
 		
 		leftGrid.setVgap(20);
 		leftGrid.setHgap(20);
 		leftGrid.setPadding(new Insets(10));
-		leftGrid.setStyle("-fx-background-color: #336699");
+		leftGrid.setStyle("-fx-background-color: #1B4F72  ");
 		
 	
 		middleGrid.setPadding(new Insets(10));
-		middleGrid.setStyle("-fx-background-color: #336699");
+		middleGrid.setStyle("-fx-background-color: #1B4F72  ");
 		
 		
 		buttonContainer.setAlignment(Pos.BASELINE_RIGHT);
-		buttonContainer.setPadding(new Insets(10));
-		buttonContainer.setStyle("-fx-background-color : #336699");
+		buttonContainer.setPadding(new Insets(10, 60 , 50, 0));
+		buttonContainer.setStyle("-fx-background-color : #1B4F72  ");
 		
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
 		GridPane.setConstraints(firstName, 0, 1);
@@ -274,13 +292,14 @@ public class Main extends Application {
             }
         } );
 		
-		
 		imageView.setFitHeight(150);
 		imageView.setFitWidth(150);
 		
 		
 		
-		imageView.setStyle("-fx-image : url(file:/Users/MDMONIRHOSSAN/Desktop/images.png)");
+		
+		imageView.setStyle("-fx-image : url(file:/Users/MDMONIRHOSSAN/Desktop/images.png);");
+
 		
 		gpaContainer1.getChildren().addAll( Gpa1_field );
 		gpaContainer2.getChildren().addAll( Gpa2_field);
@@ -322,8 +341,34 @@ public class Main extends Application {
 		point012_field.setPromptText(">>");
 		point013_field.setPromptText(">>");
 		
+		reference.setPadding(new Insets(40 , 0 ,0 , 0 ));
+		reference1.setPromptText("Reference 01");
+		reference2.setPromptText("Reference 02");
 		
 		
+		cvFormat.setPadding(new Insets(300 ,  0, 0 , 30));
+		rb1.setPadding(new Insets(0,  0, 0 , 30));
+		rb2.setPadding(new Insets(0,  0, 0 , 30));
+		rb1.setToggleGroup(group);
+		rb1.setSelected(true);
+		rb1.setTextFill((Color.web("white")));
+		rb2.setToggleGroup(group);
+		rb2.setTextFill((Color.web("white")));
+		
+		
+		for(int i = 0 ; i <allLabel.length; i++) {
+			
+			allLabel[i].setStyle("-fx-font-weight: bold;"
+					+"-fx-font-size: 14px;"
+					+"-fx-text-fill: #FF9800 ;");
+		}
+		
+		for(int i = 0 ; i <allTitle.length; i++) {
+					
+					allTitle[i].setStyle("-fx-font-weight: bold;"
+							+"-fx-font-size: 20px;"
+							+"-fx-text-fill: white;");	
+				}
 		
 		leftGrid.getChildren().addAll(title2 , firstName , FName_field , lastName ,LName_field ,  birth , DoBirth_Field ,
 				Mailing_address , Mailing_field ,
@@ -337,7 +382,7 @@ public class Main extends Application {
 		middleGrid.getChildren().addAll(skills ,programming_Skill_field1 , others_Skill_field2,
 				language_skill_field ,experience , 
 				experience01_container,point01_field,point02_field,point03_field,experience02_container,point011_field,
-				point012_field,point013_field);
+				point012_field,point013_field,reference,reference1,reference2);
 		
 		experience01_container.getChildren().addAll(experience1_field , duration1_field);
 		experience02_container.getChildren().addAll(experience2_field,duration2_field);
@@ -345,11 +390,9 @@ public class Main extends Application {
 		addInfoContainer1.getChildren().addAll(addInfoTitle1,addInfoDescription1);
 		addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
 		
-		rightContainer.getChildren().addAll(imageView , chooseFile);
+		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2);
 		
-		buttonContainer.getChildren().addAll(bottomAddInfo,btn1, btn2 , btn3);	
-		bottomAddInfo.setAlignment(Pos.BOTTOM_LEFT);
-		bottomAddInfo.getChildren().addAll(addInfoTitle3,addInfoDescription3);
+		buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
 		
 		
 		Scene scene = new Scene(Whole_container);
@@ -375,6 +418,20 @@ public class Main extends Application {
 	public void createHtml() {
 		
 		HTMLCode html = new HTMLCode();
+		
+		if(rb1.isSelected() == true) {
+			
+			if(FName_field.getText().isEmpty()) {
+				FName_field.setStyle("-fx-border-color: red;");
+				LName_field.setStyle("-fx-border-color: red;");
+			}
+			else {
+				FName_field.setStyle("-fx-border-color: none;");
+				LName_field.setStyle("-fx-border-color: none;");
+			}
+		}
+		
+		
 		
 		html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
 				Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,
