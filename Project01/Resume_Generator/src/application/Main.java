@@ -49,104 +49,29 @@ public class Main extends Application {
 	
 	FileChooser fileChooser = new FileChooser();
 	
-	Label title = new Label("Generate Your Resume Here!!");
-	Label title2 = new Label("PERSONAL INFORMATION");
-	Label firstName = new Label("First Name");
-	Label lastName = new Label("Last Name");
-	Label birth = new Label("Date of Birth");
-	Label nationality = new Label("Nationality");
-	Label Mailing_address = new Label("Mailing Address");
-	Label contact = new Label("Contact");
-	Label email = new Label("Email");
-	Label skills = new Label("Your Skills");
-	Label programming = new Label("Programming");
-	Label others = new Label("Others");
+	Label title , title2,firstName, lastName, birth, nationality, Mailing_address,
+	contact, email , skills,programming,others,	 title3,ssc,gpa1, session1, hsc, gpa2,
+	session2, undergraduate, cgpa, session3, experience, reference, additionalInfo, cvFormat;
 	
+	TextField FName_field,
+	 LName_field, Nationality_field, Mailing_field , Contact_field, Email_field, 
+	 programming_Skill_field1, language_skill_field, others_Skill_field2,Ssc_field, Gpa1_field,
+	 session1_field, department1_field, Hsc_field, Gpa2_field,
+	 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
+	 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
+	 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
+	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2;
 	
-	TextField FName_field = new TextField();
-	TextField LName_field = new TextField();
-	DatePicker DoBirth_Field = new DatePicker();
-	TextField Nationality_field = new TextField();
-	TextField Mailing_field = new TextField();
-	TextField Contact_field = new TextField();
-	TextField Email_field = new TextField();
-	TextField programming_Skill_field1 = new TextField();
-	TextField others_Skill_field2 = new TextField();
-	TextField language_skill_field = new TextField();
+	ImageView imageView;
 	
+	DatePicker DoBirth_Field;
 	
+	RadioButton rb1 , rb2;
+	ToggleGroup group ;
 	
-	Label title3 = new Label("EDUCATION");
-	Label ssc = new Label("SSC/A Lavel");
-	Label gpa1 = new Label("GPA");
-	Label session1 = new Label("Session");
-	Label hsc = new Label("HSC/O Lavel");
-	Label gpa2 = new Label("GPA");
-	Label session2 = new Label("Session");
-	Label undergraduate = new Label("Uudergraduate");
-	Label cgpa = new Label("CGPA");
-	Label session3 = new Label("Session");
+	Button btn1, btn2, btn3,chooseFile;
+		
 	
-	TextField Ssc_field = new TextField();
-	TextField Gpa1_field = new TextField();
-	TextField session1_field = new TextField();
-	TextField department1_field = new TextField();
-	TextField Hsc_field = new TextField();
-	TextField Gpa2_field = new TextField();
-	TextField session2_field = new TextField();
-	TextField department2_field = new TextField();
-	TextField Undergraduate_field = new TextField();
-	TextField Cgpa_field = new TextField();
-	TextField session3_field = new TextField();
-	TextField department3_field = new TextField();
-	
-	Label experience = new Label("Experiences");	
-	TextField experience1_field = new TextField();
-	TextField duration1_field = new TextField();
-	TextField point01_field= new TextField();
-	TextField point02_field = new TextField();
-	TextField point03_field = new TextField();
-	TextField experience2_field = new TextField();
-	TextField duration2_field = new TextField();
-	TextField point011_field = new TextField();
-	TextField point012_field = new TextField();
-	TextField point013_field = new TextField();
-	
-	Label reference = new Label("References");
-	TextField reference1 = new TextField();
-	TextField reference2 = new TextField();
-	
-	
-	Label additionalInfo = new Label("Additional Information");
-	TextField addInfoTitle1 = new TextField();
-	TextField addInfoDescription1 = new TextField();
-	TextField addInfoTitle2 = new TextField();
-	TextField addInfoDescription2 = new TextField();
-	
-	ImageView imageView = new ImageView();
-	
-	Label cvFormat = new Label("Resume Format");
-	RadioButton rb1 = new RadioButton("USA");
-	RadioButton rb2 = new RadioButton("Bangladesh");
-	
-	ToggleGroup group = new ToggleGroup();
-	
-//	Image image = new Image("file:/Users/MDMONIRHOSSAN/Downloads/Ashik.jpg ");
-	
-	
-	Button btn1 = new Button();
-	Button btn2 = new Button();
-	Button btn3 = new Button();
-	
-	Button chooseFile = new Button("Choose Image");
-	
-	Label[] allLabel = { firstName , lastName ,  birth ,
-			Mailing_address ,
-			nationality , contact,
-				 email , ssc, hsc,  undergraduate, 
-				session1 ,  session2 , 
-				 session3 };
-	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , cvFormat};
 	
 	public static void main(String[] args) {
 		
@@ -173,6 +98,100 @@ public class Main extends Application {
 		rightContainer.setPadding(new Insets (40 , 20,10,10));
 		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
+		
+		
+		title = new Label("Generate Your Resume Here!!");
+		title2 = new Label("PERSONAL INFORMATION");
+		firstName = new Label("First Name");
+		lastName = new Label("Last Name");
+		 birth = new Label("Date of Birth");
+		 nationality = new Label("Nationality");
+		 Mailing_address = new Label("Mailing Address");
+		 contact = new Label("Contact");
+		 email = new Label("Email");
+		 skills = new Label("Your Skills");
+		 programming = new Label("Programming");
+		 others = new Label("Others");
+	
+		 
+		 FName_field = new TextField();
+		 LName_field = new TextField();
+		 DoBirth_Field = new DatePicker();
+		 Nationality_field = new TextField();
+		 Mailing_field = new TextField();
+		 Contact_field = new TextField();
+		 Email_field = new TextField();
+		 programming_Skill_field1 = new TextField();
+		 language_skill_field = new TextField();
+		 others_Skill_field2 = new TextField();
+		
+		
+		 
+		 title3 = new Label("EDUCATION");
+		 ssc = new Label("SSC/A Lavel");
+		 gpa1 = new Label("GPA");
+		 session1 = new Label("Session");
+		 hsc = new Label("HSC/O Lavel");
+		 gpa2 = new Label("GPA");
+		 session2 = new Label("Session");
+		 undergraduate = new Label("Uudergraduate");
+		 cgpa = new Label("CGPA");
+		 session3 = new Label("Session");
+		 
+		 Ssc_field = new TextField();
+		 Gpa1_field = new TextField();
+		 session1_field = new TextField();
+		 department1_field = new TextField();
+		 Hsc_field = new TextField();
+		 Gpa2_field = new TextField();
+		 session2_field = new TextField();
+		 department2_field = new TextField();
+		 Undergraduate_field = new TextField();
+		 Cgpa_field = new TextField();
+		 session3_field = new TextField();
+		 department3_field = new TextField();
+		 
+		 
+		 experience = new Label("Experiences");	
+		 experience1_field = new TextField();
+		 duration1_field = new TextField();
+		 point01_field= new TextField();
+		 point02_field = new TextField();
+		 point03_field = new TextField();
+		 experience2_field = new TextField();
+		 duration2_field = new TextField();
+		 point011_field = new TextField();
+		 point012_field = new TextField();
+		 point013_field = new TextField();
+		
+	 
+		 reference = new Label("References");
+		 reference1 = new TextField();
+		 reference2 = new TextField();
+		
+		 additionalInfo = new Label("Additional Information");
+		 addInfoTitle1 = new TextField();
+		 addInfoDescription1 = new TextField();
+		 addInfoTitle2 = new TextField();
+		 addInfoDescription2 = new TextField();
+		
+		 imageView = new ImageView();
+		
+		 cvFormat = new Label("Resume Format");
+		 rb1 = new RadioButton("USA");
+		 rb2 = new RadioButton("Bangladesh");
+		
+		 group = new ToggleGroup();
+		
+//		Image image = new Image("file:/Users/MDMONIRHOSSAN/Downloads/Ashik.jpg ");
+		
+		
+		 btn1 = new Button();
+		 btn2 = new Button();
+		 btn3 = new Button();
+		
+		 chooseFile = new Button("Choose Image");
+		
 		
 		
 		titleContainer.setAlignment(Pos.CENTER);
@@ -276,7 +295,7 @@ public class Main extends Application {
 		
 		
 		chooseFile.setOnAction(e -> {
-            File selectedFile = fileChooser.showOpenDialog(primaryStage);
+           File selectedFile = fileChooser.showOpenDialog(primaryStage);
             
             if(selectedFile != null) {
             	
@@ -356,19 +375,6 @@ public class Main extends Application {
 		rb2.setTextFill((Color.web("white")));
 		
 		
-		for(int i = 0 ; i <allLabel.length; i++) {
-			
-			allLabel[i].setStyle("-fx-font-weight: bold;"
-					+"-fx-font-size: 14px;"
-					+"-fx-text-fill: #FF9800 ;");
-		}
-		
-		for(int i = 0 ; i <allTitle.length; i++) {
-					
-					allTitle[i].setStyle("-fx-font-weight: bold;"
-							+"-fx-font-size: 20px;"
-							+"-fx-text-fill: white;");	
-				}
 		
 		leftGrid.getChildren().addAll(title2 , firstName , FName_field , lastName ,LName_field ,  birth , DoBirth_Field ,
 				Mailing_address , Mailing_field ,
@@ -394,6 +400,10 @@ public class Main extends Application {
 		
 		buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
 		
+
+		
+		
+		labelCSS();
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -404,7 +414,7 @@ public class Main extends Application {
 	
 	
 	
-	public static boolean isStringOnlyAlphabet(String str) 
+	public boolean isStringOnlyAlphabet(String str) 
     { 	
 		
         return ((str != null) 
@@ -415,34 +425,63 @@ public class Main extends Application {
     }
 	
 	
+	
 	public void createHtml() {
+	
+	HTMLCode html = new HTMLCode();
+	
+	if(rb1.isSelected() == true) {
 		
-		HTMLCode html = new HTMLCode();
-		
-		if(rb1.isSelected() == true) {
-			
-			if(FName_field.getText().isEmpty()) {
-				FName_field.setStyle("-fx-border-color: red;");
-				LName_field.setStyle("-fx-border-color: red;");
-			}
-			else {
-				FName_field.setStyle("-fx-border-color: none;");
-				LName_field.setStyle("-fx-border-color: none;");
-			}
+		if(FName_field.getText().isEmpty()) {
+			FName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
+			LName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
 		}
-		
-		
-		
-		html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
-				Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,
-				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
-				department3_field,
+		else {
+			FName_field.setStyle("-fx-border-color: none;");
+			LName_field.setStyle("-fx-border-color: none;");
+		}
+	}
+	
+			html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
+					Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
+				department3_field,	
 				programming_Skill_field1,language_skill_field, others_Skill_field2,
 				experience1_field,duration1_field,point01_field,point02_field,point03_field,
 				experience2_field,duration2_field,point011_field,
-				point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
+			point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 		
+	
+	}
+	
+	public void labelCSS() {
 		
+	Label[] allLabel = { firstName , lastName ,  birth ,
+			Mailing_address ,
+			nationality , contact,
+				 email , ssc, hsc,  undergraduate, 
+				session1 ,  session2 , 
+				 session3 };
+	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , cvFormat};
+	
+	
+		for(int i = 0 ; i <allLabel.length; i++) {
+			
+			allLabel[i].setStyle("-fx-font-weight: bold;"
+					+"-fx-font-size: 14px;"
+					+"-fx-text-fill: #FF9800 ;");
+		}
+		
+		for(int i = 0 ; i <allTitle.length; i++) {
+					
+					allTitle[i].setStyle("-fx-font-weight: bold;"
+							+"-fx-font-size: 20px;"
+							+"-fx-text-fill: white;");	
+				}
+	}
+	
+	
+	public int add(int x , int y) {
+		return x + y ;
 	}
 	
 

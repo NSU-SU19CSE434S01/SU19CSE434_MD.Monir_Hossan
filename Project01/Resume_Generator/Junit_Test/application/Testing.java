@@ -8,10 +8,14 @@ import org.junit.jupiter.api.Test;
 
 class Testing {
 
-	Main main = new Main();
 	
 	@Test
-	void test() {
+	public void test() {
+		Main main = new Main();
+		
+		boolean test = main.isStringOnlyAlphabet("Hello6");
+		
+		assertEquals(false , test);
 		
 
 	}
