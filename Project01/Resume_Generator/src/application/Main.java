@@ -4,7 +4,6 @@ package application;
 import java.io.File;
 import java.net.MalformedURLException;
 
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -51,7 +50,8 @@ public class Main extends Application {
 	
 	Label title , title2,firstName, lastName, birth, nationality, Mailing_address,
 	contact, email , skills,programming,others,	 title3,ssc,gpa1, session1, hsc, gpa2,
-	session2, undergraduate, cgpa, session3, experience, reference, additionalInfo, cvFormat;
+	session2, undergraduate, cgpa, session3, experience, reference, additionalInfo, cvFormat,
+	importantLink;
 	
 	TextField FName_field,
 	 LName_field, Nationality_field, Mailing_field , Contact_field, Email_field, 
@@ -60,7 +60,7 @@ public class Main extends Application {
 	 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
 	 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
 	 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
-	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2;
+	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2;
 	
 	ImageView imageView;
 	
@@ -95,7 +95,7 @@ public class Main extends Application {
 		
 		Whole_container.setRight(rightContainer);
 
-		rightContainer.setPadding(new Insets (40 , 20,10,10));
+		rightContainer.setPadding(new Insets (30));
 		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
 		
@@ -168,6 +168,10 @@ public class Main extends Application {
 		 reference = new Label("References");
 		 reference1 = new TextField();
 		 reference2 = new TextField();
+		 
+		 importantLink = new Label("Important Link");
+		 link_field1 = new TextField();
+		 link_field2 = new TextField();
 		
 		 additionalInfo = new Label("Additional Information");
 		 addInfoTitle1 = new TextField();
@@ -183,8 +187,6 @@ public class Main extends Application {
 		
 		 group = new ToggleGroup();
 		
-//		Image image = new Image("file:/Users/MDMONIRHOSSAN/Downloads/Ashik.jpg ");
-		
 		
 		 btn1 = new Button();
 		 btn2 = new Button();
@@ -193,25 +195,6 @@ public class Main extends Application {
 		 chooseFile = new Button("Choose Image");
 		
 		
-		
-		titleContainer.setAlignment(Pos.CENTER);
-		titleContainer.setPadding(new Insets(10));
-		titleContainer.setStyle("-fx-background-color : #1B4F72  ");
-		titleContainer.getChildren().add(title);
-		
-		leftGrid.setVgap(20);
-		leftGrid.setHgap(20);
-		leftGrid.setPadding(new Insets(10));
-		leftGrid.setStyle("-fx-background-color: #1B4F72  ");
-		
-	
-		middleGrid.setPadding(new Insets(10));
-		middleGrid.setStyle("-fx-background-color: #1B4F72  ");
-		
-		
-		buttonContainer.setAlignment(Pos.BASELINE_RIGHT);
-		buttonContainer.setPadding(new Insets(10, 60 , 50, 0));
-		buttonContainer.setStyle("-fx-background-color : #1B4F72  ");
 		
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
 		GridPane.setConstraints(firstName, 0, 1);
@@ -264,27 +247,14 @@ public class Main extends Application {
 		
 		
 		
-		programming_Skill_field1.setPrefWidth(500);
 		
-		
-		Cgpa_field.setPrefWidth(50);
-		
-		
-		title.setAlignment(Pos.CENTER);
-		title.getStyleClass().add("title");
-		title.setStyle("-fx-font-weight: bold;"
-						+"-fx-font-size: 30px;"
-						+"-fx-text-fill: white;");	
-		
-		title2.setStyle("-fx-font-size: 15px;"  +
-						"-fx-font-weight: bold;");
-		
-
-		programming_Skill_field1.setPrefWidth(260);
-		others_Skill_field2.setPrefWidth(260);
 
 		btn1.setText("Generate");
-		btn1.setOnAction(e -> createHtml());
+		btn1.setOnAction(e -> { 
+							createHtml() ;
+							window.close();
+						}
+							);
 		
 		btn2.setText("Cencel");
 		btn2.setOnAction(e -> window.close());
@@ -311,70 +281,15 @@ public class Main extends Application {
             }
         } );
 		
-		imageView.setFitHeight(150);
-		imageView.setFitWidth(150);
 		
+			styleProperty();
 		
-		
-		
-		imageView.setStyle("-fx-image : url(file:/Users/MDMONIRHOSSAN/Desktop/images.png);");
-
-		
-		gpaContainer1.getChildren().addAll( Gpa1_field );
-		gpaContainer2.getChildren().addAll( Gpa2_field);
-		gpaContainer.getChildren().addAll( Cgpa_field );
-		Cgpa_field.setPrefWidth(120);
-		Gpa1_field.setPrefWidth(120);
-		Gpa2_field.setPrefWidth(120);
-		
-		Gpa1_field.setPromptText("GPA");
-		department1_field.setPromptText("Department");
-		Gpa2_field.setPromptText("GPA");
-		department2_field.setPromptText("Department");
-		Cgpa_field.setPromptText("CGPA");
-		department3_field.setPromptText("Department");
-		
-		addInfoTitle1.setPromptText("Title");
-		addInfoDescription1.setPrefWidth(400);
-		addInfoDescription1.setPromptText("Description");
-		addInfoTitle2.setPromptText("Title");
-		addInfoDescription2.setPrefWidth(400);
-		addInfoDescription2.setPromptText("Description");
-		
-		DoBirth_Field.setEditable(false);
-		
-		programming_Skill_field1.setPromptText("Programming Skills");
-		language_skill_field.setPromptText("Others");
-		others_Skill_field2.setPromptText("Languages");
-		
-		experience1_field.setPromptText("Experience 01");
-		experience1_field.setPrefWidth(250);
-		duration1_field.setPromptText("Duration");
-		point01_field.setPromptText(">>");
-		point02_field.setPromptText(">>");
-		point03_field.setPromptText(">>");
-		experience2_field.setPromptText("Experience 02");
-		experience2_field.setPrefWidth(250);
-		duration2_field.setPromptText("Duration");
-		point011_field.setPromptText(">>");
-		point012_field.setPromptText(">>");
-		point013_field.setPromptText(">>");
-		
-		reference.setPadding(new Insets(40 , 0 ,0 , 0 ));
-		reference1.setPromptText("Reference 01");
-		reference2.setPromptText("Reference 02");
-		
-		
-		cvFormat.setPadding(new Insets(300 ,  0, 0 , 30));
-		rb1.setPadding(new Insets(0,  0, 0 , 30));
-		rb2.setPadding(new Insets(0,  0, 0 , 30));
-		rb1.setToggleGroup(group);
-		rb1.setSelected(true);
-		rb1.setTextFill((Color.web("white")));
-		rb2.setToggleGroup(group);
-		rb2.setTextFill((Color.web("white")));
-		
-		
+			
+			
+			gpaContainer1.getChildren().addAll( Gpa1_field );
+			gpaContainer2.getChildren().addAll( Gpa2_field);
+			gpaContainer.getChildren().addAll( Cgpa_field );
+			
 		
 		leftGrid.getChildren().addAll(title2 , firstName , FName_field , lastName ,LName_field ,  birth , DoBirth_Field ,
 				Mailing_address , Mailing_field ,
@@ -388,7 +303,8 @@ public class Main extends Application {
 		middleGrid.getChildren().addAll(skills ,programming_Skill_field1 , others_Skill_field2,
 				language_skill_field ,experience , 
 				experience01_container,point01_field,point02_field,point03_field,experience02_container,point011_field,
-				point012_field,point013_field,reference,reference1,reference2);
+				point012_field,point013_field,reference,reference1,reference2 , importantLink,
+				 link_field1,link_field2);
 		
 		experience01_container.getChildren().addAll(experience1_field , duration1_field);
 		experience02_container.getChildren().addAll(experience2_field,duration2_field);
@@ -396,9 +312,9 @@ public class Main extends Application {
 		addInfoContainer1.getChildren().addAll(addInfoTitle1,addInfoDescription1);
 		addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
 		
-		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2);
+		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
 		
-		buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
+		//buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
 		
 
 		
@@ -453,6 +369,129 @@ public class Main extends Application {
 	
 	}
 	
+	public void styleProperty() {
+		
+		
+		setPromptText();
+		
+		setStyle();
+
+		titleContainer.setAlignment(Pos.CENTER);
+		titleContainer.setPadding(new Insets(10));
+		titleContainer.getChildren().add(title);
+		
+		leftGrid.setVgap(20);
+		leftGrid.setHgap(20);
+		leftGrid.setPadding(new Insets(10));
+		
+		middleGrid.setPadding(new Insets(10));
+		
+		buttonContainer.setAlignment(Pos.BASELINE_RIGHT);
+		buttonContainer.setPadding(new Insets(10, 60 , 50, 0));
+		
+		imageView.setFitHeight(150);
+		imageView.setFitWidth(150);
+		
+		Cgpa_field.setPrefWidth(120);
+		Gpa1_field.setPrefWidth(120);
+		Gpa2_field.setPrefWidth(120);
+		
+		addInfoDescription1.setPrefWidth(400);
+		addInfoDescription2.setPrefWidth(400);
+			
+		DoBirth_Field.setEditable(false);
+	
+		programming_Skill_field1.setPrefWidth(500);
+		
+		Cgpa_field.setPrefWidth(50);
+		
+		title.setAlignment(Pos.CENTER);
+		title.getStyleClass().add("title");
+		
+		programming_Skill_field1.setPrefWidth(260);
+		others_Skill_field2.setPrefWidth(260);
+		
+		
+		experience1_field.setPrefWidth(250);
+		experience2_field.setPrefWidth(250);
+		
+		reference.setPadding(new Insets(0 , 0 ,0 , 0 ));
+		
+		
+		cvFormat.setPadding(new Insets(150 ,  0, 0 , 30));
+		rb1.setPadding(new Insets(0,  0, 0 , 30));
+		rb2.setPadding(new Insets(0,  0, 60 , 30));
+		rb1.setToggleGroup(group);
+		rb1.setSelected(true);
+		rb1.setTextFill((Color.web("white")));
+		rb2.setToggleGroup(group);
+		rb2.setTextFill((Color.web("white")));
+		
+		btn1.setPrefSize(150, 35);
+		btn2.setPrefSize(150, 35);
+		btn3.setPrefSize(150, 35);
+		
+		
+	}
+	
+	public void setPromptText() {
+		
+		Gpa1_field.setPromptText("GPA");
+		department1_field.setPromptText("Department");
+		Gpa2_field.setPromptText("GPA");
+		department2_field.setPromptText("Department");
+		Cgpa_field.setPromptText("CGPA");
+		department3_field.setPromptText("Department");
+		
+		addInfoTitle1.setPromptText("Title");
+		addInfoDescription1.setPromptText("Description");
+		addInfoTitle2.setPromptText("Title");
+		addInfoDescription2.setPromptText("Description");
+		
+		programming_Skill_field1.setPromptText("Programming Skills");
+		language_skill_field.setPromptText("Others");
+		others_Skill_field2.setPromptText("Languages");
+		
+		experience1_field.setPromptText("Experience 01");
+		duration1_field.setPromptText("Duration");
+		point01_field.setPromptText(">>");
+		point02_field.setPromptText(">>");
+		point03_field.setPromptText(">>");
+		experience2_field.setPromptText("Experience 02");
+		
+		duration2_field.setPromptText("Duration");
+		point011_field.setPromptText(">>");
+		point012_field.setPromptText(">>");
+		point013_field.setPromptText(">>");
+		
+		
+		reference1.setPromptText("Reference 01");
+		reference2.setPromptText("Reference 02");
+		
+		link_field1.setPromptText("Link 01");
+		link_field2.setPromptText("Link 02");
+	}
+	
+	public void setStyle() {
+		titleContainer.setStyle("-fx-background-color : #1B4F72  ");
+		leftGrid.setStyle("-fx-background-color: #1B4F72  ");
+		middleGrid.setStyle("-fx-background-color: #1B4F72  ");
+		buttonContainer.setStyle("-fx-background-color : #1B4F72  ");
+		
+		imageView.setStyle("-fx-image : url(file:/Users/MDMONIRHOSSAN/Desktop/images.png);");
+		
+		title.setStyle("-fx-font-weight: bold;"
+				+"-fx-font-size: 30px;"
+				+"-fx-text-fill: white;");	
+
+		title2.setStyle("-fx-font-size: 15px;"  +
+				"-fx-font-weight: bold;");
+		
+		btn1.setStyle("-fx-background-color: #66BB6A");
+		btn2.setStyle("-fx-background-color: #EF5350");
+		btn3.setStyle("-fx-background-color: #FF9800");
+	}
+	
 	public void labelCSS() {
 		
 	Label[] allLabel = { firstName , lastName ,  birth ,
@@ -461,7 +500,8 @@ public class Main extends Application {
 				 email , ssc, hsc,  undergraduate, 
 				session1 ,  session2 , 
 				 session3 };
-	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , cvFormat};
+	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , 
+			cvFormat,importantLink};
 	
 	
 		for(int i = 0 ; i <allLabel.length; i++) {
