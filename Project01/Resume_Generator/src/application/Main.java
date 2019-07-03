@@ -3,6 +3,9 @@ package application;
 
 import java.io.File;
 import java.net.MalformedURLException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -14,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -252,6 +257,7 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
+							validateContact(Contact_field.getText());
 							window.close();
 						}
 							);
@@ -519,11 +525,27 @@ public class Main extends Application {
 				}
 	}
 	
-	
-	public int add(int x , int y) {
-		return x + y ;
+	public boolean validateContact(String str) {
+		
+		Pattern p = Pattern.compile("[0-9]+");
+		Matcher m = p.matcher(str);
+		
+		if(str.length() == 11 && m.find() && m.group().equals(str)) {
+			
+			System.out.println("Number is Valid");
+				return true;
+			}
+			else {
+				
+				Alert alert = new Alert(AlertType.WARNING);
+				alert.setTitle("Contact Invalid");
+				alert.setHeaderText("Contact Number Is Invalid");
+				alert.setContentText("Please enter valid contact with 11 digit..");
+				alert.showAndWait();
+				return false;
+			}			
+		
 	}
 	
 
-	
 }

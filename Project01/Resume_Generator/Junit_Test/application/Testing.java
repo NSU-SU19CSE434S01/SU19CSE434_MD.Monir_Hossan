@@ -15,7 +15,11 @@ class Testing {
 		
 		boolean test = main.isStringOnlyAlphabet("Hello6");
 		
+		boolean test2 = main.validateContact("12345666543");
+		
 		assertEquals(false , test);
+		
+		assertEquals(true , test2);
 		
 
 	}
