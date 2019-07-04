@@ -75,7 +75,6 @@ public class Main extends Application {
 	ToggleGroup group ;
 	
 	Button btn1, btn2, btn3,chooseFile;
-		
 	
 	
 	public static void main(String[] args) {
@@ -86,6 +85,9 @@ public class Main extends Application {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
+		
+		Validation validation = new Validation();
 	
 		Stage window = primaryStage;
 		window.setTitle("Resume Generator");
@@ -257,8 +259,9 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
-							validateContact(Contact_field.getText());
-							window.close();
+							validation.validateContact(Contact_field.getText());
+							validation.emailValidation(Email_field.getText());
+							//window.close();
 						}
 							);
 		
@@ -266,7 +269,7 @@ public class Main extends Application {
 		btn2.setOnAction(e -> window.close());
 		
 		btn3.setText("Clear");
-		btn3.setOnAction(e -> System.out.println(isStringOnlyAlphabet(LName_field.getText())));
+		btn3.setOnAction(e -> System.out.println(validation.isStringOnlyAlphabet(LName_field.getText())));
 		
 		
 		
@@ -333,18 +336,6 @@ public class Main extends Application {
 		window.show();
 		
 	}
-	
-	
-	
-	public boolean isStringOnlyAlphabet(String str) 
-    { 	
-		
-        return ((str != null) 
-                && (!str.equals("")) 
-                && (str.matches("^[a-zA-Z]*$"))); 
-        
-    
-    }
 	
 	
 	
@@ -525,27 +516,7 @@ public class Main extends Application {
 				}
 	}
 	
-	public boolean validateContact(String str) {
-		
-		Pattern p = Pattern.compile("[0-9]+");
-		Matcher m = p.matcher(str);
-		
-		if(str.length() == 11 && m.find() && m.group().equals(str)) {
-			
-			System.out.println("Number is Valid");
-				return true;
-			}
-			else {
-				
-				Alert alert = new Alert(AlertType.WARNING);
-				alert.setTitle("Contact Invalid");
-				alert.setHeaderText("Contact Number Is Invalid");
-				alert.setContentText("Please enter valid contact with 11 digit..");
-				alert.showAndWait();
-				return false;
-			}			
-		
-	}
+	
 	
 
 }
