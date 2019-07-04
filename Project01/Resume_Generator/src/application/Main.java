@@ -259,8 +259,8 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
-							validation.validateContact(Contact_field.getText());
-							validation.emailValidation(Email_field.getText());
+							validation.validateContact(Contact_field , Contact_field.getText());
+							validation.emailValidation(Email_field , Email_field.getText());
 							//window.close();
 						}
 							);
@@ -269,7 +269,7 @@ public class Main extends Application {
 		btn2.setOnAction(e -> window.close());
 		
 		btn3.setText("Clear");
-		btn3.setOnAction(e -> System.out.println(validation.isStringOnlyAlphabet(LName_field.getText())));
+		//btn3.setOnAction(e -> System.out.println(validation.isStringOnlyAlphabet(LName_field.getText())));
 		
 		
 		
