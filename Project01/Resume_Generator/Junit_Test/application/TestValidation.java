@@ -12,6 +12,8 @@ import com.sun.jdi.InternalException;
 
 class TestValidation {
 
+	Main ne = new Main();
+	
 	private static  Validation testValidation;
 	
 	@BeforeAll
@@ -27,7 +29,7 @@ class TestValidation {
 	}
 
 	@Test
-	void stringTest() {
+	void stringTest() throws Exception {
 	
 		try {
 			
@@ -35,7 +37,7 @@ class TestValidation {
 			assertEquals(testValidation.isStringOnlyAlphabet("Hossan23") , false);
 			
 			assertTrue(testValidation.isStringOnlyAlphabet("Raju"));
-			assertFalse(testValidation.isStringOnlyAlphabet("Raju23"));
+			assertFalse(testValidation.isStringOnlyAlphabet ("Raju23"));
 		}
 		catch(InternalException e){
 			e.printStackTrace();

@@ -259,8 +259,8 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
-							validation.validateContact(Contact_field , Contact_field.getText());
-							validation.emailValidation(Email_field , Email_field.getText());
+							validation.validateContact(Contact_field.getText());
+							validation.emailValidation(Email_field.getText());
 							//window.close();
 						}
 							);
@@ -372,20 +372,46 @@ public class Main extends Application {
 		setPromptText();
 		
 		setStyle();
-
+		
+		setPadding();
+		
+		setPrewidthHeight();
+		
 		titleContainer.setAlignment(Pos.CENTER);
-		titleContainer.setPadding(new Insets(10));
+		
 		titleContainer.getChildren().add(title);
 		
 		leftGrid.setVgap(20);
 		leftGrid.setHgap(20);
-		leftGrid.setPadding(new Insets(10));
-		
-		middleGrid.setPadding(new Insets(10));
 		
 		buttonContainer.setAlignment(Pos.BASELINE_RIGHT);
-		buttonContainer.setPadding(new Insets(10, 60 , 50, 0));
+			
+		DoBirth_Field.setEditable(false);
 		
+		title.setAlignment(Pos.CENTER);
+		title.getStyleClass().add("title");
+	
+		rb1.setToggleGroup(group);
+		rb1.setSelected(true);
+		rb1.setTextFill((Color.web("white")));
+		rb2.setToggleGroup(group);
+		rb2.setTextFill((Color.web("white")));
+		
+		
+	}
+	public void setPadding() {
+		titleContainer.setPadding(new Insets(10));
+		leftGrid.setPadding(new Insets(10));
+		middleGrid.setPadding(new Insets(10));
+		buttonContainer.setPadding(new Insets(10, 60 , 50, 0));
+
+		reference.setPadding(new Insets(0 , 0 ,0 , 0 ));
+		cvFormat.setPadding(new Insets(150 ,  0, 0 , 30));
+		rb1.setPadding(new Insets(0,  0, 0 , 30));
+		rb2.setPadding(new Insets(0,  0, 60 , 30));
+	
+	}
+	public void setPrewidthHeight() {
 		imageView.setFitHeight(150);
 		imageView.setFitWidth(150);
 		
@@ -395,15 +421,9 @@ public class Main extends Application {
 		
 		addInfoDescription1.setPrefWidth(400);
 		addInfoDescription2.setPrefWidth(400);
-			
-		DoBirth_Field.setEditable(false);
-	
+		
 		programming_Skill_field1.setPrefWidth(500);
-		
 		Cgpa_field.setPrefWidth(50);
-		
-		title.setAlignment(Pos.CENTER);
-		title.getStyleClass().add("title");
 		
 		programming_Skill_field1.setPrefWidth(260);
 		others_Skill_field2.setPrefWidth(260);
@@ -412,25 +432,10 @@ public class Main extends Application {
 		experience1_field.setPrefWidth(250);
 		experience2_field.setPrefWidth(250);
 		
-		reference.setPadding(new Insets(0 , 0 ,0 , 0 ));
-		
-		
-		cvFormat.setPadding(new Insets(150 ,  0, 0 , 30));
-		rb1.setPadding(new Insets(0,  0, 0 , 30));
-		rb2.setPadding(new Insets(0,  0, 60 , 30));
-		rb1.setToggleGroup(group);
-		rb1.setSelected(true);
-		rb1.setTextFill((Color.web("white")));
-		rb2.setToggleGroup(group);
-		rb2.setTextFill((Color.web("white")));
-		
 		btn1.setPrefSize(150, 35);
 		btn2.setPrefSize(150, 35);
 		btn3.setPrefSize(150, 35);
-		
-		
 	}
-	
 	public void setPromptText() {
 		
 		Gpa1_field.setPromptText("GPA");

@@ -25,48 +25,43 @@ public class Validation {
     }
 	
 	
-public boolean emailValidation(TextField textfield , String emailText) {
+public boolean emailValidation(String emailText) {
 			
 		Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
 		Matcher m = p.matcher(emailText);
 		
+		
 		if( m.find() && m.group().equals(emailText)) {
 			
-			textfield.setStyle("-fx-text-inner-color: none ;"
-					+ " -fx-border-color: none; -fx-border-width: 2px ;");
+
 			System.out.println("Email is Valid");
 				return true;
 			}
 			else {
 				
-				//showAlert("Invalid" , "Email is not valid" , "Please enter a valid Email with ab@aaa.com format");
-				
-				textfield.setStyle("-fx-text-inner-color: red; -fx-border-color: red;"
-						+ " -fx-border-width: 2px ;");
+				showAlert("Invalid" , "Email is not valid" , "Please enter a valid Email with ab@aaa.com format");
+	
 
 				return false;
-			}	
+			}
+		
 		
 		
 	}
 	
-public boolean validateContact(TextField textfield , String str) {
+public boolean validateContact(String str) {
 		
 		Pattern p = Pattern.compile("[0-9]+");
 		Matcher m = p.matcher(str);
 		
 		if(str.length() == 11 && m.find() && m.group().equals(str)) {
-			
-			textfield.setStyle("-fx-text-inner-color: none ;"
-					+ " -fx-border-color: none; -fx-border-width: 2px ;");
-			
+						
 			System.out.println("Number is Valid");
 				return true;
 			}
 			else {
-				textfield.setStyle("-fx-text-inner-color: red; -fx-border-color: red;"
-						+ " -fx-border-width: 2px ;");
-				//showAlert("Invalid" , "Contact is not valid" , "Please enter a valid contact with 11 digit!!");
+				
+				showAlert("Invalid" , "Contact is not valid" , "Please enter a valid contact with 11 digit!!");
 				return false;
 			}			
 		
