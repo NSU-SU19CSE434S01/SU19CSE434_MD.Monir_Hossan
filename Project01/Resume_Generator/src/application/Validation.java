@@ -38,9 +38,6 @@ public boolean emailValidation(String emailText) {
 				return true;
 			}
 			else {
-				
-				showAlert("Invalid" , "Email is not valid" , "Please enter a valid Email with ab@aaa.com format");
-	
 
 				return false;
 			}
@@ -61,7 +58,6 @@ public boolean validateContact(String str) {
 			}
 			else {
 				
-				showAlert("Invalid" , "Contact is not valid" , "Please enter a valid contact with 11 digit!!");
 				return false;
 			}			
 		

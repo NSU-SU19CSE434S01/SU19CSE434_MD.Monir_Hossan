@@ -76,6 +76,8 @@ public class Main extends Application {
 	
 	Button btn1, btn2, btn3,chooseFile;
 	
+	Validation validation = new Validation();
+	
 	
 	public static void main(String[] args) {
 		
@@ -87,7 +89,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		
 		
-		Validation validation = new Validation();
+	
 	
 		Stage window = primaryStage;
 		window.setTitle("Resume Generator");
@@ -259,8 +261,9 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
-							validation.validateContact(Contact_field.getText());
-							validation.emailValidation(Email_field.getText());
+							validionAllField();
+							//validation.validateContact(Contact_field.getText());
+							//validation.emailValidation(Email_field.getText());
 							//window.close();
 						}
 							);
@@ -338,6 +341,24 @@ public class Main extends Application {
 	}
 	
 	
+	public void validionAllField() {
+		
+				
+		if(validation.validateContact(Contact_field.getText()) == true) {
+			Contact_field.setStyle("-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;");
+		}
+		else {
+			Contact_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;");
+		}
+		
+		if(validation.emailValidation(Email_field.getText()) == true) {
+			Email_field.setStyle("-fx-border-color: none; -fx-border-color: none; -fx-text-inner-color: none;");
+		}
+		else {
+			Email_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ; -fx-text-inner-color: red;");
+		}
+		
+	}
 	
 	public void createHtml() {
 	
