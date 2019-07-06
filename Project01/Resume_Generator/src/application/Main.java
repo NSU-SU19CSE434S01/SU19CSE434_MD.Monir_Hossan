@@ -53,7 +53,7 @@ public class Main extends Application {
 	
 	FileChooser fileChooser = new FileChooser();
 	
-	Label title , title2,firstName, lastName, birth, nationality, Mailing_address,
+	Label title , title2 ,firstName, lastName, birth, nationality, Mailing_address,
 	contact, email , skills,programming,others,	 title3,ssc,gpa1, session1, hsc, gpa2,
 	session2, undergraduate, cgpa, session3, experience, reference, additionalInfo, cvFormat,
 	importantLink;
@@ -203,6 +203,8 @@ public class Main extends Application {
 		
 		 chooseFile = new Button("Choose Image");
 		
+			labelCSS();
+			styleProperty();
 		
 		
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
@@ -328,10 +330,7 @@ public class Main extends Application {
 		//buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
 		
 
-		
-		
-		labelCSS();
-		styleProperty();
+
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -397,7 +396,8 @@ public class Main extends Application {
 	}
 	
 			html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
-					Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
+					Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,			
+					Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
 				department3_field,	
 				programming_Skill_field1,language_skill_field, others_Skill_field2,
 				experience1_field,duration1_field,point01_field,point02_field,point03_field,
@@ -422,8 +422,6 @@ public class Main extends Application {
 		titleContainer.setAlignment(Pos.CENTER);
 		
 		titleContainer.getChildren().add(title);
-		
-		Cgpa_field.setPrefWidth(120); 
 
 		leftGrid.setVgap(20);
 		leftGrid.setHgap(20);
@@ -462,13 +460,13 @@ public class Main extends Application {
 
 		Gpa1_field.setPrefWidth(120);
 		Gpa2_field.setPrefWidth(120);
+		Cgpa_field.setPrefWidth(120);
 
 		
 		addInfoDescription1.setPrefWidth(400);
 		addInfoDescription2.setPrefWidth(400);
 		
 		programming_Skill_field1.setPrefWidth(500);
-		Cgpa_field.setPrefWidth(50);
 		
 		programming_Skill_field1.setPrefWidth(260);
 		others_Skill_field2.setPrefWidth(260);
@@ -531,8 +529,6 @@ public class Main extends Application {
 				+"-fx-font-size: 30px;"
 				+"-fx-text-fill: white;");	
 
-		title2.setStyle("-fx-font-size: 15px;"  +
-				"-fx-font-weight: bold;");
 		
 		btn1.setStyle("-fx-background-color: #66BB6A");
 		btn2.setStyle("-fx-background-color: #EF5350");
@@ -547,7 +543,7 @@ public class Main extends Application {
 				 email , ssc, hsc,  undergraduate, 
 				session1 ,  session2 , 
 				 session3 };
-	Label[] allTitle = {title2,title3 ,additionalInfo,skills ,experience ,reference , 
+	Label[] allTitle = {title3 ,additionalInfo,title2 , skills ,experience ,reference , 
 			cvFormat,importantLink};
 	
 	

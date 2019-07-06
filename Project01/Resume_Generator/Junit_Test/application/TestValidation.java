@@ -44,5 +44,72 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void validateDateTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.validateDate("22/1/2009") , true);
+			assertEquals(testValidation.validateDate("3/5") , false);
+			
+			assertTrue(testValidation.validateDate("23/12/2009"));
+			assertFalse(testValidation.validateDate ("3454jj"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	void contactValidationTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.validateContact("01345654321") , true);
+			assertEquals(testValidation.validateContact("0888883") , false);
+			
+			assertTrue(testValidation.validateContact("01343213453"));
+			assertFalse(testValidation.validateContact ("333454jj"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	void emailValidationTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.emailValidation("abc@gmail.com") , true);
+			assertEquals(testValidation.emailValidation("asddn.com") , false);
+			
+			assertTrue(testValidation.emailValidation("1abc_e@gmail.com"));
+			assertFalse(testValidation.emailValidation ("avbv@.com"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 
+	@Test
+	void validateGPATest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.validateGPA("3.44") , true);
+			assertEquals(testValidation.validateGPA("22") , false);
+			
+			assertTrue(testValidation.validateGPA("5.00"));
+			assertFalse(testValidation.validateGPA ("22e.44"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
 }
