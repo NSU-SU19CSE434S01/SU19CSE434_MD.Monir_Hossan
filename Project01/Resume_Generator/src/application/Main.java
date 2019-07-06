@@ -38,9 +38,9 @@ public class Main extends Application {
 	HBox titleContainer = new HBox();
 	HBox bottomAddInfo = new HBox(20);
 	HBox buttonContainer = new HBox(20);
-	HBox gpaContainer = new HBox(15);
 	HBox gpaContainer1 = new HBox(20);
 	HBox gpaContainer2 = new HBox(20);
+	HBox gpaContainer = new HBox(20);
 
 	
 	HBox experience01_container = new HBox(10);
@@ -293,8 +293,7 @@ public class Main extends Application {
             }
         } );
 		
-		
-			styleProperty();
+
 		
 			
 			
@@ -332,6 +331,7 @@ public class Main extends Application {
 		
 		
 		labelCSS();
+		styleProperty();
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -340,24 +340,44 @@ public class Main extends Application {
 		
 	}
 	
-	
 	public void validionAllField() {
 		
+		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
+		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
 				
 		if(validation.validateContact(Contact_field.getText()) == true) {
-			Contact_field.setStyle("-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;");
+			Contact_field.setStyle(defaultColor);
 		}
 		else {
-			Contact_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;");
+			Contact_field.setStyle(redColor);
 		}
 		
 		if(validation.emailValidation(Email_field.getText()) == true) {
-			Email_field.setStyle("-fx-border-color: none; -fx-border-color: none; -fx-text-inner-color: none;");
+			Email_field.setStyle(defaultColor);
 		}
 		else {
-			Email_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ; -fx-text-inner-color: red;");
+			Email_field.setStyle(redColor);
 		}
 		
+		if(validation.validateGPA(Gpa1_field.getText()) == true) {
+			Gpa1_field.setStyle(defaultColor);
+		}
+		else {
+			Gpa1_field.setStyle(redColor);
+		}
+		
+		if( validation.validateGPA(Gpa2_field.getText()) == true) {
+			Gpa2_field.setStyle(defaultColor);
+		}
+		else {
+			Gpa2_field.setStyle(redColor);
+		}
+		if( validation.validateGPA(Cgpa_field.getText()) == true) {
+			Cgpa_field.setStyle(defaultColor);
+		}
+		else {
+			Cgpa_field.setStyle(redColor);
+		}
 	}
 	
 	public void createHtml() {
@@ -391,17 +411,20 @@ public class Main extends Application {
 		
 		
 		setPromptText();
-		
+
 		setStyle();
 		
+
 		setPadding();
-		
+	
 		setPrewidthHeight();
 		
 		titleContainer.setAlignment(Pos.CENTER);
 		
 		titleContainer.getChildren().add(title);
 		
+		Cgpa_field.setPrefWidth(120); 
+
 		leftGrid.setVgap(20);
 		leftGrid.setHgap(20);
 		
@@ -436,9 +459,10 @@ public class Main extends Application {
 		imageView.setFitHeight(150);
 		imageView.setFitWidth(150);
 		
-		Cgpa_field.setPrefWidth(120);
+
 		Gpa1_field.setPrefWidth(120);
 		Gpa2_field.setPrefWidth(120);
+
 		
 		addInfoDescription1.setPrefWidth(400);
 		addInfoDescription2.setPrefWidth(400);
