@@ -33,7 +33,7 @@ class TestValidation {
 	
 		try {
 			
-			assertEquals(testValidation.isStringOnlyAlphabet("MDMONIR") , true);
+			assertEquals(testValidation.isStringOnlyAlphabet("MD MONIR") , true);
 			assertEquals(testValidation.isStringOnlyAlphabet("Hossan23") , false);
 			
 			assertTrue(testValidation.isStringOnlyAlphabet("Raju"));
@@ -49,10 +49,10 @@ class TestValidation {
 	
 		try {
 			
-			assertEquals(testValidation.validateDate("22/1/2009") , true);
-			assertEquals(testValidation.validateDate("3/5") , false);
+			assertEquals(testValidation.validateDate("21/1/2009") , true);
+			assertEquals(testValidation.validateDate("3/5/20098") , false);
 			
-			assertTrue(testValidation.validateDate("23/12/2009"));
+			assertTrue(testValidation.validateDate("23/1/2009"));
 			assertFalse(testValidation.validateDate ("3454jj"));
 		}
 		catch(InternalException e){
@@ -79,6 +79,24 @@ class TestValidation {
 	}
 	
 	@Test
+	void mailingAddressValidateTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.mailingAddressValidate("Road 07 , House (194/A) , Block: C-.") , true);
+			assertEquals(testValidation.mailingAddressValidate("dd445@@$!^+=?><") , false);
+			
+			assertTrue(testValidation.mailingAddressValidate("Road 07 , House_ (194/A) , Block: C."));
+			assertFalse(testValidation.mailingAddressValidate ("dd445@@$!^+=?><"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+
+	
+	@Test
 	void emailValidationTest() throws Exception {
 	
 		try {
@@ -94,7 +112,7 @@ class TestValidation {
 		}
 		
 	}
-
+	
 	@Test
 	void validateGPATest() throws Exception {
 	

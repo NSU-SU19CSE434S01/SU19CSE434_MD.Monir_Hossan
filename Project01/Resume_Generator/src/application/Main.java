@@ -274,7 +274,7 @@ public class Main extends Application {
 		btn2.setOnAction(e -> window.close());
 		
 		btn3.setText("Clear");
-		//btn3.setOnAction(e -> System.out.println(validation.isStringOnlyAlphabet(LName_field.getText())));
+		btn3.setOnAction(e -> clearAllField());
 		
 		
 		
@@ -339,6 +339,25 @@ public class Main extends Application {
 		
 	}
 	
+	
+	public void clearAllField() {
+		
+		TextField field [] = {FName_field,
+				 LName_field, Nationality_field, Mailing_field , Contact_field, Email_field, 
+				 programming_Skill_field1, language_skill_field, others_Skill_field2,Ssc_field, Gpa1_field,
+				 session1_field, department1_field, Hsc_field, Gpa2_field,
+				 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
+				 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
+				 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
+				 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2};
+		
+		
+		for(int i = 0 ; i < field.length ; i++) {
+			
+			field[i].clear();
+		}
+		DoBirth_Field.setValue(null);
+	}
 	public void validionAllField() {
 		
 		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
