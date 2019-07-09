@@ -267,6 +267,7 @@ public class Main extends Application {
 							//validation.validateContact(Contact_field.getText());
 							//validation.emailValidation(Email_field.getText());
 							//window.close();
+							System.out.println(DoBirth_Field.getValue().toString());
 						}
 							);
 		
@@ -360,9 +361,29 @@ public class Main extends Application {
 	}
 	public void validionAllField() {
 		
+		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DoBirth_Field.getValue());
+		
 		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
 		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
-				
+		
+		if(validation.isStringOnlyAlphabet(FName_field.getText()) == true ) {
+			FName_field.setStyle(defaultColor);
+		}
+		else {
+			FName_field.setStyle(redColor);
+		}
+		if( validation.isStringOnlyAlphabet(LName_field.getText()) == true ) {
+			LName_field.setStyle(defaultColor);
+		}
+		else {
+			LName_field.setStyle(redColor);
+		}
+		if(validation.isStringOnlyAlphabet(Nationality_field.getText()) == true ) {
+			Nationality_field.setStyle(defaultColor);
+		}
+		else {
+			Nationality_field.setStyle(redColor);
+		}
 		if(validation.validateContact(Contact_field.getText()) == true) {
 			Contact_field.setStyle(defaultColor);
 		}
@@ -396,6 +417,19 @@ public class Main extends Application {
 		else {
 			Cgpa_field.setStyle(redColor);
 		}
+//		if( validation.validateDate(DoBirth_Field.getValue().toString()) == false) {
+//			DoBirth_Field.setStyle(defaultColor);
+//		}
+//		else  {
+//			DoBirth_Field.setStyle(redColor);
+//		}
+		
+		if( validation.mailingAddressValidate(Mailing_field.getText()) == true) {
+			Mailing_field.setStyle(defaultColor);
+		}
+		else {
+			Mailing_field.setStyle(redColor);
+		}
 	}
 	
 	public void createHtml() {
@@ -404,14 +438,14 @@ public class Main extends Application {
 	
 	if(rb1.isSelected() == true) {
 		
-		if(FName_field.getText().isEmpty()) {
-			FName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
-			LName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
-		}
-		else {
-			FName_field.setStyle("-fx-border-color: none;");
-			LName_field.setStyle("-fx-border-color: none;");
-		}
+//		if(FName_field.getText().isEmpty()) {
+//			FName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
+//			LName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
+//		}
+//		else {
+//			FName_field.setStyle("-fx-border-color: none;");
+//			LName_field.setStyle("-fx-border-color: none;");
+//		}
 	}
 	
 			html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,

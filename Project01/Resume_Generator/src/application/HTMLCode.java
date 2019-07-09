@@ -122,7 +122,7 @@ public class HTMLCode {
 			e.printStackTrace();
 		}
 		
-		firstName.setText("");
+		//firstName.setText("");
 	}
 		
 	}

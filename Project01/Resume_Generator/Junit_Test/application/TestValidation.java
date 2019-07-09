@@ -49,11 +49,27 @@ class TestValidation {
 	
 		try {
 			
-			assertEquals(testValidation.validateDate("21/1/2009") , true);
+			assertEquals(testValidation.validateDate("2009/12/22") , true);
 			assertEquals(testValidation.validateDate("3/5/20098") , false);
 			
-			assertTrue(testValidation.validateDate("23/1/2009"));
+			assertTrue(testValidation.validateDate("2022/11/20"));
 			assertFalse(testValidation.validateDate ("3454jj"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	@Test
+	void validateNationalityTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.isStringOnlyAlphabet("Bengladeshi") , true);
+			assertEquals(testValidation.isStringOnlyAlphabet("Bangladeshi221") , false);
+			
+			assertTrue(testValidation.isStringOnlyAlphabet("American"));
+			assertFalse(testValidation.isStringOnlyAlphabet ("American546"));
 		}
 		catch(InternalException e){
 			e.printStackTrace();
