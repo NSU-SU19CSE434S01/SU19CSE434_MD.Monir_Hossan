@@ -145,5 +145,21 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void validateDepartmentest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.isStringOnlyAlphabet("Science") , true);
+			assertEquals(testValidation.isStringOnlyAlphabet("Science211") , false);
+			
+			assertTrue(testValidation.isStringOnlyAlphabet("CSE"));
+			assertFalse(testValidation.isStringOnlyAlphabet ("/CSE/BBA/"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 }

@@ -356,12 +356,14 @@ public class Main extends Application {
 		for(int i = 0 ; i < field.length ; i++) {
 			
 			field[i].clear();
+
 		}
 		DoBirth_Field.setValue(null);
 	}
 	public void validionAllField() {
 		
 		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DoBirth_Field.getValue());
+		
 		
 		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
 		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
@@ -417,6 +419,25 @@ public class Main extends Application {
 		else {
 			Cgpa_field.setStyle(redColor);
 		}
+		if(validation.isStringOnlyAlphabet(department1_field.getText()) == true) {
+			department1_field.setStyle(defaultColor);
+		}
+		else {
+			department1_field.setStyle(redColor);
+		}
+		
+		if( validation.isStringOnlyAlphabet(department2_field.getText()) == true) {
+			department2_field.setStyle(defaultColor);
+		}
+		else {
+			department2_field.setStyle(redColor);
+		}
+		if( validation.isStringOnlyAlphabet(department3_field.getText()) == true) {
+			department3_field.setStyle(defaultColor);
+		}
+		else {
+			department3_field.setStyle(redColor);
+		}
 //		if( validation.validateDate(DoBirth_Field.getValue().toString()) == false) {
 //			DoBirth_Field.setStyle(defaultColor);
 //		}
@@ -430,6 +451,12 @@ public class Main extends Application {
 		else {
 			Mailing_field.setStyle(redColor);
 		}
+		
+		
+		
+		
+		
+		showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}
 	
 	public void createHtml() {
@@ -615,6 +642,17 @@ public class Main extends Application {
 				}
 	}
 	
+	
+	public boolean showAlert(String title , String headerText , String contentText) {
+		
+		 Alert alert = new Alert(AlertType.WARNING);
+		alert.setTitle(title);
+		alert.setHeaderText(headerText);
+		alert.setContentText(contentText);
+		alert.showAndWait();
+		
+		return true;
+	}
 	
 	
 

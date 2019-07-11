@@ -134,9 +134,7 @@ public boolean validateContact(String str) {
 			return false;
 		}			
 	
-}
-	
-	
+}	
 	
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
