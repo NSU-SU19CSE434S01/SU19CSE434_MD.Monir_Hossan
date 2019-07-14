@@ -137,10 +137,10 @@ public class Main extends Application {
 		
 		 
 		 title3 = new Label("EDUCATION");
-		 ssc = new Label("SSC/A Lavel");
+		 ssc = new Label("SSC/O Lavel");
 		 gpa1 = new Label("GPA");
 		 session1 = new Label("Session");
-		 hsc = new Label("HSC/O Lavel");
+		 hsc = new Label("HSC/A Lavel");
 		 gpa2 = new Label("GPA");
 		 session2 = new Label("Session");
 		 undergraduate = new Label("Uudergraduate");
@@ -419,6 +419,25 @@ public class Main extends Application {
 		else {
 			Cgpa_field.setStyle(redColor);
 		}
+		if(validation.validateSession(session1_field.getText()) == true) {
+			session1_field.setStyle(defaultColor);
+		}
+		else {
+			session1_field.setStyle(redColor);
+		}
+		
+		if( validation.validateSession(session2_field.getText()) == true) {
+			session2_field.setStyle(defaultColor);
+		}
+		else {
+			session2_field.setStyle(redColor);
+		}
+		if( validation.validateSession(session3_field.getText()) == true) {
+			session3_field.setStyle(defaultColor);
+		}
+		else {
+			session3_field.setStyle(redColor);
+		}
 		if(validation.isStringOnlyAlphabet(department1_field.getText()) == true) {
 			department1_field.setStyle(defaultColor);
 		}
@@ -456,7 +475,7 @@ public class Main extends Application {
 		
 		
 		
-		showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
+		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}
 	
 	public void createHtml() {
@@ -562,10 +581,13 @@ public class Main extends Application {
 	public void setPromptText() {
 		
 		Gpa1_field.setPromptText("GPA");
+		session1_field.setPromptText("Ex: 2012-2013");
 		department1_field.setPromptText("Department");
 		Gpa2_field.setPromptText("GPA");
+		session2_field.setPromptText("Ex: 2013-2014");
 		department2_field.setPromptText("Department");
 		Cgpa_field.setPromptText("CGPA");
+		session3_field.setPromptText("Ex: 2014-2018");
 		department3_field.setPromptText("Department");
 		
 		addInfoTitle1.setPromptText("Title");

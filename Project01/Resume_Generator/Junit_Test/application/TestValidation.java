@@ -146,6 +146,22 @@ class TestValidation {
 		
 	}
 	@Test
+	void validateSessionTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.validateSession("2012-2013") , true);
+			assertEquals(testValidation.validateSession("22-12k") , false);
+			
+			assertTrue(testValidation.validateSession("2015-2018"));
+			assertFalse(testValidation.validateSession ("12-13"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	@Test
 	void validateDepartmentest() throws Exception {
 	
 		try {

@@ -21,7 +21,7 @@ public class Validation {
 		Matcher m = p.matcher(str);
 		
 		
-		if( m.find() && m.group().equals(str)) {
+		if( m.find() && m.group().equals(str) && !str.equals("")){
 			
 
 			System.out.println("Only Alphabet String is Valid");
@@ -87,7 +87,7 @@ public boolean mailingAddressValidate(String mailingAddress) {
 	Matcher m = p.matcher(mailingAddress);
 	
 	
-	if( m.find() && m.group().equals(mailingAddress)) {
+	if( m.find() && m.group().equals(mailingAddress) && !mailingAddress.equals("")) {
 		
 
 		System.out.println("Mailing address is Valid");
@@ -135,6 +135,22 @@ public boolean validateContact(String str) {
 		}			
 	
 }	
+	public boolean validateSession(String str) {
+		
+	Pattern p = Pattern.compile("[0-9]{4}[-][0-9]{4}");
+	Matcher m = p.matcher(str);
+	
+	if(m.find() && m.group().equals(str)) {
+					
+		System.out.println("Sessiion is Valid");
+			return true;
+		}
+		else {
+			
+			return false;
+		}			
+	
+}
 	
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
