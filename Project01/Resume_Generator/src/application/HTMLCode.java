@@ -11,6 +11,20 @@ import javafx.scene.control.TextField;
 public class HTMLCode {
 	
 	
+	String div01 = " <div>\n" + 
+			"            <img src='/Users/MDMONIRHOSSAN/Desktop/images.png' height='140' width='140' style=' float: right'>\n" + 
+			"            <h3 style='margin: 0;'>Md Maruf Ahmmad Chowdory</h3>\n" + 
+			"            <span>Flat: 503, Block: A, Road: 07, Uttara, DHAKA</span><br>\n" + 
+			"\n" + 
+			"            <span>\n" + 
+			"                <b>Email:</b><span>mdraju018934@gmail.com</span>\n" + 
+			"            </span><br>\n" + 
+			"            <span>\n" + 
+			"                <b>Cell: </b><span>01712345013</span>\n" + 
+			"            </span>\n" + 
+			"        </div>";
+	
+	
 	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
 						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
 						 TextField sscDepartment, TextField HSC, TextField hscGPA, TextField hscSession,
