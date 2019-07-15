@@ -128,6 +128,22 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void validateInstitutionNameTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.validateInstitutionName("BN School, & College") , true);
+			assertEquals(testValidation.validateInstitutionName("!23College@") , false);
+			
+			assertTrue(testValidation.validateInstitutionName("Dhaka School College (Dhaka)"));
+			assertFalse(testValidation.validateInstitutionName("666ggjv)"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 	@Test
 	void validateGPATest() throws Exception {

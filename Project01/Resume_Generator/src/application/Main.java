@@ -399,7 +399,25 @@ public class Main extends Application {
 		else {
 			Email_field.setStyle(redColor);
 		}
+		if(validation.validateInstitutionName(Ssc_field.getText()) == true) {
+			Ssc_field.setStyle(defaultColor);
+		}
+		else {
+			Ssc_field.setStyle(redColor);
+		}
 		
+		if( validation.validateInstitutionName(Hsc_field.getText()) == true) {
+			Hsc_field.setStyle(defaultColor);
+		}
+		else {
+			Hsc_field.setStyle(redColor);
+		}
+		if( validation.validateInstitutionName(Undergraduate_field.getText()) == true) {
+			Undergraduate_field.setStyle(defaultColor);
+		}
+		else {
+			Undergraduate_field.setStyle(redColor);
+		}
 		if(validation.validateGPA(Gpa1_field.getText()) == true) {
 			Gpa1_field.setStyle(defaultColor);
 		}

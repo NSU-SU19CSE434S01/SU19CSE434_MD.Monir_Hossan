@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TextField;
 
 public class Validation {
 	
@@ -118,7 +117,22 @@ public boolean validateContact(String str) {
 			}			
 		
 	}
-
+		public boolean validateInstitutionName(String str) {
+			
+		Pattern p = Pattern.compile("[a-z A-z&:.(),-]*");
+		Matcher m = p.matcher(str);
+		
+		if(m.find() && m.group().equals(str)) {
+						
+			System.out.println("Name is Valid");
+				return true;
+			}
+			else {
+				
+				return false;
+			}			
+		
+		}
 	public boolean validateGPA(String str) {
 	
 	Pattern p = Pattern.compile("[0-9]*([.]([0-9]{2})*)+");
