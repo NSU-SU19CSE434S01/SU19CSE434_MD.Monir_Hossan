@@ -502,6 +502,7 @@ public class Main extends Application {
 	
 	if(rb1.isSelected() == true) {
 		
+		
 //		if(FName_field.getText().isEmpty()) {
 //			FName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
 //			LName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");

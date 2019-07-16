@@ -15,15 +15,34 @@ public class HTMLCode {
 			"            <img src='/Users/MDMONIRHOSSAN/Desktop/images.png' height='140' width='140' style=' float: right'>\n" + 
 			"            <h3 style='margin: 0;'>Md Maruf Ahmmad Chowdory</h3>\n" + 
 			"            <span>Flat: 503, Block: A, Road: 07, Uttara, DHAKA</span><br>\n" + 
-			"\n" + 
 			"            <span>\n" + 
-			"                <b>Email:</b><span>mdraju018934@gmail.com</span>\n" + 
+			"                <b>Email: </b><span>mdraju018934@gmail.com</span>\n" + 
 			"            </span><br>\n" + 
 			"            <span>\n" + 
 			"                <b>Cell: </b><span>01712345013</span>\n" + 
 			"            </span>\n" + 
 			"        </div>";
-	
+	String div02 = " <div>\n" + 
+			"            <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>CAREER OBJECTIVE</b></div>\n" + 
+			"            <p>To work in challenging environment, achive skilld in the respective field and work for the simultaneous progression of organization and myself</p>\n" + 
+			"        </div>";
+	String div03 = "<div>\n" + 
+			"            <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>WORKING EXPERENCES</b></div>\n" + 
+			"            <div>\n" + 
+			"                <h4 style='margin-bottom: 0px'>American & Efird Limited (November 2011 - July 2013)</h4>\n" + 
+			"                <label>Follow up and collection of cutomer acceotence on Export Documents Collection of Utilization Declaration</label>\n" + 
+			"                <label>Reporting to the management of cutomers acceptence area</label>\n" + 
+			"                <label>Update datbase on customers acceptence</label>\n" + 
+			"                <label>Instant Problem solver and Relationship with buyer</label>\n" + 
+			"            </div>\n" + 
+			"            <div>\n" + 
+			"                <h4 style='margin-bottom: 0px'>Federal University of Rio de Janerio, Brazil (November 2011 - July 2013)</h4>\n" + 
+			"                <label>Collected and managed data</label>\n" + 
+			"                <label>Examined pros and cons of existing programming language to develop new programming</label>\n" + 
+			"                <label></label>\n" + 
+			"                <label>Assisted a caseload of customers from seven states with IT issues</label>\n" + 
+			"            </div>\n" + 
+			"        </div>";
 	
 	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
 						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
