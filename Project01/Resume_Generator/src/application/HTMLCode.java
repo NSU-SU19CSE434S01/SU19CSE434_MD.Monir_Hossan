@@ -43,6 +43,36 @@ public class HTMLCode {
 			"                <label>Assisted a caseload of customers from seven states with IT issues</label>\n" + 
 			"            </div>\n" + 
 			"        </div>";
+	String div04 = "<div>\n" + 
+			"                <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>EDUCATIONAL QUALIFICATION</b></div> \n" + 
+			"            <div> \n" + 
+			"                <h4 style=\"margin-bottom: 0\"><u>Bechelor of Computer Science & Engineering(Undergraduate):</u></h4>\n" + 
+			"                <label><pre>Institute   :  North South University(NSU)</pre></label>\n" + 
+			"                <label><pre>CGPA        :  3.44 </pre></label>\n" + 
+			"                <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
+			"                <label><pre>Department  :  Major in CSE </pre></label>\n" + 
+			"            </div>\n" + 
+			"            <div>\n" + 
+			"                    <h4 style=\"margin-bottom: 0\"><u>Higher Secondary Certificate(H.S,C):</u></h4>\n" + 
+			"                    <label><pre>Institute   :  Dhaka City College</pre></label>\n" + 
+			"                    <label><pre>GPA         :  3.44 </pre></label>\n" + 
+			"                    <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
+			"                    <label><pre>Department  :  Science </pre></label>\n" + 
+			"                </div>\n" + 
+			"                <div>\n" + 
+			"                        <h4 style=\"margin-bottom: 0\"><u>Secondary School Certificate(S.S.C):</u></h4>\n" + 
+			"                        <label><pre>Institute   :  Rajuk Model School</pre></label>\n" + 
+			"                        <label><pre>GPA         :  3.44 </pre></label>\n" + 
+			"                        <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
+			"                        <label><pre>Department  :  Science </pre></label>\n" + 
+			"                </div>\n" + 
+			"        </div>";
+	String div05 = "<div>\n" + 
+			"            <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>SKILLS</b></div>\n" + 
+			"            <p style=\"margin-bottom: 0\"><b>Programming Skills : </b><span> Java , C++ , HTML , CSS , JavaScript , C# , Swift</span></p>\n" + 
+			"            <p style=\"margin-bottom: 0\"><b>Language Skills : </b><span> Bangla , English , Hindi , Spanish</span></p>\n" + 
+			"            <p style=\"margin-bottom: 0\"><b>Others Skills : </b><span> Football , Live coding , Swiming, Racing</span></p>\n" + 
+			"       </div>     ";
 	
 	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
 						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
