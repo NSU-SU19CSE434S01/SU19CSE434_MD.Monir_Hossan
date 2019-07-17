@@ -258,7 +258,6 @@ public class Main extends Application {
 		
 		
 		
-		
 
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 

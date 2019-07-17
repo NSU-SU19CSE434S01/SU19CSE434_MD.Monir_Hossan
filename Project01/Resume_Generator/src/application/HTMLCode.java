@@ -73,6 +73,23 @@ public class HTMLCode {
 			"            <p style=\"margin-bottom: 0\"><b>Language Skills : </b><span> Bangla , English , Hindi , Spanish</span></p>\n" + 
 			"            <p style=\"margin-bottom: 0\"><b>Others Skills : </b><span> Football , Live coding , Swiming, Racing</span></p>\n" + 
 			"       </div>     ";
+	String div06 = "<div>\n" + 
+			"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>ADDiTIONAL INFORMATION</b></div>\n" + 
+			"        <h4><u>Conferences Attend : </u></h4><span>IEEE Conference on internation competition of robotics in canada, Aug 2018</span>\n" + 
+			"        <h4><u>Workshop on Programming :</u></h4><span>ACM Conference on internation competition of robotics in canada, Aug 2018</span>\n" + 
+			"       </div> <br>  ";
+	String div07 = "<div>\n" + 
+			"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>IMPORTANT LINKS</b></div> \n" + 
+			"        <p><b>Website Link : </b> file:///Users/MDMONIRHOSSAN/Documents/CSE434/Project01/Resume2.html</p>\n" + 
+			"        <p><b>Project Link : </b> file:///Users/MDMONIRHOSSAN/Documents/CSE434/Project01/Resume2.html</p>\n" + 
+			"       </div> ";
+	String div08 = "<div>\n" + 
+			"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>REFERENCES</b></div> \n" + 
+			"        <h4 style=\"margin-bottom: 0\">Dr. Monjurul Alam (PhD)</h4><br>\n" + 
+			"        <span>Associate Professor , School of Bussiness , North South University</span>\n" + 
+			"        <h4 style=\"margin-bottom: 0\">Dr. Monjurul Alam (PhD)</h4><br>\n" + 
+			"        <span>Associate Professor , School of Bussiness , North South University</span>\n" + 
+			"       </div>";
 	
 	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
 						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
