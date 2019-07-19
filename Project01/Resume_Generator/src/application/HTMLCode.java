@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 
 public class HTMLCode {
 	
-	
 	String div01 = " <div>\n" + 
 			"            <img src='/Users/MDMONIRHOSSAN/Desktop/images.png' height='140' width='140' style=' float: right'>\n" + 
 			"            <h3 style='margin: 0;'>Md Maruf Ahmmad Chowdory</h3>\n" + 
@@ -91,7 +90,7 @@ public class HTMLCode {
 			"        <span>Associate Professor , School of Bussiness , North South University</span>\n" + 
 			"       </div>";
 	
-	public void func(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
+	public void htmlGenerateForUS(TextField firstName , TextField lastName , DatePicker dateOfBirth , TextField nationality,TextField address,
 						 TextField email,TextField contact,TextField SSC,TextField sscGPA , TextField sscSession,
 						 TextField sscDepartment, TextField HSC, TextField hscGPA, TextField hscSession,
 						 TextField hscDepartment, TextField undergraduate, TextField undergraduateCgpa, TextField undergraduateSession,
@@ -105,7 +104,7 @@ public class HTMLCode {
 		
 		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(field3.getValue());
 		
-	String html =" <!DOCTYPE html>\n" + 
+	String htmlForUSFormat =" <!DOCTYPE html>\n" + 
 			" <html>\n" + 
 			" <head>\n" + 
 			" 	\n" + 
@@ -195,7 +194,7 @@ public class HTMLCode {
 		
 		try {
 			BufferedWriter b = new BufferedWriter(new FileWriter(filePath));
-			b.write(html);
+			b.write(htmlForUSFormat);
 			b.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

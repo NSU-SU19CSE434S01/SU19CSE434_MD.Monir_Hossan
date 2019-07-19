@@ -88,27 +88,18 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		
-	
-	
 		Stage window = primaryStage;
 		window.setTitle("Resume Generator");
-
-		
 
 		Whole_container.setLeft(leftGrid);
 		Whole_container.setCenter(middleGrid);
 		Whole_container.setTop(titleContainer);
 		Whole_container.setBottom(buttonContainer);
-		
-		
 		Whole_container.setRight(rightContainer);
 
 		rightContainer.setPadding(new Insets (30));
 		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
-		
-		
 		title = new Label("Generate Your Resume Here!!");
 		title2 = new Label("PERSONAL INFORMATION");
 		firstName = new Label("First Name");
@@ -122,7 +113,6 @@ public class Main extends Application {
 		 programming = new Label("Programming");
 		 others = new Label("Others");
 	
-		 
 		 FName_field = new TextField();
 		 LName_field = new TextField();
 		 DoBirth_Field = new DatePicker();
@@ -133,8 +123,6 @@ public class Main extends Application {
 		 programming_Skill_field1 = new TextField();
 		 language_skill_field = new TextField();
 		 others_Skill_field2 = new TextField();
-		
-		
 		 
 		 title3 = new Label("EDUCATION");
 		 ssc = new Label("SSC/O Lavel");
@@ -160,7 +148,6 @@ public class Main extends Application {
 		 session3_field = new TextField();
 		 department3_field = new TextField();
 		 
-		 
 		 experience = new Label("Experiences");	
 		 experience1_field = new TextField();
 		 duration1_field = new TextField();
@@ -173,7 +160,6 @@ public class Main extends Application {
 		 point012_field = new TextField();
 		 point013_field = new TextField();
 		
-	 
 		 reference = new Label("References");
 		 reference1 = new TextField();
 		 reference2 = new TextField();
@@ -205,8 +191,7 @@ public class Main extends Application {
 		
 			labelCSS();
 			styleProperty();
-		
-		
+			
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
 		GridPane.setConstraints(firstName, 0, 1);
 		GridPane.setConstraints(lastName, 2, 1);
@@ -248,7 +233,6 @@ public class Main extends Application {
 		GridPane.setConstraints(addInfoContainer1, 0, 13 ,4 ,1 );
 		GridPane.setConstraints(addInfoContainer2, 0, 14  ,4 ,1);
 		
-		
 		GridPane.setConstraints(skills, 0, 0 );
 		GridPane.setConstraints(programming, 0, 1);
 		GridPane.setConstraints(others, 0, 2);
@@ -256,9 +240,6 @@ public class Main extends Application {
 		GridPane.setConstraints(language_skill_field, 0, 2 , 3 ,1);
 		GridPane.setConstraints(others_Skill_field2, 0, 3 , 3 ,1);
 		
-		
-		
-
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
@@ -275,7 +256,6 @@ public class Main extends Application {
 		
 		btn3.setText("Clear");
 		btn3.setOnAction(e -> clearAllField());
-		
 		
 		
 		chooseFile.setOnAction(e -> {
@@ -295,10 +275,7 @@ public class Main extends Application {
             }
         } );
 		
-
 		
-			
-			
 			gpaContainer1.getChildren().addAll( Gpa1_field );
 			gpaContainer2.getChildren().addAll( Gpa2_field);
 			gpaContainer.getChildren().addAll( Cgpa_field );
@@ -327,11 +304,6 @@ public class Main extends Application {
 		
 		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
 		
-		//buttonContainer.getChildren().addAll(btn1, btn2 , btn3 );	
-		
-
-
-		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
 		window.setScene(scene);
@@ -351,7 +323,6 @@ public class Main extends Application {
 				 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
 				 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2};
 		
-		
 		for(int i = 0 ; i < field.length ; i++) {
 			
 			field[i].clear();
@@ -359,10 +330,10 @@ public class Main extends Application {
 		}
 		DoBirth_Field.setValue(null);
 	}
+	
 	public void validionAllField() {
 		
 		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DoBirth_Field.getValue());
-		
 		
 		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
 		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
@@ -488,10 +459,6 @@ public class Main extends Application {
 			Mailing_field.setStyle(redColor);
 		}
 		
-		
-		
-		
-		
 		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}
 	
@@ -501,26 +468,18 @@ public class Main extends Application {
 	
 	if(rb1.isSelected() == true) {
 		
-		
-//		if(FName_field.getText().isEmpty()) {
-//			FName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
-//			LName_field.setStyle("-fx-border-color: red; -fx-border-width: 2px ;");
-//		}
-//		else {
-//			FName_field.setStyle("-fx-border-color: none;");
-//			LName_field.setStyle("-fx-border-color: none;");
-//		}
+		html.htmlGenerateForUS(FName_field, LName_field, DoBirth_Field, Nationality_field,
+				Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,			
+				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
+			department3_field,	
+			programming_Skill_field1,language_skill_field, others_Skill_field2,
+			experience1_field,duration1_field,point01_field,point02_field,point03_field,
+			experience2_field,duration2_field,point011_field,
+		point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 	}
-	
-			html.func(FName_field, LName_field, DoBirth_Field, Nationality_field,
-					Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,			
-					Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
-				department3_field,	
-				programming_Skill_field1,language_skill_field, others_Skill_field2,
-				experience1_field,duration1_field,point01_field,point02_field,point03_field,
-				experience2_field,duration2_field,point011_field,
-			point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
+	else if (rb2.isSelected() == true) {
 		
+	}
 	
 	}
 	
