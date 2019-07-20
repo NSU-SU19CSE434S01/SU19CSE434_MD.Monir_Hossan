@@ -130,9 +130,9 @@ public class HTMLCode {
 			
 			" 			<h5 style='margin-bottom: 0'>"+undergraduate.getText()+"\n" + 
 			" 				<span style='float: right; font-size: 12px'>"+undergraduateSession.getText()+"</span>\n" + 
+			" 			<span>"+ undergraduateDepartment.getText()+"</span>\n" + 
 			" 			<span style='float: right; font-size: 12px'>"+undergraduateCgpa.getText()+"</span><br>\n" +
 			" 			</h5>\n" + 
-			" 			<span>"+ undergraduateDepartment.getText()+"</span>\n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
 			" 			<h3>\n" + 

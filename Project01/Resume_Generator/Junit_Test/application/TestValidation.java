@@ -166,11 +166,11 @@ class TestValidation {
 	
 		try {
 			
-			assertEquals(testValidation.validateSession("2012-2013") , true);
+			assertEquals(testValidation.validateSession("Aug 2012 - Jan 2013") , true);
 			assertEquals(testValidation.validateSession("22-12k") , false);
 			
-			assertTrue(testValidation.validateSession("2015-2018"));
-			assertFalse(testValidation.validateSession ("12-13"));
+			assertTrue(testValidation.validateSession("jul 2015 - dec 2018"));
+			assertFalse(testValidation.validateSession ("Aug 12-13 Jan"));
 		}
 		catch(InternalException e){
 			e.printStackTrace();

@@ -151,7 +151,7 @@ public boolean validateContact(String str) {
 }	
 	public boolean validateSession(String str) {
 		
-	Pattern p = Pattern.compile("[0-9]{4}[-][0-9]{4}");
+	Pattern p = Pattern.compile("[a-zA-Z]{3}[ ][0-9]{4}[ ][-][ ][a-zA-Z]{3}[ ][0-9]{4}");
 	Matcher m = p.matcher(str);
 	
 	if(m.find() && m.group().equals(str)) {

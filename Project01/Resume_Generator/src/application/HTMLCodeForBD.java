@@ -21,9 +21,8 @@ public class HTMLCodeForBD {
 			 TextField experience01_3,TextField experience02,TextField experience02Duration,
 			 TextField experience02_1 ,TextField experience02_2,TextField experience02_3,
 			 TextField additionalTitle1,TextField additionalDes1,TextField additionalTitle2,TextField additionalDes2,
-			 TextField reference1, TextField reference2, TextField link1, TextField link2 , String imagePath
+			 TextField reference1,TextField designation1, TextField reference2, TextField designation2, TextField link1, TextField link2 ,  String imagePath
 			 ) {
-		
 		
 		String htmlCode = "<html lang=\"en\">\n" + 
 				"\n" + 
@@ -58,68 +57,67 @@ public class HTMLCodeForBD {
 				"        <div>\n" + 
 				"            <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>WORKING EXPERENCES</b></div>\n" + 
 				"            <div>\n" + 
-				"                <h4 style='margin-bottom: 0px'>American & Efird Limited (November 2011 - July 2013)</h4>\n" + 
-				"                <label>Follow up and collection of cutomer acceotence on Export Documents Collection of Utilization Declaration</label><br>\n" + 
-				"                <label>Reporting to the management of cutomers acceptence area</label><br>\n" + 
-				"                <label>Update datbase on customers acceptence</label><br>\n" + 
-				"                <label>Instant Problem solver and Relationship with buyer</label><br>\n" + 
+				"                <h4 style='margin-bottom: 0px'>"+ experience01.getText() + " " + experience01Duration.getText()+"</h4>\n" + 
+				"                <label>"+experience01_1.getText()+"</label><br>\n" + 
+				"                <label>"+experience01_2.getText()+"</label><br>\n" + 
+				"                <label>"+experience01_3.getText()+"</label><br>\n" + 
 				"            </div>\n" + 
 				"            <div>\n" + 
-				"                <h4 style='margin-bottom: 0px'>Federal University of Rio de Janerio, Brazil (November 2011 - July 2013)</h4>\n" + 
-				"                <label>Collected and managed data</label><br>\n" + 
-				"                <label>Examined pros and cons of existing programming language to develop new programming</label><br>\n" + 
-				"                <label>Assisted a caseload of customers from seven states with IT issues</label><br>\n" + 
+				"                <h4 style='margin-bottom: 0px'>"+experience02.getText()+" " +experience02Duration.getText()+"</h4>\n" + 
+				"                <label>"+experience02_1.getText()+"Collected and managed data</label><br>\n" + 
+				"                <label>"+experience02_2.getText()+"</label><br>\n" + 
+				"                <label>"+experience02_3.getText()+"</label><br>\n" + 
 				"            </div>\n" + 
 				"        </div><br>\n" + 
 				"\n" + 
 				"        <div>\n" + 
 				"                <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>EDUCATIONAL QUALIFICATION</b></div> \n" + 
 				"            <div> \n" + 
-				"                <h4 style=\"margin-bottom: 0\"><u>Bechelor of Computer Science & Engineering(Undergraduate):</u></h4>\n" + 
-				"                <label><pre>Institute   :  North South University(NSU)</pre></label>\n" + 
-				"                <label><pre>CGPA        :  3.44 </pre></label>\n" + 
-				"                <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
-				"                <label><pre>Department  :  Major in CSE </pre></label>\n" + 
+				"                <h4 style=\"margin-bottom: 0\"><u>B.Sc/BBA(Undergraduate):</u></h4>\n" + 
+				"                <label><pre>Institute   :  "+undergraduate.getText()+"</pre></label>\n" + 
+				"                <label><pre>CGPA        :  "+undergraduateCgpa.getText()+"</pre></label>\n" + 
+				"                <label><pre>Session     :  "+undergraduateSession.getText()+"</pre></label>\n" + 
+				"                <label><pre>Department  :  "+undergraduateDepartment.getText()+"</pre></label>\n" + 
 				"            </div>\n" + 
 				"            <div>\n" + 
 				"                    <h4 style=\"margin-bottom: 0\"><u>Higher Secondary Certificate(H.S,C):</u></h4>\n" + 
-				"                    <label><pre>Institute   :  Dhaka City College</pre></label>\n" + 
-				"                    <label><pre>GPA         :  3.44 </pre></label>\n" + 
-				"                    <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
-				"                    <label><pre>Department  :  Science </pre></label>\n" + 
+				"                    <label><pre>Institute   :  "+HSC.getText()+"</pre></label>\n" + 
+				"                    <label><pre>GPA         :  "+ hscGPA.getText()+"</pre></label>\n" + 
+				"                    <label><pre>Session     :  "+hscSession.getText()+"</pre></label>\n" + 
+				"                    <label><pre>Department  :  "+hscDepartment.getText()+"</pre></label>\n" + 
 				"                </div>\n" + 
 				"                <div>\n" + 
 				"                        <h4 style=\"margin-bottom: 0\"><u>Secondary School Certificate(S.S.C):</u></h4>\n" + 
-				"                        <label><pre>Institute   :  Rajuk Model School</pre></label>\n" + 
-				"                        <label><pre>GPA         :  3.44 </pre></label>\n" + 
-				"                        <label><pre>Session     :  Aug 2012 - Jan 2016</pre></label>\n" + 
-				"                        <label><pre>Department  :  Science </pre></label>\n" + 
+				"                        <label><pre>Institute   :  "+SSC.getText()+"</pre></label>\n" + 
+				"                        <label><pre>GPA         :  "+sscGPA.getText()+"</pre></label>\n" + 
+				"                        <label><pre>Session     :  "+sscSession.getText()+"</pre></label>\n" + 
+				"                        <label><pre>Department  :  "+sscDepartment.getText()+"</pre></label>\n" + 
 				"                </div>\n" + 
 				"        </div>\n" + 
 				"    </div>\n" + 
 				"    <div style='margin: auto ; background-color:  whitesmoke;  width: 50%; padding: 30px; margin-top: 40px'>\n" + 
 				"        <div>\n" + 
 				"            <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>SKILLS</b></div>\n" + 
-				"            <h4 style=\"margin-bottom: 0\"><u>Programming Skills : </u></h4><span> Java , C++ , HTML , CSS , JavaScript , C# , Swift</span>\n" + 
-				"            <h4 style=\"margin-bottom: 0\"><u>Language Skills : </u></h4><span> Bangla , English , Hindi , Spanish</span>\n" + 
-				"            <h4 style=\"margin-bottom: 0\"><u>Others Skills : </u></h4><span> Football , Live coding , Swiming, Racing</span></p>\n" + 
+				"            <h4 style=\"margin-bottom: 0\"><u>Programming Skills : </u></h4><span>" +programmingSkill.getText()+ "</span>\n" + 
+				"            <h4 style=\"margin-bottom: 0\"><u>Language Skills : </u></h4><span>" +languageSkill.getText()+ "</span>\n" + 
+				"            <h4 style=\"margin-bottom: 0\"><u>Others Skills : </u></h4><span>" +otherSkill.getText()+ "</span></p>\n" + 
 				"       </div> <br>\n" + 
 				"       <div>\n" + 
 				"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>ADDiTIONAL INFORMATION</b></div>\n" + 
-				"        <h4><u>Conferences Attend : </u></h4><span>IEEE Conference on internation competition of robotics in canada, Aug 2018</span>\n" + 
-				"        <h4><u>Workshop on Programming :</u></h4><span>ACM Conference on internation competition of robotics in canada, Aug 2018</span>\n" + 
+				"        <h4><u>" +additionalTitle1.getText()+ " : </u></h4><span>" +additionalDes1.getText()+ "</span>\n" + 
+				"        <h4><u>" +additionalTitle2.getText()+ " :</u></h4><span>" +additionalDes2.getText()+ "</span>\n" + 
 				"       </div> <br>  \n" + 
 				"       <div>\n" + 
 				"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>IMPORTANT LINKS</b></div> \n" + 
-				"        <p><b>Website Link : </b> file:///Users/MDMONIRHOSSAN/Documents/CSE434/Project01/Resume2.html</p>\n" + 
-				"        <p><b>Project Link : </b> file:///Users/MDMONIRHOSSAN/Documents/CSE434/Project01/Resume2.html</p>\n" + 
+				"        <p><b>Website Link : </b>" +link1+ " </p>\n" + 
+				"        <p><b>Project Link : </b>" +link2+ " </p>\n" + 
 				"       </div> \n" + 
 				"       <div>\n" + 
 				"        <div style=\" box-sizing: border-box;width: 100%; padding: 10px;background-color: rgb(187, 181, 181);\"><b>REFERENCES</b></div> \n" + 
-				"        <h4 style=\"margin-bottom: 0\">Dr. Monjurul Alam (PhD)</h4><br>\n" + 
-				"        <span>Associate Professor , School of Bussiness , North South University</span>\n" + 
-				"        <h4 style=\"margin-bottom: 0\">Dr. Monjurul Alam (PhD)</h4><br>\n" + 
-				"        <span>Associate Professor , School of Bussiness , North South University</span>\n" + 
+				"        <h4 style=\"margin-bottom: 0\">" +reference1.getText()+ "</h4><br>\n" + 
+				"        <span>" +designation1.getText()+ "</span>\n" + 
+				"        <h4 style=\"margin-bottom: 0\">" +reference2.getText()+ "</h4><br>\n" + 
+				"        <span>" +designation2.getText()+ "</span>\n" + 
 				"       </div>\n" + 
 				"    </div>\n" + 
 				"</body>\n" + 

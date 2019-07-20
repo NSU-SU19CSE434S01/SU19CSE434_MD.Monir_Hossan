@@ -46,6 +46,9 @@ public class Main extends Application {
 	HBox experience01_container = new HBox(10);
 	HBox experience02_container = new HBox(10);
 	
+	HBox reference01_container = new HBox(10);
+	HBox reference02_container = new HBox(10);
+	
 	HBox addInfoContainer1 = new HBox(10);
 	HBox addInfoContainer2 = new HBox(10);
 	
@@ -64,7 +67,7 @@ public class Main extends Application {
 	 session1_field, department1_field, Hsc_field, Gpa2_field,
 	 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
 	 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
-	 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
+	 duration2_field,point011_field,point012_field,point013_field, reference1, designation1, reference2, designation2, addInfoTitle1,
 	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2;
 	
 	ImageView imageView;
@@ -164,7 +167,9 @@ public class Main extends Application {
 		
 		 reference = new Label("References");
 		 reference1 = new TextField();
+		 designation1 = new TextField();
 		 reference2 = new TextField();
+		 designation2 = new TextField();
 		 
 		 importantLink = new Label("Important Link");
 		 link_field1 = new TextField();
@@ -274,7 +279,7 @@ public class Main extends Application {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-            	FName_field.setText(selectedFile.getAbsolutePath());
+            	//FName_field.setText(selectedFile.getAbsolutePath());
             }
         } );
 		
@@ -296,18 +301,20 @@ public class Main extends Application {
 		middleGrid.getChildren().addAll(skills ,programming_Skill_field1 , others_Skill_field2,
 				language_skill_field ,experience , 
 				experience01_container,point01_field,point02_field,point03_field,experience02_container,point011_field,
-				point012_field,point013_field,reference,reference1,reference2 , importantLink,
+				point012_field,point013_field,reference, reference01_container,reference02_container , importantLink,
 				 link_field1,link_field2);
 		
 		experience01_container.getChildren().addAll(experience1_field , duration1_field);
 		experience02_container.getChildren().addAll(experience2_field,duration2_field);
+		
+		reference01_container.getChildren().addAll( reference1, designation1);
+		reference02_container.getChildren().addAll(reference2,designation2);
 		
 		addInfoContainer1.getChildren().addAll(addInfoTitle1,addInfoDescription1);
 		addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
 		
 		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
 		
-		imageView.setPreserveRatio(true);
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -475,26 +482,24 @@ public class Main extends Application {
 	if(rb1.isSelected() == true) {
 		
 		html.htmlGenerateForUS(FName_field, LName_field, DoBirth_Field, Nationality_field,
-				Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,			
-				Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
-			department3_field,	
-			programming_Skill_field1,language_skill_field, others_Skill_field2,
-			experience1_field,duration1_field,point01_field,point02_field,point03_field,
-			experience2_field,duration2_field,point011_field,
-		point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
-	}
+								Mailing_field, Email_field,  Contact_field,Ssc_field,Gpa1_field,session1_field,department1_field,			
+								Hsc_field,Gpa2_field,session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,
+								department3_field, programming_Skill_field1,language_skill_field, others_Skill_field2,
+								experience1_field,duration1_field,point01_field,point02_field,point03_field,
+								experience2_field,duration2_field,point011_field,
+								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
+		}
 	else if (rb2.isSelected() == true) {
 		
-		html2.htmlForBd(FName_field,
-	 LName_field, DoBirth_Field, Nationality_field, Mailing_field , Contact_field, Email_field, 
-	 programming_Skill_field1, language_skill_field, others_Skill_field2,Ssc_field, Gpa1_field,
-	 session1_field, department1_field, Hsc_field, Gpa2_field,
-	 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
-	 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
-	 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
-	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2 , selectedFile.getAbsolutePath() );
+		html2.htmlForBd(FName_field, LName_field, DoBirth_Field, Nationality_field, Mailing_field , Email_field ,  Contact_field, 
+						Ssc_field, Gpa1_field,session1_field, department1_field, Hsc_field, Gpa2_field,session2_field,department2_field,Undergraduate_field,
+						Cgpa_field,session3_field,department3_field ,
+						programming_Skill_field1, language_skill_field, others_Skill_field2,
+						experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field, duration2_field,point011_field,point012_field,point013_field,
+						addInfoTitle1, addInfoDescription1,  addInfoTitle2,  addInfoDescription2,
+						reference1, designation1 , reference2, designation2,  link_field1, link_field2 , selectedFile.getAbsolutePath() );
 		
-	}
+		}
 	
 	}
 	
@@ -509,6 +514,8 @@ public class Main extends Application {
 		setPadding();
 	
 		setPrewidthHeight();
+		
+		imageView.setPreserveRatio(true);
 		
 		titleContainer.setAlignment(Pos.CENTER);
 		
@@ -566,6 +573,9 @@ public class Main extends Application {
 		experience1_field.setPrefWidth(250);
 		experience2_field.setPrefWidth(250);
 		
+		designation1.setPrefWidth(250);
+		designation2.setPrefWidth(250);
+		
 		btn1.setPrefSize(150, 35);
 		btn2.setPrefSize(150, 35);
 		btn3.setPrefSize(150, 35);
@@ -573,13 +583,13 @@ public class Main extends Application {
 	public void setPromptText() {
 		
 		Gpa1_field.setPromptText("GPA");
-		session1_field.setPromptText("Ex: 2012-2013");
+		session1_field.setPromptText("AUg 2012 - Jan 2013");
 		department1_field.setPromptText("Department");
 		Gpa2_field.setPromptText("GPA");
-		session2_field.setPromptText("Ex: 2013-2014");
+		session2_field.setPromptText("AUg 2014 - Jan 2015");
 		department2_field.setPromptText("Department");
 		Cgpa_field.setPromptText("CGPA");
-		session3_field.setPromptText("Ex: 2014-2018");
+		session3_field.setPromptText("AUg 2016 - Jan 2019");
 		department3_field.setPromptText("Department");
 		
 		addInfoTitle1.setPromptText("Title");
@@ -604,11 +614,14 @@ public class Main extends Application {
 		point013_field.setPromptText(">>");
 		
 		
-		reference1.setPromptText("Reference 01");
-		reference2.setPromptText("Reference 02");
+		reference1.setPromptText("Dr. Monjurul Alam (PhD)");
+		reference2.setPromptText("Dr. Kamruj Jaman khan");
 		
-		link_field1.setPromptText("Link 01");
-		link_field2.setPromptText("Link 02");
+		designation1.setPromptText("Associate Professor , North South University");
+		designation2.setPromptText("Lecturer at Nort South University");
+		
+		link_field1.setPromptText("WebSite Link");
+		link_field2.setPromptText("Project Link");
 	}
 	
 	public void setStyle() {
