@@ -78,6 +78,8 @@ public class Main extends Application {
 	
 	Validation validation = new Validation();
 	
+	File selectedFile;
+	
 	
 	public static void main(String[] args) {
 		
@@ -259,7 +261,8 @@ public class Main extends Application {
 		
 		
 		chooseFile.setOnAction(e -> {
-           File selectedFile = fileChooser.showOpenDialog(primaryStage);
+			
+			selectedFile = fileChooser.showOpenDialog(primaryStage);
             
             if(selectedFile != null) {
             	
@@ -303,6 +306,8 @@ public class Main extends Application {
 		addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
 		
 		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
+		
+		imageView.setPreserveRatio(true);
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -465,6 +470,7 @@ public class Main extends Application {
 	public void createHtml() {
 	
 	HTMLCode html = new HTMLCode();
+	HTMLCodeForBD html2 = new HTMLCodeForBD();
 	
 	if(rb1.isSelected() == true) {
 		
@@ -478,6 +484,15 @@ public class Main extends Application {
 		point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 	}
 	else if (rb2.isSelected() == true) {
+		
+		html2.htmlForBd(FName_field,
+	 LName_field, DoBirth_Field, Nationality_field, Mailing_field , Contact_field, Email_field, 
+	 programming_Skill_field1, language_skill_field, others_Skill_field2,Ssc_field, Gpa1_field,
+	 session1_field, department1_field, Hsc_field, Gpa2_field,
+	 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
+	 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
+	 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
+	 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2 , selectedFile.getAbsolutePath() );
 		
 	}
 	

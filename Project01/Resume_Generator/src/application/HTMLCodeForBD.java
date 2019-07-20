@@ -21,7 +21,7 @@ public class HTMLCodeForBD {
 			 TextField experience01_3,TextField experience02,TextField experience02Duration,
 			 TextField experience02_1 ,TextField experience02_2,TextField experience02_3,
 			 TextField additionalTitle1,TextField additionalDes1,TextField additionalTitle2,TextField additionalDes2,
-			 TextField reference1, TextField reference2, TextField link1, TextField link2
+			 TextField reference1, TextField reference2, TextField link1, TextField link2 , String imagePath
 			 ) {
 		
 		
@@ -38,15 +38,15 @@ public class HTMLCodeForBD {
 				"    <div style='margin: auto ; background-color:  whitesmoke;  width: 50%; padding: 30px;'>\n" + 
 				"\n" + 
 				"        <div>\n" + 
-				"            <img src='/Users/MDMONIRHOSSAN/Desktop/images.png' height='140' width='140' style=' float: right'><br><br>\n" + 
-				"            <h3 style='margin: 0;'>Md Maruf Ahmmad Chowdory</h3>\n" + 
-				"            <span>Flat: 503, Block: A, Road: 07, Uttara, DHAKA</span><br>\n" + 
+				"           <img src='"+ imagePath +"' height='140' width='140' style=' float: right'><br><br>\n" + 
+				"            <h3 style='margin: 0;'>" + firstName.getText() + "</h3>\n" + 
+				"            <span>" + address.getText() + "</span><br>\n" + 
 				"\n" + 
 				"            <span>\n" + 
-				"                <b>Email: </b><span>mdraju018934@gmail.com</span>\n" + 
+				"                <b>Email: </b><span>" + email.getText() + "</span>\n" + 
 				"            </span><br>\n" + 
 				"            <span>\n" + 
-				"                <b>Cell: </b><span>01712345013</span>\n" + 
+				"                <b>Cell: </b><span>"+ contact.getText() +"</span>\n" + 
 				"            </span><br><br>\n" + 
 				"        </div><br><br>\n" + 
 				"\n" + 
