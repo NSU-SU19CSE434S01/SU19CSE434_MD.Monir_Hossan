@@ -193,5 +193,21 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void skillValidationtest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.skillValidation("Java, C++, C#, (JvaScript) 99") , true);
+			assertEquals(testValidation.skillValidation("$Java, C*, c--") , false);
+			
+			assertTrue(testValidation.skillValidation("BANGLA, Eng, Swiming, :"));
+			assertFalse(testValidation.skillValidation ("~???__^^"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 }

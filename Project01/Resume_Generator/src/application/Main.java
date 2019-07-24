@@ -470,6 +470,26 @@ public class Main extends Application {
 		else {
 			Mailing_field.setStyle(redColor);
 		}
+		if( validation.skillValidation(programming_Skill_field1.getText()) == true) {
+			programming_Skill_field1.setStyle(defaultColor);
+		}
+		else {
+			programming_Skill_field1.setStyle(redColor);
+		}
+		if( validation.skillValidation(language_skill_field.getText()) == true ) {
+			language_skill_field.setStyle(defaultColor);
+			
+		}
+		else {
+			language_skill_field.setStyle(redColor);
+		}
+		if( validation.skillValidation(others_Skill_field2.getText()) == true ) {
+			others_Skill_field2.setStyle(defaultColor);
+			
+		}
+		else {
+			others_Skill_field2.setStyle(redColor);
+		}
 		
 		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}

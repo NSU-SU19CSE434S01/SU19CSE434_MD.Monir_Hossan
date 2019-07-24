@@ -165,6 +165,21 @@ public boolean validateContact(String str) {
 		}			
 	
 }
+	public boolean skillValidation(String str) {
+		
+	Pattern p = Pattern.compile("[a-zA-Z0-9 +/.:(',*&)#]*");
+	Matcher m = p.matcher(str);
+	
+	if(m.find() && m.group().equals(str)) {
+
+			return true;
+		}
+		else {
+			
+			return false;
+		}			
+	
+}
 	
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
