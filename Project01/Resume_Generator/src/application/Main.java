@@ -602,12 +602,15 @@ public class Main extends Application {
 	}
 	public void setPromptText() {
 		
+		Ssc_field.setPromptText("Institution Name");
 		Gpa1_field.setPromptText("GPA");
 		session1_field.setPromptText("AUg 2012 - Jan 2013");
 		department1_field.setPromptText("Department");
+		Hsc_field.setPromptText("Institution Name");
 		Gpa2_field.setPromptText("GPA");
 		session2_field.setPromptText("AUg 2014 - Jan 2015");
 		department2_field.setPromptText("Department");
+		Undergraduate_field.setPromptText("Institution Name");
 		Cgpa_field.setPromptText("CGPA");
 		session3_field.setPromptText("AUg 2016 - Jan 2019");
 		department3_field.setPromptText("Department");
@@ -621,24 +624,23 @@ public class Main extends Application {
 		language_skill_field.setPromptText("Others");
 		others_Skill_field2.setPromptText("Languages");
 		
-		experience1_field.setPromptText("Experience 01");
-		duration1_field.setPromptText("Duration");
+		experience1_field.setPromptText("Experience Title & Institution Name");
+		duration1_field.setPromptText("Jan 2011 - Dec 2017");
 		point01_field.setPromptText(">>");
 		point02_field.setPromptText(">>");
 		point03_field.setPromptText(">>");
-		experience2_field.setPromptText("Experience 02");
-		
-		duration2_field.setPromptText("Duration");
+		experience2_field.setPromptText("Experience Title & Institution Name");
+		duration2_field.setPromptText("Aug 2012 - Jan 2018");
 		point011_field.setPromptText(">>");
 		point012_field.setPromptText(">>");
 		point013_field.setPromptText(">>");
 		
 		
-		reference1.setPromptText("Dr. Monjurul Alam (PhD)");
-		reference2.setPromptText("Dr. Kamruj Jaman khan");
+		reference1.setPromptText("NAME");
+		reference2.setPromptText("NAME");
 		
-		designation1.setPromptText("Associate Professor , North South University");
-		designation2.setPromptText("Lecturer at Nort South University");
+		designation1.setPromptText("Designation.....");
+		designation2.setPromptText("Designation.....");
 		
 		link_field1.setPromptText("WebSite Link");
 		link_field2.setPromptText("Project Link");
