@@ -209,5 +209,21 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void referenceNameValidationtest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.referenceNameValidation("Md. KamruJ Jaman (PhD)") , true);
+			assertEquals(testValidation.referenceNameValidation("Hal uddin 098 +Phd") , false);
+			
+			assertTrue(testValidation.referenceNameValidation("Md Nayeem Hossain (Phd:Dhaka)"));
+			assertFalse(testValidation.referenceNameValidation ("23 Habsa(0)"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 }

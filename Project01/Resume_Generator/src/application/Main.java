@@ -490,7 +490,42 @@ public class Main extends Application {
 		else {
 			others_Skill_field2.setStyle(redColor);
 		}
-		
+		if( validation.validateInstitutionName(experience1_field.getText()) == true) {
+			experience1_field.setStyle(defaultColor);
+		}
+		else {
+			experience1_field.setStyle(redColor);
+		}
+		if( validation.validateInstitutionName(experience2_field.getText()) == true) {
+			experience2_field.setStyle(defaultColor);
+		}
+		else {
+			experience2_field.setStyle(redColor);
+		}
+		if( validation.validateSession(duration1_field.getText()) == true) {
+			duration1_field.setStyle(defaultColor);
+		}
+		else {
+			duration1_field.setStyle(redColor);
+		}
+		if( validation.validateSession(duration2_field.getText()) == true) {
+			duration2_field.setStyle(defaultColor);
+		}
+		else {
+			duration2_field.setStyle(redColor);
+		}
+		if(validation.referenceNameValidation(reference1.getText()) == true ) {
+			reference1.setStyle(defaultColor);
+		}
+		else {
+			reference1.setStyle(redColor);
+		}
+		if(validation.referenceNameValidation(reference2.getText()) == true ) {
+			reference2.setStyle(defaultColor);
+		}
+		else {
+			reference2.setStyle(redColor);
+		}
 		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}
 	

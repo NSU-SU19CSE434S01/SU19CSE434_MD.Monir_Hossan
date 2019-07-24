@@ -180,6 +180,25 @@ public boolean validateContact(String str) {
 		}			
 	
 }
+	public boolean referenceNameValidation(String str) 
+    { 	
+
+
+		Pattern p = Pattern.compile("[a-z A-Z(,.:')]*");
+		Matcher m = p.matcher(str);
+		
+		
+		if( m.find() && m.group().equals(str) && !str.equals("")){
+			
+
+			System.out.println("Only Alphabet String is Valid");
+				return true;
+			}
+			else {
+
+				return false;
+			}
+    }
 	
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
