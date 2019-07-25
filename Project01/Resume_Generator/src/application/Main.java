@@ -250,7 +250,7 @@ public class Main extends Application {
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
 							createHtml() ;
-							validionAllField();
+							//validionAllField();
 							//validation.validateContact(Contact_field.getText());
 							//validation.emailValidation(Email_field.getText());
 							//window.close();
@@ -352,6 +352,64 @@ public class Main extends Application {
 		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
 		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
 		
+		
+		if(validation.validateInstitutionName(Ssc_field.getText()) == true) {
+			Ssc_field.setStyle(defaultColor);
+		}
+		else {
+			Ssc_field.setStyle(redColor);
+		}
+		
+		
+		if(validation.validateGPA(Gpa1_field.getText()) == true) {
+			Gpa1_field.setStyle(defaultColor);
+		}
+		else {
+			Gpa1_field.setStyle(redColor);
+		}
+		
+		
+		if(validation.validateSession(session1_field.getText()) == true) {
+			session1_field.setStyle(defaultColor);
+		}
+		else {
+			session1_field.setStyle(redColor);
+		}
+		
+		
+		if(validation.isStringOnlyAlphabet(department1_field.getText()) == true) {
+			department1_field.setStyle(defaultColor);
+		}
+		else {
+			department1_field.setStyle(redColor);
+		}
+		
+		if( validation.validateDate(DoBirth_Field.getValue().toString()) == false) {
+			DoBirth_Field.setStyle(defaultColor);
+		}
+		else  {
+			DoBirth_Field.setStyle(redColor);
+		}
+		if(validation.referenceNameValidation(reference1.getText()) == true ) {
+			reference1.setStyle(defaultColor);
+		}
+		else {
+			reference1.setStyle(redColor);
+		}
+		if(validation.referenceNameValidation(reference2.getText()) == true ) {
+			reference2.setStyle(defaultColor);
+		}
+		else {
+			reference2.setStyle(redColor);
+		}
+		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
+	}
+	
+	public void fieldForUsFormat() {
+		
+		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
+		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
+		
 		if(validation.isStringOnlyAlphabet(FName_field.getText()) == true ) {
 			FName_field.setStyle(defaultColor);
 		}
@@ -383,13 +441,12 @@ public class Main extends Application {
 		else {
 			Email_field.setStyle(redColor);
 		}
-		if(validation.validateInstitutionName(Ssc_field.getText()) == true) {
-			Ssc_field.setStyle(defaultColor);
+		if( validation.mailingAddressValidate(Mailing_field.getText()) == true) {
+			Mailing_field.setStyle(defaultColor);
 		}
 		else {
-			Ssc_field.setStyle(redColor);
+			Mailing_field.setStyle(redColor);
 		}
-		
 		if( validation.validateInstitutionName(Hsc_field.getText()) == true) {
 			Hsc_field.setStyle(defaultColor);
 		}
@@ -402,13 +459,6 @@ public class Main extends Application {
 		else {
 			Undergraduate_field.setStyle(redColor);
 		}
-		if(validation.validateGPA(Gpa1_field.getText()) == true) {
-			Gpa1_field.setStyle(defaultColor);
-		}
-		else {
-			Gpa1_field.setStyle(redColor);
-		}
-		
 		if( validation.validateGPA(Gpa2_field.getText()) == true) {
 			Gpa2_field.setStyle(defaultColor);
 		}
@@ -421,13 +471,6 @@ public class Main extends Application {
 		else {
 			Cgpa_field.setStyle(redColor);
 		}
-		if(validation.validateSession(session1_field.getText()) == true) {
-			session1_field.setStyle(defaultColor);
-		}
-		else {
-			session1_field.setStyle(redColor);
-		}
-		
 		if( validation.validateSession(session2_field.getText()) == true) {
 			session2_field.setStyle(defaultColor);
 		}
@@ -440,13 +483,6 @@ public class Main extends Application {
 		else {
 			session3_field.setStyle(redColor);
 		}
-		if(validation.isStringOnlyAlphabet(department1_field.getText()) == true) {
-			department1_field.setStyle(defaultColor);
-		}
-		else {
-			department1_field.setStyle(redColor);
-		}
-		
 		if( validation.isStringOnlyAlphabet(department2_field.getText()) == true) {
 			department2_field.setStyle(defaultColor);
 		}
@@ -458,19 +494,6 @@ public class Main extends Application {
 		}
 		else {
 			department3_field.setStyle(redColor);
-		}
-//		if( validation.validateDate(DoBirth_Field.getValue().toString()) == false) {
-//			DoBirth_Field.setStyle(defaultColor);
-//		}
-//		else  {
-//			DoBirth_Field.setStyle(redColor);
-//		}
-		
-		if( validation.mailingAddressValidate(Mailing_field.getText()) == true) {
-			Mailing_field.setStyle(defaultColor);
-		}
-		else {
-			Mailing_field.setStyle(redColor);
 		}
 		if( validation.skillValidation(programming_Skill_field1.getText()) == true) {
 			programming_Skill_field1.setStyle(defaultColor);
@@ -516,19 +539,7 @@ public class Main extends Application {
 		else {
 			duration2_field.setStyle(redColor);
 		}
-		if(validation.referenceNameValidation(reference1.getText()) == true ) {
-			reference1.setStyle(defaultColor);
-		}
-		else {
-			reference1.setStyle(redColor);
-		}
-		if(validation.referenceNameValidation(reference2.getText()) == true ) {
-			reference2.setStyle(defaultColor);
-		}
-		else {
-			reference2.setStyle(redColor);
-		}
-		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
+		
 	}
 	
 	//Create instance of html file and pass necessary fields as parameter
@@ -548,6 +559,8 @@ public class Main extends Application {
 								experience2_field,duration2_field,point011_field,
 								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 		
+		fieldForUsFormat();
+		
 		showAlertSuccess("Confirmation" , "Do you want to generate US format Resume?" , "If You are agree click ok!");
 		
 		}
@@ -561,7 +574,10 @@ public class Main extends Application {
 						addInfoTitle1, addInfoDescription1,  addInfoTitle2,  addInfoDescription2,
 						reference1, designation1 , reference2, designation2,  link_field1, link_field2 , selectedFile.getAbsolutePath() );
 		
-		showAlertSuccess("Confirmation" , "Do you want to generate BD format Resume?" , "If You are agree click ok!");
+		fieldForUsFormat();
+		validionAllField();
+		
+		 showAlertSuccess("Confirmation" , "Do you want to generate BD format Resume?" , "If You are agree click ok!");
 		
 		}
 	

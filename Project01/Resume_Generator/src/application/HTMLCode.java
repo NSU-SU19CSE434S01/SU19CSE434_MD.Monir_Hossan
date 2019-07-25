@@ -114,8 +114,9 @@ public class HTMLCode {
 			" 		<div style='text-align: center'>\n" + 
 			" 			<h2 style='margin: 0;'>" + firstName.getText()+ " " + lastName.getText() + "</h2>\n" + 
 			" 			<span>"+ address.getText() +"</span><br>\n" + 
-			" 			<span>"+ email.getText() +"\n" + 
-			" 				<span>"+ contact.getText() +"</span>\n" + 
+			" 			<span>"+ email.getText() +",\n" + 
+			" 				<span>"+ contact.getText() +"</span><br>\n" + 
+			" 				<span><b>Nationality : </b>"+ nationality.getText() +"</span>\n" + 
 			" 			</span>\n" + 
 			" 		</div>\n" + 
 			" 		<div>\n" + 
