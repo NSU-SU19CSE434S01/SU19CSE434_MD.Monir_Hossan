@@ -200,6 +200,24 @@ public boolean validateContact(String str) {
 			}
     }
 	
+	public boolean designationValidate(String str) 
+    { 	
+
+
+		Pattern p = Pattern.compile("[a-z A-Z0-9&,(:'.)-]*");
+		Matcher m = p.matcher(str);
+		
+		
+		if( m.find() && m.group().equals(str) && !str.equals("")){
+			
+				return true;
+			}
+			else {
+
+				return false ;
+			}
+    }	
+	
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
 		 Alert alert = new Alert(AlertType.WARNING);

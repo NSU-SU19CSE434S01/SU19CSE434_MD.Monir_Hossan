@@ -225,5 +225,21 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void designationValidateTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.designationValidate("Associate Professor & Lecturer,(NSU 2018 - Present)") , true);
+			assertEquals(testValidation.designationValidate("+% asoo 99 Professor") , false);
+			
+			assertTrue(testValidation.designationValidate("Associate Professor , (NSU 2018 - Present)"));
+			assertFalse(testValidation.designationValidate ("shJD ** sdjk JDHC"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 }
