@@ -254,7 +254,9 @@ public class Main extends Application {
 							//validation.validateContact(Contact_field.getText());
 							//validation.emailValidation(Email_field.getText());
 							//window.close();
+							
 							System.out.println(DoBirth_Field.getValue().toString());
+							
 						}
 							);
 		
@@ -529,7 +531,9 @@ public class Main extends Application {
 		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
 	}
 	
-	public void createHtml() {
+	//Create instance of html file and pass necessary fields as parameter
+	
+	public void createHtml() { 
 	
 	HTMLCode html = new HTMLCode();
 	HTMLCodeForBD html2 = new HTMLCodeForBD();
@@ -543,6 +547,9 @@ public class Main extends Application {
 								experience1_field,duration1_field,point01_field,point02_field,point03_field,
 								experience2_field,duration2_field,point011_field,
 								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
+		
+		showAlertSuccess("Confirmation" , "Do you want to generate US format Resume?" , "If You are agree click ok!");
+		
 		}
 	else if (rb2.isSelected() == true) {
 		
@@ -553,6 +560,8 @@ public class Main extends Application {
 						experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field, duration2_field,point011_field,point012_field,point013_field,
 						addInfoTitle1, addInfoDescription1,  addInfoTitle2,  addInfoDescription2,
 						reference1, designation1 , reference2, designation2,  link_field1, link_field2 , selectedFile.getAbsolutePath() );
+		
+		showAlertSuccess("Confirmation" , "Do you want to generate BD format Resume?" , "If You are agree click ok!");
 		
 		}
 	
@@ -730,6 +739,17 @@ public class Main extends Application {
 	public boolean showAlert(String title , String headerText , String contentText) {
 		
 		 Alert alert = new Alert(AlertType.WARNING);
+		alert.setTitle(title);
+		alert.setHeaderText(headerText);
+		alert.setContentText(contentText);
+		alert.showAndWait();
+		
+		return true;
+	}
+	
+	public boolean showAlertSuccess(String title , String headerText , String contentText) {
+		
+		 Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle(title);
 		alert.setHeaderText(headerText);
 		alert.setContentText(contentText);
