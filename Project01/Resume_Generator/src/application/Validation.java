@@ -124,7 +124,7 @@ public boolean validateContact(String str) {
 		
 		if(m.find() && m.group().equals(str)) {
 						
-			System.out.println("Name is Valid");
+			System.out.println("Institution Name is Valid");
 				return true;
 			}
 			else {

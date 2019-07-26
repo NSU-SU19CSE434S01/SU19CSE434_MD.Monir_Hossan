@@ -29,8 +29,8 @@ class TestValidation {
 	}
 	
 	/*
-	 In this stringTest() method the acceptance input is only String with both capital & small Alphabet & input alphabet can be multiple then 
-	 it will pass the test
+	 In this stringTest() method the acceptance input is only String with both capital & small Alphabet & 
+	 input alphabet can be multiple then it will pass the test
 	 The regular expression for this test case is "[a-z A-Z]*"
 	 If any number and any other character is given as input it will not pass the test case.  
 	*/
@@ -123,6 +123,12 @@ class TestValidation {
 		
 	}
 
+	/*
+	 Email need 4 different part including "abc@gmail.com" or "12abc.ab_@aanytext.anydomain" this format have to have in any 
+	 email id then it will pass the test case 
+	 The regular expression for email is "[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+" 
+	 If any email id does not follow the above email format the test case will fail
+	*/
 	
 	@Test
 	void emailValidationTest() throws Exception {
@@ -140,6 +146,11 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The institution name can have this " A-Z , a-z , & : . () , - " character and will pass the test
+		The regular expression is "[a-z A-z&:.(),-]*"
+		Except this character the test case will fail
+	*/
 	@Test
 	void validateInstitutionNameTest() throws Exception {
 	
