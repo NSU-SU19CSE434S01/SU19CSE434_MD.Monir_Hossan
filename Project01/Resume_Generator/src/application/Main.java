@@ -109,29 +109,13 @@ public class Main extends Application {
 		referenceSection();
 		linkSection();
 		additionalSection();
+		rightPart();
+	
+		labelCSS();
+		styleProperty();
+		layoutConstraint();
 		
-		 imageView = new ImageView();
-		
-		 cvFormat = new Label("Resume Format");
-		 rb1 = new RadioButton("USA");
-		 rb2 = new RadioButton("Bangladesh");
-		
-		 group = new ToggleGroup();
-		
-		
-		 btn1 = new Button();
-		 btn2 = new Button();
-		 btn3 = new Button();
-		
-		 chooseFile = new Button("Choose Image");
-		
-			labelCSS();
-			styleProperty();
-			layoutConstraint();
-			
-		
-		
-		btn1.setText("Generate");
+		// All buttion action
 		btn1.setOnAction(e -> { 
 							createHtml() ;
 							//validionAllField();
@@ -143,31 +127,12 @@ public class Main extends Application {
 							
 						}
 							);
-		
-		btn2.setText("Cencel");
 		btn2.setOnAction(e -> window.close());
-		
-		btn3.setText("Clear");
 		btn3.setOnAction(e -> clearAllField());
-		
-		
-		chooseFile.setOnAction(e -> {
-			
+		chooseFile.setOnAction(e ->{
 			selectedFile = fileChooser.showOpenDialog(primaryStage);
-            
-            if(selectedFile != null) {
-            	
-            	Image image;
-				try {
-					image = new Image(selectedFile.toURL().toString());
-					imageView.setImage(image);
-				} catch (MalformedURLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-            	//FName_field.setText(selectedFile.getAbsolutePath());
-            }
-        } );
+			 uploadImage();
+		});
 		
 		
 			gpaContainer1.getChildren().addAll( Gpa1_field );
@@ -727,8 +692,37 @@ public class Main extends Application {
 		 addInfoTitle2 = new TextField();
 		 addInfoDescription2 = new TextField();
 	}
+	public void rightPart() {
+		imageView = new ImageView();
+		chooseFile = new Button("Choose Image");
+		cvFormat = new Label("Resume Format");
+		rb1 = new RadioButton("USA");
+		rb2 = new RadioButton("Bangladesh");
+		group = new ToggleGroup();
+		
+		 btn1 = new Button();
+		 btn2 = new Button();
+		 btn3 = new Button();
+		 
+		btn1.setText("Generate");
+		btn2.setText("Cencel");
+		btn3.setText("Clear");
+	}
 	
-
+	public void uploadImage() {
+        if(selectedFile != null) {
+        	
+        	Image image;
+			try {
+				image = new Image(selectedFile.toURL().toString());
+				imageView.setImage(image);
+			} catch (MalformedURLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+        	//FName_field.setText(selectedFile.getAbsolutePath());
+        }
+	}
 	
 	
 	public void layoutConstraint() {
