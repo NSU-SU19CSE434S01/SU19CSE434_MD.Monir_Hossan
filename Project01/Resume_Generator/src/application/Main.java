@@ -3,9 +3,6 @@ package application;
 
 import java.io.File;
 import java.net.MalformedURLException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -198,8 +195,7 @@ public class Main extends Application {
 		
 			labelCSS();
 			styleProperty();
-			
-			layout();
+			layoutConstraint();
 			
 		
 		
@@ -680,6 +676,8 @@ public class Main extends Application {
 		btn3.setStyle("-fx-background-color: #FF9800");
 	}
 	
+	// set color and css for all label
+	
 	public void labelCSS() {
 		
 	Label[] allLabel = { firstName , lastName ,  birth ,
@@ -707,30 +705,7 @@ public class Main extends Application {
 				}
 	}
 	
-	
-	public boolean showAlert(String title , String headerText , String contentText) {
-		
-		 Alert alert = new Alert(AlertType.WARNING);
-		alert.setTitle(title);
-		alert.setHeaderText(headerText);
-		alert.setContentText(contentText);
-		alert.showAndWait();
-		
-		return true;
-	}
-	
-	public boolean showAlertSuccess(String title , String headerText , String contentText) {
-		
-		 Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle(title);
-		alert.setHeaderText(headerText);
-		alert.setContentText(contentText);
-		alert.showAndWait();
-		
-		return true;
-	}
-	
-	public void layout() {
+	public void layoutConstraint() {
 		
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
 		GridPane.setConstraints(firstName, 0, 1);
@@ -781,6 +756,27 @@ public class Main extends Application {
 		GridPane.setConstraints(others_Skill_field2, 0, 3 , 3 ,1);
 	}
 	
+	public boolean showAlert(String title , String headerText , String contentText) {
+		
+		 Alert alert = new Alert(AlertType.WARNING);
+		alert.setTitle(title);
+		alert.setHeaderText(headerText);
+		alert.setContentText(contentText);
+		alert.showAndWait();
+		
+		return true;
+	}
+	
+	public boolean showAlertSuccess(String title , String headerText , String contentText) {
+		
+		 Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle(title);
+		alert.setHeaderText(headerText);
+		alert.setContentText(contentText);
+		alert.showAndWait();
+		
+		return true;
+	}
 	
 
 }

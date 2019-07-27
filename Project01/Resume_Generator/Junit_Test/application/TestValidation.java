@@ -11,8 +11,6 @@ import com.sun.jdi.InternalException;
 
 
 class TestValidation {
-
-	Main ne = new Main();
 	
 	private static  Validation testValidation;
 	
@@ -30,8 +28,8 @@ class TestValidation {
 	
 	/*
 	 In this stringTest() method the acceptance input is only String with both capital & small Alphabet & 
-	 input alphabet can be multiple then it will pass the test
-	 The regular expression for this test case is "[a-z A-Z]*"
+	 input alphabet can be multiple & the character length is 2 to 15 then it will pass the test
+	 The regular expression for this test case is "[a-z A-Z]{2,15}$"
 	 If any number and any other character is given as input it will not pass the test case.  
 	*/
 	@Test
@@ -51,8 +49,8 @@ class TestValidation {
 		
 	}
 	/*
-	This test method is checking perfect date format as 2009/12/10, year must be length of 4 then / then month must be length of 2
-	then / then date must be length of 2 then it will pass this test case.
+	This test method is checking perfect date format as 2009/12/10, year must be length of 4 then / 
+	then month must be length of 2 then / then date must be length of 2 then it will pass this test case.
 	The regular expression for this test case is "[0-9]{4}/[0-9]{2}/[0-9]{2}"
 	Otherwise it will not pass this test case 
 	*/
@@ -72,6 +70,12 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	In this validateNationalityTest() method the acceptance input is only String with 
+	 	both capital & small Alphabet & input alphabet can be multiple then it will pass the test
+	 	The regular expression for this test case is "[a-z A-Z]{2,15}$"
+	 	If any number and any other character is given as input it will not pass the test case.
+	*/
 	@Test
 	void validateNationalityTest() throws Exception {
 	

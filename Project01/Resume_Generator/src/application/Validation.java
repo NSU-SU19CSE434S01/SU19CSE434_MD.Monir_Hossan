@@ -16,7 +16,7 @@ public class Validation {
     { 	
 
 
-		Pattern p = Pattern.compile("[a-z A-Z]*");
+		Pattern p = Pattern.compile("[a-z A-Z]{2,15}$");
 		Matcher m = p.matcher(str);
 		
 		
