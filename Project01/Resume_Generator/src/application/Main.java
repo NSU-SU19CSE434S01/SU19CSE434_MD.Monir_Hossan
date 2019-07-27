@@ -102,53 +102,17 @@ public class Main extends Application {
 		rightContainer.setPadding(new Insets (30));
 		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
-		title = new Label("Generate Your Resume Here!!");
-		title2 = new Label("PERSONAL INFORMATION");
-		firstName = new Label("First Name");
-		lastName = new Label("Last Name");
-		 birth = new Label("Date of Birth");
-		 nationality = new Label("Nationality");
-		 Mailing_address = new Label("Mailing Address");
-		 contact = new Label("Contact");
-		 email = new Label("Email");
+		section1();
+		
 		 skills = new Label("Your Skills");
 		 programming = new Label("Programming");
 		 others = new Label("Others");
-	
-		 FName_field = new TextField();
-		 LName_field = new TextField();
-		 DoBirth_Field = new DatePicker();
-		 Nationality_field = new TextField();
-		 Mailing_field = new TextField();
-		 Contact_field = new TextField();
-		 Email_field = new TextField();
+		 
 		 programming_Skill_field1 = new TextField();
 		 language_skill_field = new TextField();
 		 others_Skill_field2 = new TextField();
 		 
-		 title3 = new Label("EDUCATION");
-		 ssc = new Label("SSC/O Lavel");
-		 gpa1 = new Label("GPA");
-		 session1 = new Label("Session");
-		 hsc = new Label("HSC/A Lavel");
-		 gpa2 = new Label("GPA");
-		 session2 = new Label("Session");
-		 undergraduate = new Label("Uudergraduate");
-		 cgpa = new Label("CGPA");
-		 session3 = new Label("Session");
-		 
-		 Ssc_field = new TextField();
-		 Gpa1_field = new TextField();
-		 session1_field = new TextField();
-		 department1_field = new TextField();
-		 Hsc_field = new TextField();
-		 Gpa2_field = new TextField();
-		 session2_field = new TextField();
-		 department2_field = new TextField();
-		 Undergraduate_field = new TextField();
-		 Cgpa_field = new TextField();
-		 session3_field = new TextField();
-		 department3_field = new TextField();
+		 section2();
 		 
 		 experience = new Label("Experiences");	
 		 experience1_field = new TextField();
@@ -703,6 +667,51 @@ public class Main extends Application {
 							+"-fx-font-size: 20px;"
 							+"-fx-text-fill: white;");	
 				}
+	}
+	
+	public void section1() {
+		title = new Label("Generate Your Resume Here!!");
+		title2 = new Label("PERSONAL INFORMATION");
+		firstName = new Label("First Name");
+		lastName = new Label("Last Name");
+		 birth = new Label("Date of Birth");
+		 nationality = new Label("Nationality");
+		 Mailing_address = new Label("Mailing Address");
+		 contact = new Label("Contact");
+		 email = new Label("Email");
+		 
+		 FName_field = new TextField();
+		 LName_field = new TextField();
+		 DoBirth_Field = new DatePicker();
+		 Nationality_field = new TextField();
+		 Mailing_field = new TextField();
+		 Contact_field = new TextField();
+		 Email_field = new TextField();
+	}
+	public void section2() {
+		title3 = new Label("EDUCATION");
+		 ssc = new Label("SSC/O Lavel");
+		 gpa1 = new Label("GPA");
+		 session1 = new Label("Session");
+		 hsc = new Label("HSC/A Lavel");
+		 gpa2 = new Label("GPA");
+		 session2 = new Label("Session");
+		 undergraduate = new Label("Uudergraduate");
+		 cgpa = new Label("CGPA");
+		 session3 = new Label("Session");
+		 
+		 Ssc_field = new TextField();
+		 Gpa1_field = new TextField();
+		 session1_field = new TextField();
+		 department1_field = new TextField();
+		 Hsc_field = new TextField();
+		 Gpa2_field = new TextField();
+		 session2_field = new TextField();
+		 department2_field = new TextField();
+		 Undergraduate_field = new TextField();
+		 Cgpa_field = new TextField();
+		 session3_field = new TextField();
+		 department3_field = new TextField();
 	}
 	
 	public void layoutConstraint() {
