@@ -38,17 +38,12 @@ public class Main extends Application {
 	HBox gpaContainer1 = new HBox(20);
 	HBox gpaContainer2 = new HBox(20);
 	HBox gpaContainer = new HBox(20);
-
-	
 	HBox experience01_container = new HBox(10);
 	HBox experience02_container = new HBox(10);
-	
 	HBox reference01_container = new HBox(10);
 	HBox reference02_container = new HBox(10);
-	
 	HBox addInfoContainer1 = new HBox(10);
 	HBox addInfoContainer2 = new HBox(10);
-	
 	VBox rightContainer = new VBox(10);
 	
 	FileChooser fileChooser = new FileChooser();
@@ -57,7 +52,6 @@ public class Main extends Application {
 	contact, email , skills,programming,others,	 title3,ssc,gpa1, session1, hsc, gpa2,
 	session2, undergraduate, cgpa, session3, experience, reference, additionalInfo, cvFormat,
 	importantLink;
-	
 	TextField FName_field,
 	 LName_field, Nationality_field, Mailing_field , Contact_field, Email_field, 
 	 programming_Skill_field1, language_skill_field, others_Skill_field2,Ssc_field, Gpa1_field,
@@ -77,6 +71,7 @@ public class Main extends Application {
 	Button btn1, btn2, btn3,chooseFile;
 	
 	Validation validation = new Validation();
+	CheckValidation ckValid = new CheckValidation();
 	
 	File selectedFile;
 	
@@ -174,7 +169,6 @@ public class Main extends Application {
 		
 	}
 	
-	
 	public void clearAllField() {
 		
 		TextField field [] = {FName_field,
@@ -196,218 +190,6 @@ public class Main extends Application {
 		DoBirth_Field.setValue(null);
 	}
 	
-	public void validationCheck() {
-		
-		CheckValidation ckValid = new CheckValidation();
-		
-		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
-				Email_field, Contact_field, Hsc_field, Gpa2_field, session2_field, department2_field,
-				Undergraduate_field, Cgpa_field, session3_field, department3_field,
-				programming_Skill_field1, language_skill_field, others_Skill_field2,
-				experience1_field, duration1_field, point01_field, point02_field, point03_field,
-				experience2_field, duration2_field, point011_field, point012_field, point013_field,
-				addInfoTitle1, addInfoDescription1, addInfoTitle2, addInfoDescription2);
-		ckValid.validionAllFieldBDFormat(Ssc_field, Gpa1_field, session1_field, department1_field,
-				DoBirth_Field, reference1, reference2);
-	}
-	
-	public void validionAllField() {
-		
-		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DoBirth_Field.getValue());
-		
-		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
-		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
-		
-		
-		if(validation.validateInstitutionName(Ssc_field.getText()) == true) {
-			Ssc_field.setStyle(defaultColor);
-		}
-		else {
-			Ssc_field.setStyle(redColor);
-		}
-		
-		
-		if(validation.validateGPA(Gpa1_field.getText()) == true) {
-			Gpa1_field.setStyle(defaultColor);
-		}
-		else {
-			Gpa1_field.setStyle(redColor);
-		}
-		
-		
-		if(validation.validateSession(session1_field.getText()) == true) {
-			session1_field.setStyle(defaultColor);
-		}
-		else {
-			session1_field.setStyle(redColor);
-		}
-		
-		
-		if(validation.isStringOnlyAlphabet(department1_field.getText()) == true) {
-			department1_field.setStyle(defaultColor);
-		}
-		else {
-			department1_field.setStyle(redColor);
-		}
-		
-		if( validation.validateDate(DoBirth_Field.getValue().toString()) == false) {
-			DoBirth_Field.setStyle(defaultColor);
-		}
-		else  {
-			DoBirth_Field.setStyle(redColor);
-		}
-		if(validation.referenceNameValidation(reference1.getText()) == true ) {
-			reference1.setStyle(defaultColor);
-		}
-		else {
-			reference1.setStyle(redColor);
-		}
-		if(validation.referenceNameValidation(reference2.getText()) == true ) {
-			reference2.setStyle(defaultColor);
-		}
-		else {
-			reference2.setStyle(redColor);
-		}
-		//showAlert("Error" , "Red color text box are invalid" , "Please give valid input");
-	}
-	
-	public void fieldForUsFormat() {
-		
-		String defaultColor = "-fx-border-color: none; -fx-border-color: none;-fx-text-inner-color: none;" ;
-		String redColor = "-fx-border-color: red; -fx-border-width: 2px ;-fx-text-inner-color: red;" ;
-		
-		if(validation.isStringOnlyAlphabet(FName_field.getText()) == true ) {
-			FName_field.setStyle(defaultColor);
-		}
-		else {
-			FName_field.setStyle(redColor);
-		}
-		if( validation.isStringOnlyAlphabet(LName_field.getText()) == true ) {
-			LName_field.setStyle(defaultColor);
-		}
-		else {
-			LName_field.setStyle(redColor);
-		}
-		if(validation.isStringOnlyAlphabet(Nationality_field.getText()) == true ) {
-			Nationality_field.setStyle(defaultColor);
-		}
-		else {
-			Nationality_field.setStyle(redColor);
-		}
-		if(validation.validateContact(Contact_field.getText()) == true) {
-			Contact_field.setStyle(defaultColor);
-		}
-		else {
-			Contact_field.setStyle(redColor);
-		}
-		
-		if(validation.emailValidation(Email_field.getText()) == true) {
-			Email_field.setStyle(defaultColor);
-		}
-		else {
-			Email_field.setStyle(redColor);
-		}
-		if( validation.mailingAddressValidate(Mailing_field.getText()) == true) {
-			Mailing_field.setStyle(defaultColor);
-		}
-		else {
-			Mailing_field.setStyle(redColor);
-		}
-		if( validation.validateInstitutionName(Hsc_field.getText()) == true) {
-			Hsc_field.setStyle(defaultColor);
-		}
-		else {
-			Hsc_field.setStyle(redColor);
-		}
-		if( validation.validateInstitutionName(Undergraduate_field.getText()) == true) {
-			Undergraduate_field.setStyle(defaultColor);
-		}
-		else {
-			Undergraduate_field.setStyle(redColor);
-		}
-		if( validation.validateGPA(Gpa2_field.getText()) == true) {
-			Gpa2_field.setStyle(defaultColor);
-		}
-		else {
-			Gpa2_field.setStyle(redColor);
-		}
-		if( validation.validateGPA(Cgpa_field.getText()) == true) {
-			Cgpa_field.setStyle(defaultColor);
-		}
-		else {
-			Cgpa_field.setStyle(redColor);
-		}
-		if( validation.validateSession(session2_field.getText()) == true) {
-			session2_field.setStyle(defaultColor);
-		}
-		else {
-			session2_field.setStyle(redColor);
-		}
-		if( validation.validateSession(session3_field.getText()) == true) {
-			session3_field.setStyle(defaultColor);
-		}
-		else {
-			session3_field.setStyle(redColor);
-		}
-		if( validation.isStringOnlyAlphabet(department2_field.getText()) == true) {
-			department2_field.setStyle(defaultColor);
-		}
-		else {
-			department2_field.setStyle(redColor);
-		}
-		if( validation.isStringOnlyAlphabet(department3_field.getText()) == true) {
-			department3_field.setStyle(defaultColor);
-		}
-		else {
-			department3_field.setStyle(redColor);
-		}
-		if( validation.skillValidation(programming_Skill_field1.getText()) == true) {
-			programming_Skill_field1.setStyle(defaultColor);
-		}
-		else {
-			programming_Skill_field1.setStyle(redColor);
-		}
-		if( validation.skillValidation(language_skill_field.getText()) == true ) {
-			language_skill_field.setStyle(defaultColor);
-			
-		}
-		else {
-			language_skill_field.setStyle(redColor);
-		}
-		if( validation.skillValidation(others_Skill_field2.getText()) == true ) {
-			others_Skill_field2.setStyle(defaultColor);
-			
-		}
-		else {
-			others_Skill_field2.setStyle(redColor);
-		}
-		if( validation.validateInstitutionName(experience1_field.getText()) == true) {
-			experience1_field.setStyle(defaultColor);
-		}
-		else {
-			experience1_field.setStyle(redColor);
-		}
-		if( validation.validateInstitutionName(experience2_field.getText()) == true) {
-			experience2_field.setStyle(defaultColor);
-		}
-		else {
-			experience2_field.setStyle(redColor);
-		}
-		if( validation.validateSession(duration1_field.getText()) == true) {
-			duration1_field.setStyle(defaultColor);
-		}
-		else {
-			duration1_field.setStyle(redColor);
-		}
-		if( validation.validateSession(duration2_field.getText()) == true) {
-			duration2_field.setStyle(defaultColor);
-		}
-		else {
-			duration2_field.setStyle(redColor);
-		}
-		
-	}
-	
 	//Create instance of html file and pass necessary fields as parameter
 	
 	public void createHtml() { 
@@ -425,7 +207,13 @@ public class Main extends Application {
 								experience2_field,duration2_field,point011_field,
 								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
 		
-		fieldForUsFormat();
+		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
+				Email_field, Contact_field, Hsc_field, Gpa2_field, session2_field, department2_field,
+				Undergraduate_field, Cgpa_field, session3_field, department3_field,
+				programming_Skill_field1, language_skill_field, others_Skill_field2,
+				experience1_field, duration1_field, point01_field, point02_field, point03_field,
+				experience2_field, duration2_field, point011_field, point012_field, point013_field,
+				addInfoTitle1, addInfoDescription1, addInfoTitle2, addInfoDescription2);
 		
 		showAlertSuccess("Confirmation" , "Do you want to generate US format Resume?" , "If You are agree click ok!");
 		
@@ -440,8 +228,7 @@ public class Main extends Application {
 						addInfoTitle1, addInfoDescription1,  addInfoTitle2,  addInfoDescription2,
 						reference1, designation1 , reference2, designation2,  link_field1, link_field2 , selectedFile.getAbsolutePath() );
 		
-		fieldForUsFormat();
-		validionAllField();
+			validationCheck();
 		
 		 showAlertSuccess("Confirmation" , "Do you want to generate BD format Resume?" , "If You are agree click ok!");
 		
@@ -449,16 +236,23 @@ public class Main extends Application {
 	
 	}
 	
-	public void styleProperty() {
+	public void validationCheck() {
 		
-		
-		setPromptText();
-
-		setStyle();
-		
-
-		setPadding();
+		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
+				Email_field, Contact_field, Hsc_field, Gpa2_field, session2_field, department2_field,
+				Undergraduate_field, Cgpa_field, session3_field, department3_field,
+				programming_Skill_field1, language_skill_field, others_Skill_field2,
+				experience1_field, duration1_field, point01_field, point02_field, point03_field,
+				experience2_field, duration2_field, point011_field, point012_field, point013_field,
+				addInfoTitle1, addInfoDescription1, addInfoTitle2, addInfoDescription2);
+		ckValid.validionAllFieldBDFormat(Ssc_field, Gpa1_field, session1_field, department1_field,
+				DoBirth_Field, reference1, reference2);
+	}
 	
+	public void styleProperty() {
+		setPromptText();
+		setStyle();
+		setPadding();
 		setPrewidthHeight();
 		
 		imageView.setPreserveRatio(true);
@@ -481,9 +275,7 @@ public class Main extends Application {
 		rb1.setSelected(true);
 		rb1.setTextFill((Color.web("white")));
 		rb2.setToggleGroup(group);
-		rb2.setTextFill((Color.web("white")));
-		
-		
+		rb2.setTextFill((Color.web("white")));	
 	}
 	public void setPadding() {
 		titleContainer.setPadding(new Insets(10));
@@ -501,20 +293,16 @@ public class Main extends Application {
 		imageView.setFitHeight(150);
 		imageView.setFitWidth(150);
 		
-
 		Gpa1_field.setPrefWidth(120);
 		Gpa2_field.setPrefWidth(120);
 		Cgpa_field.setPrefWidth(120);
 
-		
 		addInfoDescription1.setPrefWidth(400);
 		addInfoDescription2.setPrefWidth(400);
 		
-		programming_Skill_field1.setPrefWidth(500);
-		
+		programming_Skill_field1.setPrefWidth(500);		
 		programming_Skill_field1.setPrefWidth(260);
 		others_Skill_field2.setPrefWidth(260);
-		
 		
 		experience1_field.setPrefWidth(250);
 		experience2_field.setPrefWidth(250);
@@ -526,8 +314,7 @@ public class Main extends Application {
 		btn2.setPrefSize(150, 35);
 		btn3.setPrefSize(150, 35);
 	}
-	public void setPromptText() {
-		
+	public void setPromptText() {	
 		Ssc_field.setPromptText("Institution Name");
 		Gpa1_field.setPromptText("GPA");
 		session1_field.setPromptText("AUg 2012 - Jan 2013");
@@ -561,7 +348,6 @@ public class Main extends Application {
 		point012_field.setPromptText(">>");
 		point013_field.setPromptText(">>");
 		
-		
 		reference1.setPromptText("NAME");
 		reference2.setPromptText("NAME");
 		
@@ -584,7 +370,6 @@ public class Main extends Application {
 				+"-fx-font-size: 30px;"
 				+"-fx-text-fill: white;");	
 
-		
 		btn1.setStyle("-fx-background-color: #66BB6A");
 		btn2.setStyle("-fx-background-color: #EF5350");
 		btn3.setStyle("-fx-background-color: #FF9800");
@@ -664,18 +449,15 @@ public class Main extends Application {
 		 department3_field = new TextField();
 	}
 	public void skillSection() {
-		
 		 skills = new Label("Your Skills");
 		 programming = new Label("Programming");
 		 others = new Label("Others");
 		 
 		 programming_Skill_field1 = new TextField();
 		 language_skill_field = new TextField();
-		 others_Skill_field2 = new TextField();
-		 
+		 others_Skill_field2 = new TextField(); 
 	}
 	public void experianceSection() {
-		 
 		 experience = new Label("Experiences");	
 		 experience1_field = new TextField();
 		 duration1_field = new TextField();
@@ -687,7 +469,6 @@ public class Main extends Application {
 		 point011_field = new TextField();
 		 point012_field = new TextField();
 		 point013_field = new TextField();
-		
 	}
 	public void referenceSection() {
 		 reference = new Label("References");
@@ -696,8 +477,7 @@ public class Main extends Application {
 		 reference2 = new TextField();
 		 designation2 = new TextField();
 	}
-	public void linkSection() {
-		 
+	public void linkSection() {	 
 		 importantLink = new Label("Important Link");
 		 link_field1 = new TextField();
 		 link_field2 = new TextField();
@@ -740,10 +520,7 @@ public class Main extends Application {
         	//FName_field.setText(selectedFile.getAbsolutePath());
         }
 	}
-	
-	
 	public void layoutConstraint() {
-		
 		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
 		GridPane.setConstraints(firstName, 0, 1);
 		GridPane.setConstraints(lastName, 2, 1);
@@ -794,7 +571,6 @@ public class Main extends Application {
 	}
 	
 	public boolean showAlert(String title , String headerText , String contentText) {
-		
 		 Alert alert = new Alert(AlertType.WARNING);
 		alert.setTitle(title);
 		alert.setHeaderText(headerText);
@@ -805,7 +581,6 @@ public class Main extends Application {
 	}
 	
 	public boolean showAlertSuccess(String title , String headerText , String contentText) {
-		
 		 Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle(title);
 		alert.setHeaderText(headerText);
@@ -814,6 +589,4 @@ public class Main extends Application {
 		
 		return true;
 	}
-	
-
 }
