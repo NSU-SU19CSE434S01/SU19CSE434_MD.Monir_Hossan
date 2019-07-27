@@ -199,53 +199,9 @@ public class Main extends Application {
 			labelCSS();
 			styleProperty();
 			
-		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
-		GridPane.setConstraints(firstName, 0, 1);
-		GridPane.setConstraints(lastName, 2, 1);
-		GridPane.setConstraints(birth, 0, 2);
-		GridPane.setConstraints(nationality, 2, 2);
-		GridPane.setConstraints(Mailing_address, 0, 3);
-		GridPane.setConstraints(contact, 2, 4);
-		GridPane.setConstraints(email, 0, 4);
-		GridPane.setConstraints(FName_field, 1, 1);
-		GridPane.setConstraints(LName_field, 3, 1);
-		GridPane.setConstraints(DoBirth_Field, 1, 2);
-		GridPane.setConstraints(Nationality_field, 3, 2);
-		GridPane.setConstraints(Mailing_field, 1, 3 , 4 , 1);
-		GridPane.setConstraints(Contact_field, 3, 4);
-		GridPane.setConstraints(Email_field, 1, 4);
+			layout();
+			
 		
-		GridPane.setConstraints(title3, 0, 5);
-		GridPane.setConstraints(ssc, 0, 6);
-		GridPane.setConstraints(gpaContainer1, 3, 6);
-		GridPane.setConstraints(session1, 0, 7);
-		GridPane.setConstraints(session1_field, 1, 7);
-		GridPane.setConstraints(department1_field, 2, 7 , 2 ,1);
-		GridPane.setConstraints(hsc, 0, 8);
-		GridPane.setConstraints(session2, 0, 9);
-		GridPane.setConstraints(session2_field, 1, 9);
-		GridPane.setConstraints(department2_field, 2, 9 , 2 ,1);
-		GridPane.setConstraints(gpaContainer2, 3, 8);
-		GridPane.setConstraints(undergraduate, 0, 10);
-		GridPane.setConstraints(gpaContainer, 3, 10);
-		GridPane.setConstraints(session3, 0, 11);
-		GridPane.setConstraints(session3_field, 1, 11);
-		GridPane.setConstraints(department3_field, 2, 11 , 2 ,1);
-		
-		GridPane.setConstraints(Ssc_field, 1, 6 , 2 ,1);
-		GridPane.setConstraints(Hsc_field, 1, 8 , 2 ,1);
-		GridPane.setConstraints(Undergraduate_field, 1, 10 , 2 ,1);
-		
-		GridPane.setConstraints(additionalInfo, 0, 12 );
-		GridPane.setConstraints(addInfoContainer1, 0, 13 ,4 ,1 );
-		GridPane.setConstraints(addInfoContainer2, 0, 14  ,4 ,1);
-		
-		GridPane.setConstraints(skills, 0, 0 );
-		GridPane.setConstraints(programming, 0, 1);
-		GridPane.setConstraints(others, 0, 2);
-		GridPane.setConstraints(programming_Skill_field1, 0, 1 , 3 ,1);
-		GridPane.setConstraints(language_skill_field, 0, 2 , 3 ,1);
-		GridPane.setConstraints(others_Skill_field2, 0, 3 , 3 ,1);
 		
 		btn1.setText("Generate");
 		btn1.setOnAction(e -> { 
@@ -772,6 +728,57 @@ public class Main extends Application {
 		alert.showAndWait();
 		
 		return true;
+	}
+	
+	public void layout() {
+		
+		GridPane.setConstraints(title2, 0, 0 , 2 , 1);
+		GridPane.setConstraints(firstName, 0, 1);
+		GridPane.setConstraints(lastName, 2, 1);
+		GridPane.setConstraints(birth, 0, 2);
+		GridPane.setConstraints(nationality, 2, 2);
+		GridPane.setConstraints(Mailing_address, 0, 3);
+		GridPane.setConstraints(contact, 2, 4);
+		GridPane.setConstraints(email, 0, 4);
+		GridPane.setConstraints(FName_field, 1, 1);
+		GridPane.setConstraints(LName_field, 3, 1);
+		GridPane.setConstraints(DoBirth_Field, 1, 2);
+		GridPane.setConstraints(Nationality_field, 3, 2);
+		GridPane.setConstraints(Mailing_field, 1, 3 , 4 , 1);
+		GridPane.setConstraints(Contact_field, 3, 4);
+		GridPane.setConstraints(Email_field, 1, 4);
+		
+		GridPane.setConstraints(title3, 0, 5);
+		GridPane.setConstraints(ssc, 0, 6);
+		GridPane.setConstraints(gpaContainer1, 3, 6);
+		GridPane.setConstraints(session1, 0, 7);
+		GridPane.setConstraints(session1_field, 1, 7);
+		GridPane.setConstraints(department1_field, 2, 7 , 2 ,1);
+		GridPane.setConstraints(hsc, 0, 8);
+		GridPane.setConstraints(session2, 0, 9);
+		GridPane.setConstraints(session2_field, 1, 9);
+		GridPane.setConstraints(department2_field, 2, 9 , 2 ,1);
+		GridPane.setConstraints(gpaContainer2, 3, 8);
+		GridPane.setConstraints(undergraduate, 0, 10);
+		GridPane.setConstraints(gpaContainer, 3, 10);
+		GridPane.setConstraints(session3, 0, 11);
+		GridPane.setConstraints(session3_field, 1, 11);
+		GridPane.setConstraints(department3_field, 2, 11 , 2 ,1);
+		
+		GridPane.setConstraints(Ssc_field, 1, 6 , 2 ,1);
+		GridPane.setConstraints(Hsc_field, 1, 8 , 2 ,1);
+		GridPane.setConstraints(Undergraduate_field, 1, 10 , 2 ,1);
+		
+		GridPane.setConstraints(additionalInfo, 0, 12 );
+		GridPane.setConstraints(addInfoContainer1, 0, 13 ,4 ,1 );
+		GridPane.setConstraints(addInfoContainer2, 0, 14  ,4 ,1);
+		
+		GridPane.setConstraints(skills, 0, 0 );
+		GridPane.setConstraints(programming, 0, 1);
+		GridPane.setConstraints(others, 0, 2);
+		GridPane.setConstraints(programming_Skill_field1, 0, 1 , 3 ,1);
+		GridPane.setConstraints(language_skill_field, 0, 2 , 3 ,1);
+		GridPane.setConstraints(others_Skill_field2, 0, 3 , 3 ,1);
 	}
 	
 	
