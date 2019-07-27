@@ -103,7 +103,7 @@ public boolean mailingAddressValidate(String mailingAddress) {
 	
 public boolean validateContact(String str) {
 		
-		Pattern p = Pattern.compile("([0][1])+[0-9]{9}");
+		Pattern p = Pattern.compile("([0-9+]{0,4}[0][1])+[0-9]{9}");
 		Matcher m = p.matcher(str);
 		
 		if( m.find() && m.group().equals(str)) {

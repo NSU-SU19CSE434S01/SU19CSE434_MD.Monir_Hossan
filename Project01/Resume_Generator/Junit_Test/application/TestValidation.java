@@ -92,16 +92,22 @@ class TestValidation {
 		}
 		
 	}
-	
+	/*
+	 	The Regular expression for contact validation is "([0-9+]{0,4}[0][1])+[0-9]{9}"
+	 	Here the input character is only 0-9, and the contact must have 01 in first and
+	 	then 9 digit & contact can have country "0088" code or "+" before 01.
+	 	The total length of contact can be 11 or 11 to 15 after that test case will pass
+	 	Otherwise test case will fail.
+	*/
 	@Test
 	void contactValidationTest() throws Exception {
 	
 		try {
 			
-			assertEquals(testValidation.validateContact("01345654321") , true);
+			assertEquals(testValidation.validateContact("008801345654321") , true);
 			assertEquals(testValidation.validateContact("0888883") , false);
 			
-			assertTrue(testValidation.validateContact("01343213453"));
+			assertTrue(testValidation.validateContact("+01343213453"));
 			assertFalse(testValidation.validateContact ("333454jj"));
 		}
 		catch(InternalException e){
