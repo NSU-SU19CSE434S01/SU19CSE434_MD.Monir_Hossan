@@ -102,45 +102,13 @@ public class Main extends Application {
 		rightContainer.setPadding(new Insets (30));
 		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
 
-		section1();
-		
-		 skills = new Label("Your Skills");
-		 programming = new Label("Programming");
-		 others = new Label("Others");
-		 
-		 programming_Skill_field1 = new TextField();
-		 language_skill_field = new TextField();
-		 others_Skill_field2 = new TextField();
-		 
-		 section2();
-		 
-		 experience = new Label("Experiences");	
-		 experience1_field = new TextField();
-		 duration1_field = new TextField();
-		 point01_field= new TextField();
-		 point02_field = new TextField();
-		 point03_field = new TextField();
-		 experience2_field = new TextField();
-		 duration2_field = new TextField();
-		 point011_field = new TextField();
-		 point012_field = new TextField();
-		 point013_field = new TextField();
-		
-		 reference = new Label("References");
-		 reference1 = new TextField();
-		 designation1 = new TextField();
-		 reference2 = new TextField();
-		 designation2 = new TextField();
-		 
-		 importantLink = new Label("Important Link");
-		 link_field1 = new TextField();
-		 link_field2 = new TextField();
-		
-		 additionalInfo = new Label("Additional Information");
-		 addInfoTitle1 = new TextField();
-		 addInfoDescription1 = new TextField();
-		 addInfoTitle2 = new TextField();
-		 addInfoDescription2 = new TextField();
+		personalInfoSection();
+		educationSection();
+		skillSection();
+		experianceSection();
+		referenceSection();
+		linkSection();
+		additionalSection();
 		
 		 imageView = new ImageView();
 		
@@ -669,7 +637,7 @@ public class Main extends Application {
 				}
 	}
 	
-	public void section1() {
+	public void personalInfoSection() {
 		title = new Label("Generate Your Resume Here!!");
 		title2 = new Label("PERSONAL INFORMATION");
 		firstName = new Label("First Name");
@@ -688,7 +656,7 @@ public class Main extends Application {
 		 Contact_field = new TextField();
 		 Email_field = new TextField();
 	}
-	public void section2() {
+	public void educationSection() {
 		title3 = new Label("EDUCATION");
 		 ssc = new Label("SSC/O Lavel");
 		 gpa1 = new Label("GPA");
@@ -713,6 +681,55 @@ public class Main extends Application {
 		 session3_field = new TextField();
 		 department3_field = new TextField();
 	}
+	public void skillSection() {
+		
+		 skills = new Label("Your Skills");
+		 programming = new Label("Programming");
+		 others = new Label("Others");
+		 
+		 programming_Skill_field1 = new TextField();
+		 language_skill_field = new TextField();
+		 others_Skill_field2 = new TextField();
+		 
+	}
+	public void experianceSection() {
+		 
+		 experience = new Label("Experiences");	
+		 experience1_field = new TextField();
+		 duration1_field = new TextField();
+		 point01_field= new TextField();
+		 point02_field = new TextField();
+		 point03_field = new TextField();
+		 experience2_field = new TextField();
+		 duration2_field = new TextField();
+		 point011_field = new TextField();
+		 point012_field = new TextField();
+		 point013_field = new TextField();
+		
+	}
+	public void referenceSection() {
+		 reference = new Label("References");
+		 reference1 = new TextField();
+		 designation1 = new TextField();
+		 reference2 = new TextField();
+		 designation2 = new TextField();
+	}
+	public void linkSection() {
+		 
+		 importantLink = new Label("Important Link");
+		 link_field1 = new TextField();
+		 link_field2 = new TextField();
+	}
+	public void additionalSection() {
+		 additionalInfo = new Label("Additional Information");
+		 addInfoTitle1 = new TextField();
+		 addInfoDescription1 = new TextField();
+		 addInfoTitle2 = new TextField();
+		 addInfoDescription2 = new TextField();
+	}
+	
+
+	
 	
 	public void layoutConstraint() {
 		
