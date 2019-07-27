@@ -184,7 +184,9 @@ public class Main extends Application {
 				 session2_field,department2_field,Undergraduate_field,Cgpa_field,session3_field,department3_field ,
 				 experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field,
 				 duration2_field,point011_field,point012_field,point013_field, reference1, reference2, addInfoTitle1,
-				 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2};
+				 addInfoDescription1,  addInfoTitle2,  addInfoDescription2, link_field1, link_field2,
+				 reference1, designation1, reference2, designation2
+				 };
 		
 		for(int i = 0 ; i < field.length ; i++) {
 			
@@ -192,6 +194,21 @@ public class Main extends Application {
 
 		}
 		DoBirth_Field.setValue(null);
+	}
+	
+	public void validationCheck() {
+		
+		CheckValidation ckValid = new CheckValidation();
+		
+		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
+				Email_field, Contact_field, Hsc_field, Gpa2_field, session2_field, department2_field,
+				Undergraduate_field, Cgpa_field, session3_field, department3_field,
+				programming_Skill_field1, language_skill_field, others_Skill_field2,
+				experience1_field, duration1_field, point01_field, point02_field, point03_field,
+				experience2_field, duration2_field, point011_field, point012_field, point013_field,
+				addInfoTitle1, addInfoDescription1, addInfoTitle2, addInfoDescription2);
+		ckValid.validionAllFieldBDFormat(Ssc_field, Gpa1_field, session1_field, department1_field,
+				DoBirth_Field, reference1, reference2);
 	}
 	
 	public void validionAllField() {
