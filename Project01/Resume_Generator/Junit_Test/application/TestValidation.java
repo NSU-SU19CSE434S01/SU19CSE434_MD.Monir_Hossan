@@ -177,14 +177,18 @@ class TestValidation {
 		}
 		
 	}
-	
+	/*
+	 	The regular expression is "[0-9]{1}[.][0-9]{2}"
+	 	The accepted input for GPA field 0-9 including a '.'. The format must be satisfy '0.00', 
+	 	Before the '.' must be 1 digit and after '.' 2 digit then test case will pass.
+	*/
 	@Test
 	void validateGPATest() throws Exception {
 	
 		try {
 			
 			assertEquals(testValidation.validateGPA("3.44") , true);
-			assertEquals(testValidation.validateGPA("22") , false);
+			assertEquals(testValidation.validateGPA("22.00") , false);
 			
 			assertTrue(testValidation.validateGPA("5.00"));
 			assertFalse(testValidation.validateGPA ("22e.44"));
