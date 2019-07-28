@@ -167,7 +167,7 @@ public boolean validateContact(String str) {
 }
 	public boolean skillValidation(String str) {
 		
-	Pattern p = Pattern.compile("[a-zA-Z0-9 +/.:(',*&)#]*");
+	Pattern p = Pattern.compile("[a-zA-Z0-9 +/.:(',*&)#]{10,120}");
 	Matcher m = p.matcher(str);
 	
 	if(m.find() && m.group().equals(str)) {
@@ -184,7 +184,7 @@ public boolean validateContact(String str) {
     { 	
 
 
-		Pattern p = Pattern.compile("[a-z A-Z(,.:')]*");
+		Pattern p = Pattern.compile("[a-z A-Z(,.:')]{5,50}");
 		Matcher m = p.matcher(str);
 		
 		
@@ -204,7 +204,7 @@ public boolean validateContact(String str) {
     { 	
 
 
-		Pattern p = Pattern.compile("[a-z A-Z0-9&,(:'.)-]*");
+		Pattern p = Pattern.compile("[a-z A-Z0-9&,(:'.)-]{5,120}");
 		Matcher m = p.matcher(str);
 		
 		

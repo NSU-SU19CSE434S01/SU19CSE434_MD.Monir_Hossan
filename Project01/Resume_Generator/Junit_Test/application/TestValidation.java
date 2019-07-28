@@ -230,6 +230,11 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The regular expression is "[a-zA-Z0-9 +/.:(',*&)#]{10,120}"
+	 	The 3 skill fields have to satisfy the above regex including all alphabet, numeric and some special 
+	 	character length can be minimum 10 character & maximum 120 character then test case will pass.
+	 */
 	@Test
 	void skillValidationtest() throws Exception {
 	
@@ -246,6 +251,11 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The regular expression is "[a-z A-Z(,.:')]{5,50}"
+	 	The both reference name must be 5 to 50 character and can have only alphabet and some special character
+	 	mention in the above regex. Otherwise test case will fail.
+	 */
 	@Test
 	void referenceNameValidationtest() throws Exception {
 	
@@ -262,6 +272,11 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The regular expression is "[a-z A-Z0-9&,(:'.)-]{5,120}"
+	 	The both designation field must be 5 to 120 character and can have alphabet, numeric
+	 	 and some special character mention in the above regex. Then the test case will pass.
+	 */
 	@Test
 	void designationValidateTest() throws Exception {
 	
