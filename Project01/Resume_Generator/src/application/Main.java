@@ -235,7 +235,6 @@ public class Main extends Application {
 		}
 	
 	}
-	
 	public void validationCheck() {
 		
 		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
