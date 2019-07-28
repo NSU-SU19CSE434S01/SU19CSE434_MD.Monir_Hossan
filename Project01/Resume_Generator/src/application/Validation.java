@@ -82,7 +82,7 @@ public boolean validateDate(String str) {
 
 public boolean mailingAddressValidate(String mailingAddress) {
 	
-	Pattern p = Pattern.compile("[a-z A-Z0-9.,-:_#(/S)]*");
+	Pattern p = Pattern.compile("[a-z A-Z0-9.,-:_#(/S)]{10,50}");
 	Matcher m = p.matcher(mailingAddress);
 	
 	
