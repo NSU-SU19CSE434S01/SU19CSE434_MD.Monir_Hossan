@@ -115,7 +115,11 @@ class TestValidation {
 		}
 		
 	}
-	
+	/*
+	  	The regular expression is "[a-z A-Z0-9.,-:_#(/S)]{10,50}"
+	  	Mailing address can have 10 to 50 character including alphabet, numeric and some special character
+	  	mention in regular expression then test case will pass.	
+	*/
 	@Test
 	void mailingAddressValidateTest() throws Exception {
 	
@@ -198,6 +202,12 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The regular expression is "[a-zA-Z]{3}[ ][0-9]{4}[ ][-][ ][a-zA-Z]{3}[ ][0-9]{4}"
+	 	All session and duration field must have this format, i.e: "Aug 2012 - Jan 2016" that means
+	 	session have to have month name in 3 character & year in 4 digit and there must be a hyphen between
+	 	start and end session then the test case will pass.
+	 */
 	@Test
 	void validateSessionTest() throws Exception {
 	
@@ -214,6 +224,12 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 In this validateDepartmentest() method the acceptance input is only String with both capital & 
+	 small Alphabet & input alphabet can be multiple & the character length is 2 to 15 then it will
+	 pass the test The regular expression for this test case is "[a-z A-Z]{2,15}$"
+	 If any number and any other character is given as input it will not pass the test case.  
+	*/
 	@Test
 	void validateDepartmentest() throws Exception {
 	
