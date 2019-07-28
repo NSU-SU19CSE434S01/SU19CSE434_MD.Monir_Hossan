@@ -227,10 +227,10 @@ public class Main extends Application {
 						experience1_field, duration1_field,point01_field,point02_field,point03_field,experience2_field, duration2_field,point011_field,point012_field,point013_field,
 						addInfoTitle1, addInfoDescription1,  addInfoTitle2,  addInfoDescription2,
 						reference1, designation1 , reference2, designation2,  link_field1, link_field2 , selectedFile.getAbsolutePath() );
-		
-			validationCheck();
-		
+		validationCheck();
 		 showAlertSuccess("Confirmation" , "Do you want to generate BD format Resume?" , "If You are agree click ok!");
+		 
+			
 		
 		}
 	
