@@ -152,6 +152,30 @@ public void fieldForUsFormat(TextField firstName , TextField lastName,
 		else {
 			experience02Duration.setStyle(redColor);
 		}
+		if( validation.additionalInfoTitle(additionalTitle1.getText()) == true) {
+			additionalTitle1.setStyle(defaultColor);
+		}
+		else {
+			additionalTitle1.setStyle(redColor);
+		}
+		if( validation.additionalInfoDes(additionalDes1.getText()) == true) {
+			additionalDes1.setStyle(defaultColor);
+		}
+		else {
+			additionalDes1.setStyle(redColor);
+		}
+		if( validation.additionalInfoTitle(additionalTitle2.getText()) == true) {
+			additionalTitle2.setStyle(defaultColor);
+		}
+		else {
+			additionalTitle2.setStyle(redColor);
+		}
+		if( validation.additionalInfoDes(additionalDes2.getText()) == true) {
+			additionalDes2.setStyle(defaultColor);
+		}
+		else {
+			additionalDes2.setStyle(redColor);
+		}
 		
 	}
 

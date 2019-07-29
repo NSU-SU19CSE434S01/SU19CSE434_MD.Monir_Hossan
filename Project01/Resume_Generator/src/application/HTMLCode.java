@@ -99,7 +99,8 @@ public class HTMLCode {
 						 TextField experience01Duration,TextField experience01_1,TextField experience01_2,
 						 TextField experience01_3,TextField experience02,TextField experience02Duration,
 						 TextField experience02_1 ,TextField experience02_2,TextField experience02_3,
-						 TextField additionalTitle1,TextField additionalDes1,TextField additionalTitle2,TextField additionalDes2
+						 TextField additionalTitle1,TextField additionalDes1,TextField additionalTitle2,
+						 TextField additionalDes2 , String imagepath
 						 ) {
 		
 		//java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(field3.getValue());
@@ -111,6 +112,7 @@ public class HTMLCode {
 			" </head>\n" + 
 			" <body style='background-color: lightgrey ;'>\n" + 
 			" 	<div style='margin: auto ; background-color:  whitesmoke;  width: 50%; padding: 30px;'>\n" + 
+			" <div style='float: right;'> <img src='"+ imagepath +"' height='90' width='90'> </div>\n" +
 			" 		<div style='text-align: center'>\n" + 
 			" 			<h2 style='margin: 0;'>" + firstName.getText()+ " " + lastName.getText() + "</h2>\n" + 
 			" 			<span>"+ address.getText() +"</span><br>\n" + 

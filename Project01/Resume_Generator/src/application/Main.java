@@ -246,7 +246,8 @@ public class Main extends Application {
 								department3_field, programming_Skill_field1,language_skill_field, others_Skill_field2,
 								experience1_field,duration1_field,point01_field,point02_field,point03_field,
 								experience2_field,duration2_field,point011_field,
-								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,addInfoDescription2);
+								point012_field,point013_field,addInfoTitle1,addInfoDescription1,addInfoTitle2,
+								addInfoDescription2, selectedFile.getAbsolutePath());
 		
 		ckValid.fieldForUsFormat(FName_field, LName_field, Nationality_field, Mailing_field,
 				Email_field, Contact_field, Hsc_field, Gpa2_field, session2_field, department2_field,

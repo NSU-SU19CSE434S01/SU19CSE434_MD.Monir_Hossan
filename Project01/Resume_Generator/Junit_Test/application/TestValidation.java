@@ -309,6 +309,12 @@ class TestValidation {
 		}
 		
 	}
+	/*
+	 	The regular expression is "[a-z A-Z0-9:(,.')-_/]{5,50}"
+	 	Here in Additional title can have 5 to 50 character & it can be also null.
+	 	Input parameter accepts all alphabet a-z numeric value and some other character.
+	 	If it is more than 50 or less than 5 then test case will fail.
+	*/
 	@Test
 	void additionalInfoTitleTest() throws Exception {
 	
@@ -325,6 +331,12 @@ class TestValidation {
 		}
 		
 	}
+	/*
+ 	The regular expression is [a-z A-Z0-9:(,.')-_/&+@#$<>]{15,200}"
+ 	Here in Additional description can have 15 to 200 character & it can be also null.
+ 	Input parameter accepts all alphabet a-z numeric value and some other character. The input string must be
+ 	between 15 to 200. Other wise test case will not pass.
+*/
 	
 	@Test
 	void additionalInfoDesTest() throws Exception {
