@@ -88,15 +88,7 @@ public class Main extends Application {
 		Stage window = primaryStage;
 		window.setTitle("Resume Generator");
 
-		Whole_container.setLeft(leftGrid);
-		Whole_container.setCenter(middleGrid);
-		Whole_container.setTop(titleContainer);
-		Whole_container.setBottom(buttonContainer);
-		Whole_container.setRight(rightContainer);
-
-		rightContainer.setPadding(new Insets (30));
-		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
-
+		container();
 		personalInfoSection();
 		educationSection();
 		skillSection();
@@ -111,56 +103,27 @@ public class Main extends Application {
 		layoutConstraint();
 		
 		// All buttion action
+		
 		btn1.setOnAction(e -> { 
-							createHtml() ;
-							//validionAllField();
-							//validation.validateContact(Contact_field.getText());
-							//validation.emailValidation(Email_field.getText());
-							//window.close();
-							
-							System.out.println(DoBirth_Field.getValue().toString());
-							
-						}
-							);
+			createHtml() ;
+			//validionAllField();
+			//validation.validateContact(Contact_field.getText());
+			//validation.emailValidation(Email_field.getText());
+			//window.close();
+			
+			System.out.println(DoBirth_Field.getValue().toString());
+			
+		});
 		btn2.setOnAction(e -> window.close());
 		btn3.setOnAction(e -> clearAllField());
 		chooseFile.setOnAction(e ->{
 			selectedFile = fileChooser.showOpenDialog(primaryStage);
-			 uploadImage();
+			uploadImage();
 		});
+
 		
-		
-			gpaContainer1.getChildren().addAll( Gpa1_field );
-			gpaContainer2.getChildren().addAll( Gpa2_field);
-			gpaContainer.getChildren().addAll( Cgpa_field );
 			
-		
-		leftGrid.getChildren().addAll(title2 , firstName , FName_field , lastName ,LName_field ,  birth , DoBirth_Field ,
-				Mailing_address , Mailing_field ,
-								nationality , Nationality_field , contact,
-									Contact_field , email , Email_field, title3 , ssc, hsc,  undergraduate, 
-									Ssc_field, session1 , session1_field ,department1_field , Hsc_field, session2 , session2_field ,
-									department2_field ,Undergraduate_field,gpaContainer1,
-									gpaContainer2, gpaContainer , session3 , session3_field ,department3_field ,
-									additionalInfo , addInfoContainer1 ,addInfoContainer2);
-		
-		middleGrid.getChildren().addAll(skills ,programming_Skill_field1 , others_Skill_field2,
-				language_skill_field ,experience , 
-				experience01_container,point01_field,point02_field,point03_field,experience02_container,point011_field,
-				point012_field,point013_field,reference, reference01_container,reference02_container , importantLink,
-				 link_field1,link_field2);
-		
-		experience01_container.getChildren().addAll(experience1_field , duration1_field);
-		experience02_container.getChildren().addAll(experience2_field,duration2_field);
-		
-		reference01_container.getChildren().addAll( reference1, designation1);
-		reference02_container.getChildren().addAll(reference2,designation2);
-		
-		addInfoContainer1.getChildren().addAll(addInfoTitle1,addInfoDescription1);
-		addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
-		
-		rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
-		
+		addAllChildren();
 		
 		Scene scene = new Scene(Whole_container);
 		scene.getStylesheets().add("application.css");
@@ -168,6 +131,52 @@ public class Main extends Application {
 		window.show();
 		
 	}
+	
+	public void container() {
+		Whole_container.setLeft(leftGrid);
+		Whole_container.setCenter(middleGrid);
+		Whole_container.setTop(titleContainer);
+		Whole_container.setBottom(buttonContainer);
+		Whole_container.setRight(rightContainer);
+
+		rightContainer.setPadding(new Insets (30));
+		rightContainer.setStyle("-fx-background-color : #1B4F72  ");
+		
+	}
+	public void addAllChildren() {
+		gpaContainer1.getChildren().addAll( Gpa1_field );
+		gpaContainer2.getChildren().addAll( Gpa2_field);
+		gpaContainer.getChildren().addAll( Cgpa_field );
+		
+	
+	leftGrid.getChildren().addAll(title2 , firstName , FName_field , lastName ,LName_field ,  birth , DoBirth_Field ,
+			Mailing_address , Mailing_field ,
+							nationality , Nationality_field , contact,
+								Contact_field , email , Email_field, title3 , ssc, hsc,  undergraduate, 
+								Ssc_field, session1 , session1_field ,department1_field , Hsc_field, session2 , session2_field ,
+								department2_field ,Undergraduate_field,gpaContainer1,
+								gpaContainer2, gpaContainer , session3 , session3_field ,department3_field ,
+								additionalInfo , addInfoContainer1 ,addInfoContainer2);
+	
+	middleGrid.getChildren().addAll(skills ,programming_Skill_field1 , others_Skill_field2,
+			language_skill_field ,experience , 
+			experience01_container,point01_field,point02_field,point03_field,experience02_container,point011_field,
+			point012_field,point013_field,reference, reference01_container,reference02_container , importantLink,
+			 link_field1,link_field2);
+	
+	experience01_container.getChildren().addAll(experience1_field , duration1_field);
+	experience02_container.getChildren().addAll(experience2_field,duration2_field);
+	
+	reference01_container.getChildren().addAll( reference1, designation1);
+	reference02_container.getChildren().addAll(reference2,designation2);
+	
+	addInfoContainer1.getChildren().addAll(addInfoTitle1,addInfoDescription1);
+	addInfoContainer2.getChildren().addAll(addInfoTitle2,addInfoDescription2);
+	
+	rightContainer.getChildren().addAll(imageView , chooseFile,cvFormat,rb1,rb2 , btn1, btn2, btn3);
+		
+	}
+	
 	
 	public void clearAllField() {
 		
