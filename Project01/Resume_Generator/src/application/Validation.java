@@ -8,30 +8,18 @@ import javafx.scene.control.Alert.AlertType;
 
 public class Validation {
 	
-	
-
-
-	
 	public boolean isStringOnlyAlphabet(String str) 
     { 	
-
-
 		Pattern p = Pattern.compile("[a-z A-Z]{2,15}$");
 		Matcher m = p.matcher(str);
 		
-		
 		if( m.find() && m.group().equals(str) && !str.equals("")){
-			
-
-			System.out.println("Only Alphabet String is Valid");
 				return true;
 			}
 			else {
-
+				//showAlertError("String Error" , "This is not a String", "Please correct String");
 				return false;
 			}
-				
-		
 		
 //        return ((str != null) 
 //                && (!str.equals("")) 
@@ -46,15 +34,11 @@ public boolean emailValidation(String emailText) {
 		Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
 		Matcher m = p.matcher(emailText);
 		
-		
 		if( m.find() && m.group().equals(emailText)) {
-			
-
-			System.out.println("Email is Valid");
 				return true;
 			}
 			else {
-
+				showAlertError("Email Error" , "Email format is not correct", "Email must have exm@abc.abc format");
 				return false;
 			}
 		
@@ -63,14 +47,10 @@ public boolean emailValidation(String emailText) {
 	}
 
 public boolean validateDate(String str) {
-	
-	
 	Pattern p = Pattern.compile("[0-9]{4}/[0-9]{2}/[0-9]{2}");
 	Matcher m = p.matcher(str);
 	
 	if(m.find() && m.group().equals(str)&& !str.equals("")) {
-					
-		System.out.println("Date is Valid");
 			return true;
 		}
 		else {
@@ -84,21 +64,14 @@ public boolean mailingAddressValidate(String mailingAddress) {
 	
 	Pattern p = Pattern.compile("[a-z A-Z0-9.,-:_#(/S)]{10,50}");
 	Matcher m = p.matcher(mailingAddress);
-	
-	
-	if( m.find() && m.group().equals(mailingAddress) && !mailingAddress.equals("")) {
-		
 
-		System.out.println("Mailing address is Valid");
+	if( m.find() && m.group().equals(mailingAddress) && !mailingAddress.equals("")) {
 			return true;
 		}
 		else {
 
 			return false;
 		}
-	
-	
-	
 }
 	
 public boolean validateContact(String str) {
@@ -107,12 +80,10 @@ public boolean validateContact(String str) {
 		Matcher m = p.matcher(str);
 		
 		if( m.find() && m.group().equals(str)) {
-						
-			System.out.println("Number is Valid");
 				return true;
 			}
 			else {
-				
+				showAlertError("Contact Error" , "Contact is invalid!", "Contact must have 11 digit starting with 01");
 				return false;
 			}			
 		
@@ -218,7 +189,7 @@ public boolean validateContact(String str) {
 			}
     }	
 	
-	public boolean showAlert(String title , String headerText , String contentText) {
+	public boolean showAlertError(String title , String headerText , String contentText) {
 		
 		 Alert alert = new Alert(AlertType.WARNING);
 		alert.setTitle(title);

@@ -1,4 +1,36 @@
 package application;
+
+
+/*
+		Line 9   : All import Library
+		Line 37  : Main Class Start
+		Line 39  : All initialization
+		Line 87	 : main method
+		Line 95  : Start method
+		Line 145 : container()
+		Line 156 : addAllChildren()
+		Line 191 : clearAllField()
+		Line 214 : createHtml()
+		Line 257 : validationCheck()
+		Line 270 : styleProperty()
+		Line 298 : setPadding()
+		Line 310 : setPrewidthHeight()
+		Line 335 : setPromptText()
+		Line 379 : setStyle()
+		Line 398 : labelCSS()
+		Line 425 : personalInfoSection()
+		Line 444 : educationSection()
+		Line 469 : skillSection()
+		Line 478 : experianceSection()
+		Line 491 : referenceSection()
+		Line 498 : linkSection()
+		Line 503 : additionalSection()
+		Line 510 : rightPart()
+		Line 527 : uploadImage()
+		Line 541 : layoutConstraint()
+		Line 591 : showAlert()
+		Line 601 : showAlertSuccess()
+*/
 	
 
 import java.io.File;
