@@ -1,10 +1,13 @@
 package application;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 
 public class Validation {
 	
@@ -26,9 +29,7 @@ public class Validation {
 //                && (str.matches("^[a-zA-Z]*$"))); 
         
     
-    }
-	
-	
+    }	
 public boolean emailValidation(String emailText) {
 			
 		Pattern p = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9._]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+");
@@ -38,7 +39,7 @@ public boolean emailValidation(String emailText) {
 				return true;
 			}
 			else {
-				showAlertError("Email Error" , "Email format is not correct", "Email must have exm@abc.abc format");
+				
 				return false;
 			}
 		
@@ -83,7 +84,6 @@ public boolean validateContact(String str) {
 				return true;
 			}
 			else {
-				showAlertError("Contact Error" , "Contact is invalid!", "Contact must have 11 digit starting with 01");
 				return false;
 			}			
 		
@@ -187,7 +187,33 @@ public boolean validateContact(String str) {
 
 				return false ;
 			}
-    }	
+    }
+	public boolean additionalInfoTitle(String str) {
+		
+		Pattern p = Pattern.compile("[a-z A-Z0-9:(,.')-_/]{5,50}");
+		Matcher m = p.matcher(str);
+		
+		if( m.find() && m.group().equals(str)) {
+				return true;
+			}
+			else {
+				
+				return false;
+			}
+	}
+	public boolean additionalInfoDes(String str) {
+		
+		Pattern p = Pattern.compile("[a-z A-Z0-9:(,.')-_/&+@#$<>]{15,200}");
+		Matcher m = p.matcher(str);
+		
+		if( m.find() && m.group().equals(str)) {
+				return true;
+			}
+			else {
+				
+				return false;
+			}
+	}
 	
 	public boolean showAlertError(String title , String headerText , String contentText) {
 		

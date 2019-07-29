@@ -309,5 +309,39 @@ class TestValidation {
 		}
 		
 	}
+	@Test
+	void additionalInfoTitleTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.additionalInfoTitle("Work Authorization: ") , true);
+			assertEquals(testValidation.additionalInfoTitle("+%Work Authorization: Work Authorization:Work Authorization:  ") , false);
+			
+			assertTrue(testValidation.additionalInfoTitle("Seminars/Conferences:"));
+			assertFalse(testValidation.additionalInfoTitle ("Hons"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
+	void additionalInfoDesTest() throws Exception {
+	
+		try {
+			
+			assertEquals(testValidation.additionalInfoDes("J-1 visa holder: Sponsorship & work authorization provided by "
+					+ "the Institution of <International Education>") , true);
+			assertEquals(testValidation.additionalInfoDes("PIBID rcipient") , false);
+			
+			assertTrue(testValidation.additionalInfoDes("IEEE International Conference on (e-science)"));
+			assertFalse(testValidation.additionalInfoDes ("^%~Hons"));
+		}
+		catch(InternalException e){
+			e.printStackTrace();
+		}
+		
+	}
 	
 }
