@@ -13,7 +13,7 @@ public class Validation {
 	
 	public boolean isStringOnlyAlphabet(String str) 
     { 	
-		Pattern p = Pattern.compile("[a-z A-Z]{2,15}$");
+		Pattern p = Pattern.compile("[a-z A-Z]{3,15}$");
 		Matcher m = p.matcher(str);
 		
 		if( m.find() && m.group().equals(str) && !str.equals("")){
@@ -47,17 +47,17 @@ public boolean emailValidation(String emailText) {
 		
 	}
 
-public boolean validateDate(String str) {
-	Pattern p = Pattern.compile("[0-9]{4}/[0-9]{2}/[0-9]{2}");
-	Matcher m = p.matcher(str);
-	
-	if(m.find() && m.group().equals(str)&& !str.equals("")) {
-			return true;
-		}
-		else {
-			
-			return false;
-		}			
+	public boolean validateDate(String str) {
+		Pattern p = Pattern.compile("[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}");
+		Matcher m = p.matcher(str);
+		
+		if(m.find() && m.group().equals(str)&& !str.equals("")) {
+				return true;
+			}
+			else {
+				
+				return false;
+			}			
 	
 }
 

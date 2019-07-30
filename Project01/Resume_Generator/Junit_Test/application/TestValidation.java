@@ -59,10 +59,10 @@ class TestValidation {
 	
 		try {
 			
-			assertEquals(testValidation.validateDate("2009/12/22") , true);
+			assertEquals(testValidation.validateDate("12/12/2009") , true);
 			assertEquals(testValidation.validateDate("3/5/20098") , false);
 			
-			assertTrue(testValidation.validateDate("2022/11/20"));
+			assertTrue(testValidation.validateDate("1/3/2022"));
 			assertFalse(testValidation.validateDate ("3454jj"));
 		}
 		catch(InternalException e){
