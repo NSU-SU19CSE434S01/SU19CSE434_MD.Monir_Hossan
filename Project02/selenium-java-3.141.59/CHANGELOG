@@ -1,3 +1,142 @@
+v3.141.59
+=========
+
+* Restored remoteHost support
+* [Grid] Adding a test to check that remoteHost is properly read and
+  set.
+* Fix mime-types of displayed content in help servlet.
+* Encourage people to access help over https.
+* Implement `WrapsElement` by `Select` element wrapper (#6616)
+* Version number is an even better approximation of π.
+
+v3.141.5
+========
+
+* Default the number of threads assigned to the server to 200, 
+  which is what it was in 3.13.0
+
+v3.141.0
+========
+
+* Hub status should only count reachable proxies. Fixes #6494.
+* Deprecated the original Actions API in favour of the W3C approach.
+* Correct localisation of platform name (#6491)
+* Beta commands in SafariDriver for opening a new window or tab.
+* Clean up of internal of `Select` element wrapper (#6501)
+* Acknowledge that Mojave is a `Platform` (#6552)
+* Deleted many command-line options marked as deprecated some time
+  ago.
+* Removed Selenium's own deprecated `Duration` and `Clock` classes in
+  favour of those provided by the JRE.
+* Fixed WebDriverBackedSelenium servlet by registering a session
+  finalization listener.
+* Installing Firefox extensions in the same form as they provided,
+  either as a file or as a directory. With the release of Firefox 62
+  Mozilla discontinued support for unpacked sideloaded extensions in
+  Release channel. Users must themselves choose proper format to use
+  in their tests depending on the browser version they run tests in.
+* Prepended command names in https error response reports (#6321)
+* Removed the apache-backed httpclient.
+* Fixing regression in Grid: if -hubPort was specified through CLI
+  params but not -hubHost, the node tried to register to
+  http://null:hubPort.
+* Fixing regression in Grid by using browserTimeout again to set
+  timeouts in the HttpClient.
+* Grid: adding image for Safari Technology Preview, fixes #6297
+* Grid: Nodes and Hubs can now be started in any order, and
+  configuration will be correct Fixes #3064.
+* Added a basic ServiceBuilder for Internet Explorer (#6181)
+* Version number is a better approximation of π.
+
+v3.14.0
+=======
+
+* Move or deprecate internal classes in java client
+* Introduce basic JPMS support. This is experimental.
+* The browser name of the Safari Tech Preview is not "safari" but
+  "Safari Technology Preview". Who knew?
+* Deprecated our own `Clock` interface for `java.time.Clock`
+* Completely removed the GSON dependency. We now use reflection to try
+  and find the class.
+* Tiny clean up to try and make Grid a little more performant.
+* Added new capabilities for safari driver: automaticInspection and
+  automaticProfiling (#6095) This commit is from the "Fix a Bug,
+  Become a Committer" workshop held at SeConf India.
+* Removed support for geckodriver 0.13. It is time.
+* Adding High Sierra to the platform set. Fixes #5969
+* Enriching Hub Status to include Node info (#6127)
+* Fixing potential Zip Slip Vulnerability, see
+  https://snyk.io/research/zip-slip-vulnerability
+* Allow temporary installation of FF extension (#1) (#5751)
+* Fix windowSize option in Firefox in Javascript (#6075)
+* Make ConnectionType searilize as integer (#6176)
+* Pass found elements to the EventListener's afterFind method (#6191)
+* Add native events under se:ieOptions. (#6183)
+
+v3.13.0
+=======
+
+* Introduced our own JSON parser and outputter, allowing GSON to be
+  removed from our dependencies.
+* Exposing a `RemoteWebDriverBuilder` which can be used to construct
+  instances of selenium when talking to servers that speak the w3c
+  protocol.
+* Fixed loading of Grid hub and node config files.
+* Fixed `noProxy` handling in Grid.
+* Added bindings for custom ChromeDriver commands
+  (GET_NETWORK_CONDITIONS, SET_NETWORK_CONDITIONS and
+  DELETE_NETWORK_CONDITIONS) that allows client code to utilize
+  built-in throttling functionality. (#3479)
+* Minimised data being encoded as JSON when serialising Java objects.
+* EventFiringWebDriver now fires events before and after `getText` and
+  implements `HasCapabilities`.
+
+v3.12.0
+=======
+
+* Added `User-Agent` header to requests from Selenium to give remote
+  ends more visibility into distribution of clients.
+* Remove GSON from how we coerce JSON to Java types.
+* Clean up the internals of Selenium's JSON handling, including
+  deprecating places where GSON leaks from our APIs.
+* Grid assignes node to a random free port if not specified.
+  explicitly. Fixes #5783.
+* Addressed concerns about backward compatibility of Grid's `-host`
+  parameter.
+* Implemented WebStorage in ChromeDriver and FirefoxDriver.
+* Documentation clean up in `By`.
+* `before/afterGetScreenshotAs` added to to WebDriverEventListener.
+
+v3.11.0
+=======
+
+* Implemented `equals` and `hashCode` for `LoggingPreferences`
+* Deleted deprecated methods from `*Options` and `MutableCapabilities`
+* Converting an object to JSON now doesn't include the object's hash
+  code.
+* Removed deprecated methods from `RemoteWebDriver`.
+* Switching Grid to use OkHttp rather than the Apache HttpClient.
+* Internal change to better use Selenium's abstractions for handing
+  JSON in Grid.
+* Removed deprecated `GridRegistry.getHttpClientFactory` method.
+* Removed `Registry.getConfiguration`
+
+v3.10.0
+=======
+
+* Deprecate internal Duration in favor of java.time.Duration
+* Fix handling of IE capabilities in Grid Nodes. Fixes #5502
+* Fix problem where Grid wasn't starting Safari sessions
+* Migrate Selenium Grid to reduce exporting GSON and Apache HttpClient
+  as much to public APIs.
+* Migrate Grid to use Selenium's own abstractions where possible. This
+  means that more of it is using OkHttp rather than the Apache
+  HttpClient.
+* Fix an issue where RemoteProxy instances were causing an exception
+  to be thrown if they weren't marked as a ManagedService.
+* Deleting ability to run html suites with selenium-server-standalone,
+  users are adviced to use htmlrunner
+
 v3.9.1
 ======
 
