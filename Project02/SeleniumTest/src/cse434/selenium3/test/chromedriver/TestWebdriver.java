@@ -7,9 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -93,14 +94,54 @@ public class TestWebdriver {
 		            ("body > div:nth-child(16) > div.datepicker-days > table > tbody > tr:nth-child(5) > td:nth-child(5)")).get(0).click();
 			Thread.sleep(2000);
 			
-//			driver.findElement(By.xpath("//*[@id=\"departure\"]")).sendKeys("2019-10-12");
+//			WebElement e =  driver.findElement(By.xpath("//*[@id=\"adults\"]"));
+//			e.click();
+//			Thread.sleep(1000);
+//			driver.findElement(By.xpath("//*[@id=\"adults\"]/option[4]")).sendKeys(Keys.RETURN);
+			
+					
+			Select select = new Select(driver.findElement(By.id("adults")));
+			Thread.sleep(1000);
+			select.selectByIndex(2);
+			Thread.sleep(1000);
+			
+			Select select2 = new Select(driver.findElement(By.id("tourtype")));
+			Thread.sleep(1000);
+			select2.selectByIndex(1);
+			Thread.sleep(2000);
+			
+			
+			driver.findElement(By.xpath("//*[@id=\"tours\"]/form/div[5]/button")).click();
+			Thread.sleep(3000);
+			
+			
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,1200)");
+			Thread.sleep(2000);
+			
+			
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[2]/div[2]/div/div/form/div/div[2]/input")).click();
+			Thread.sleep(1000);
+			
+			driver.findElements(By.cssSelector
+		            ("body > div.datepicker.dropdown-menu > div.datepicker-days > table > tbody > tr:nth-child(5) > td:nth-child(4)")).get(0).click();
+			Thread.sleep(2000);
+			
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[2]/div[2]/div/div/form/div/div[2]/button")).click();
+			Thread.sleep(3000);
+			
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,1200)");
+			Thread.sleep(2000);
+			
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[2]/div[2]/div/form/div[4]/button")).click();			
 //			Thread.sleep(1000);
 //			driver.findElement(By.xpath("//*[@id=\"departure\"]")).sendKeys(Keys.RETURN);
 			
 			
 			
 			
-			
+			Thread.sleep(3000);
 			driver.close();
 			
 			
