@@ -44,6 +44,7 @@ public class TestWebdriver {
 			
 			setInputField();
 			signupLogin();
+			//logIn();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -179,10 +180,44 @@ public class TestWebdriver {
 			driver.findElement(By.xpath("/html/body/nav/div/div[1]/a/img")).click();
 			Thread.sleep(3000);
 
-			Select select = new Select(driver.findElement(By.xpath("//*[@id=\"li_myaccount\"]")));
+			driver.get("https://www.phptravels.net/register");
+			
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[3]/input")).sendKeys("Md Monir");
 			Thread.sleep(1000);
-			select.selectByIndex(1);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[4]/input")).sendKeys("Hossan");
 			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[5]/input")).sendKeys("01782345064");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("monir@gmail.com");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[7]/input")).sendKeys("123456");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[8]/input")).sendKeys("123456");
+			Thread.sleep(1000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,200)");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
+			Thread.sleep(1000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,-500)");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).clear();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("mdmonir@gmail.com");
+			Thread.sleep(1000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,200)");
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
+			Thread.sleep(3000);
+			
+			//driver.close();
+			
+			
+//			Select select = new Select(driver.findElement(By.xpath("//*[@id=\"li_myaccount\"]")));
+//			Thread.sleep(1000);
+//			select.selectByIndex(1);
+//			Thread.sleep(1000);
 			
 			
 		} catch (InterruptedException e) {
@@ -191,5 +226,7 @@ public class TestWebdriver {
 		}
 		
 	}
+	
+
 
 }
