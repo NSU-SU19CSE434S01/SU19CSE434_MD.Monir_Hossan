@@ -43,6 +43,7 @@ public class TestWebdriver {
 			driver.get("https://www.phptravels.net");
 			
 			setInputField();
+			signupLogin();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -145,13 +146,20 @@ public class TestWebdriver {
 			
 			
 			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div/div[1]/div[2]/div[4]/button")).click();
+			Thread.sleep(4000);
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div[2]/div[2]/center/button[2]")).click();
+			Thread.sleep(1000);
 			
+			Select select4 = new Select(driver.findElement(By.id("gateway")));
+			Thread.sleep(1000);
+			select4.selectByIndex(3);
+			Thread.sleep(1000);
 //			new WebDriverWait(driver, 20).until(
 //			          webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 //			
 			
-			Thread.sleep(6000);
-			driver.close();
+			//Thread.sleep(6000);
+			//driver.close();
 			
 			
 
@@ -161,6 +169,26 @@ public class TestWebdriver {
 			e.printStackTrace();
 		}
 		
+		
+	}
+	
+	
+	public void signupLogin() {
+		 
+		try {
+			driver.findElement(By.xpath("/html/body/nav/div/div[1]/a/img")).click();
+			Thread.sleep(3000);
+
+			Select select = new Select(driver.findElement(By.xpath("//*[@id=\"li_myaccount\"]")));
+			Thread.sleep(1000);
+			select.selectByIndex(1);
+			Thread.sleep(1000);
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
