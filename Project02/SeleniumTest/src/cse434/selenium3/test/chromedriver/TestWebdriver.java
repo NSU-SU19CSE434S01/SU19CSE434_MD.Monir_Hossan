@@ -42,9 +42,11 @@ public class TestWebdriver {
 			
 			driver.get("https://www.phptravels.net");
 			
-			setInputField();
+			//setInputField();
 			signupLogin();
 			logIn();
+			Thread.sleep(3000);
+			driver.close();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -204,17 +206,20 @@ public class TestWebdriver {
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).clear();
 			Thread.sleep(1000);
-			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("mdmonir@gmail.com");
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("mdmonirh@gmail.com");
 			Thread.sleep(1000);
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,200)");
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
 			Thread.sleep(3000);
 			
+			//driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a")).click();
+			
 			//driver.close();
 			
+			driver.get("https://www.phptravels.net/account/logout"); 
 			
-//			Select select = new Select(driver.findElement(By.xpath("//*[@id=\"li_myaccount\"]")));
+//			Select select = new Select(driver.findElement(By.cssSelector("body > nav > div > div.collapse.navbar-collapse > ul.nav.navbar-nav.navbar-right.hidden-sm.go-left > ul > li:nth-child(1) > a")));
 //			Thread.sleep(1000);
 //			select.selectByIndex(1);
 //			Thread.sleep(1000);
@@ -240,7 +245,7 @@ public class TestWebdriver {
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
 			
-			
+
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

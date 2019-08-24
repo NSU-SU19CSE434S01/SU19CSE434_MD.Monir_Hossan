@@ -2,12 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-24T09:57:23Z" name="Default suite" finished-at="2019-08-24T09:57:23Z" duration-ms="28">
+  <suite started-at="2019-08-24T11:12:55Z" name="Default suite" finished-at="2019-08-24T11:13:30Z" duration-ms="34338">
     <groups>
     </groups>
-    <test started-at="2019-08-24T09:57:23Z" name="Default test" finished-at="2019-08-24T09:57:23Z" duration-ms="28">
+    <test started-at="2019-08-24T11:12:55Z" name="Default test" finished-at="2019-08-24T11:13:30Z" duration-ms="34338">
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
-        <test-method signature="testWebdriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@bccb269]" started-at="2019-08-24T09:57:23Z" name="testWebdriver" finished-at="2019-08-24T09:57:23Z" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@8c3b9d]" started-at="2019-08-24T17:12:55Z" name="loadDriver" finished-at="2019-08-24T17:12:55Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadDriver -->
+        <test-method signature="testWebdriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@8c3b9d]" started-at="2019-08-24T17:12:55Z" name="testWebdriver" finished-at="2019-08-24T17:13:30Z" duration-ms="34317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWebdriver -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="cse434.selenium3.test.chromedriver.Test_NG">
+        <methods>
+          <include name="testWebdriver"/>
+          <include name="loadDriver"/>
+        </methods>
+      </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
