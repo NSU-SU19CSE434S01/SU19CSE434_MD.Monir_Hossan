@@ -43,8 +43,8 @@ public class TestWebdriver {
 			driver.get("https://www.phptravels.net");
 			
 			//setInputField();
-			signupLogin();
-			logIn();
+//			signupLogin();
+//			logIn();
 			Thread.sleep(3000);
 			driver.close();
 			
@@ -252,6 +252,11 @@ public class TestWebdriver {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public void closeBrowser() {
+		
+		driver.close();
 	}
 
 }
