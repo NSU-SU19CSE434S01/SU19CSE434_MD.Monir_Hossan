@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-26T14:10:51Z" name="Default suite" finished-at="2019-08-26T14:12:38Z" duration-ms="106220">
+  <suite started-at="2019-08-26T15:48:50Z" name="Default suite" finished-at="2019-08-26T15:50:30Z" duration-ms="100399">
     <groups>
     </groups>
-    <test started-at="2019-08-26T14:10:51Z" name="Default test" finished-at="2019-08-26T14:12:38Z" duration-ms="106220">
+    <test started-at="2019-08-26T15:48:50Z" name="Default test" finished-at="2019-08-26T15:50:30Z" duration-ms="100399">
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
-        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@1757cd72]" started-at="2019-08-26T20:10:51Z" name="loadDriver" finished-at="2019-08-26T20:11:01Z" duration-ms="9630" status="PASS">
+        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:50Z" name="loadDriver" finished-at="2019-08-26T21:48:57Z" duration-ms="7961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadDriver -->
-        <test-method signature="signUp()[pri:1, instance:cse434.selenium3.test.chromedriver.Test_NG@1757cd72]" started-at="2019-08-26T20:11:01Z" name="signUp" finished-at="2019-08-26T20:11:19Z" duration-ms="17518" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:57Z" name="beforeMethod" finished-at="2019-08-26T21:48:57Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="skipTest()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:57Z" name="skipTest" finished-at="2019-08-26T21:48:57Z" duration-ms="4" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skip this test method]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skip this test methodat cse434.selenium3.test.chromedriver.Test_NG.skipTest(Test_NG.java:69)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skipTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:57Z" name="afterMethod" finished-at="2019-08-26T21:48:57Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="signUp()[pri:1, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:57Z" name="signUp" finished-at="2019-08-26T21:49:15Z" duration-ms="17142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUp -->
-        <test-method signature="logIn()[pri:2, instance:cse434.selenium3.test.chromedriver.Test_NG@1757cd72]" started-at="2019-08-26T20:11:19Z" name="logIn" finished-at="2019-08-26T20:11:26Z" duration-ms="7341" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:48:57Z" name="beforeMethod" finished-at="2019-08-26T21:48:57Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:15Z" name="afterMethod" finished-at="2019-08-26T21:49:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:15Z" name="beforeMethod" finished-at="2019-08-26T21:49:15Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="logIn()[pri:2, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:15Z" name="logIn" finished-at="2019-08-26T21:49:21Z" duration-ms="6596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method signature="bookingForTour()[pri:3, instance:cse434.selenium3.test.chromedriver.Test_NG@1757cd72]" started-at="2019-08-26T20:11:26Z" name="bookingForTour" finished-at="2019-08-26T20:12:35Z" duration-ms="68597" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:21Z" name="beforeMethod" finished-at="2019-08-26T21:49:21Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:21Z" name="afterMethod" finished-at="2019-08-26T21:49:21Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="bookingForTour()[pri:3, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:49:21Z" name="bookingForTour" finished-at="2019-08-26T21:50:27Z" duration-ms="65549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookingForTour -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@1757cd72]" started-at="2019-08-26T20:12:35Z" name="closeBrowser" finished-at="2019-08-26T20:12:38Z" duration-ms="3114" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:50:27Z" name="afterMethod" finished-at="2019-08-26T21:50:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@c86b9e3]" started-at="2019-08-26T21:50:27Z" name="closeBrowser" finished-at="2019-08-26T21:50:30Z" duration-ms="3120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

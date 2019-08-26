@@ -8,7 +8,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.SkipException;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -16,8 +19,6 @@ public class Test_NG {
 	
 	static WebDriver driver;
 	static JavascriptExecutor jse;
-	
-	TestWebdriver seleniumRun = new TestWebdriver();
 
 
 	@BeforeTest
@@ -33,6 +34,7 @@ public class Test_NG {
 		driver.get("https://www.phptravels.net");
 	}
 	
+	
 	@AfterTest
 	public void closeBrowser() {
 		
@@ -45,8 +47,59 @@ public class Test_NG {
 		}
 	}
 	
+	@BeforeMethod
+	public void beforeMethod() {
+		
+		//throw new SkipException("");
+		
+	}
+	
+	
+	@AfterMethod
+	public void afterMethod() {
+		
+		//throw new SkipException("");
+		
+	}
+	
+	
+	@Test
+	public void skipTest() {
+		
+		throw new SkipException("Skip this test method");
+	}
+	
 	@Test(priority=1)
 	public void signUp() {
+		
+		
+		signup();
+		
+	}
+	
+	@Test(priority=2)
+	public void logIn() {
+		
+		login();
+		
+	}
+	
+	
+	@Test(priority=3)
+	public void bookingForTour() {
+		
+		tourBooking();
+		
+		System.out.println("Booked for tour");
+	}
+	
+	
+	
+	
+	
+	
+	public void signup() {
+		
 		
 		try {
 
@@ -94,25 +147,6 @@ public class Test_NG {
 			e.printStackTrace();
 		}
 	}
-	
-	@Test(priority=2)
-	public void logIn() {
-		
-		login();
-		
-	}
-	
-	
-	@Test(priority=3)
-	public void bookingForTour() {
-		
-		tourBooking();
-		
-		System.out.println("Booked for tour");
-	}
-	
-	
-	
 	
 	
 	
