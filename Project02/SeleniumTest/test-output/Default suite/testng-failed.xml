@@ -5,7 +5,8 @@
     <classes>
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
         <methods>
-          <include name="testWebdriver"/>
+          <include name="closeBrowser"/>
+          <include name="signUp"/>
           <include name="loadDriver"/>
         </methods>
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
