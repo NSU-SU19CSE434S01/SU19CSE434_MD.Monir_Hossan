@@ -29,6 +29,18 @@ public class Test_NG {
 		driver.get("https://www.phptravels.net");
 	}
 	
+	@AfterTest
+	public void closeBrowser() {
+		
+		try {
+			Thread.sleep(3000);
+			driver.close();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	@Test(priority=1)
 	public void signUp() {
 		
@@ -103,16 +115,5 @@ public class Test_NG {
 	}
 	
 	
-	@AfterTest
-	public void closeBrowser() {
-		
-		try {
-			Thread.sleep(3000);
-			driver.close();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 }
