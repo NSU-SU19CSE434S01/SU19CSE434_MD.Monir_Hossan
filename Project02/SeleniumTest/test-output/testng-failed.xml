@@ -5,9 +5,11 @@
     <classes>
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
         <methods>
+          <include name="logIn"/>
           <include name="closeBrowser"/>
           <include name="signUp"/>
           <include name="loadDriver"/>
+          <include name="bookingForTour"/>
         </methods>
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </classes>

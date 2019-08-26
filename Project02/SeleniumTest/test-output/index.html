@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="bookingForTour">bookingForTour</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="logIn">logIn</a> <!-- method navigator-link -->
@@ -130,6 +135,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="bookingForTour">
+                  </a> <!-- bookingForTour -->
+                  <span class="method-name">bookingForTour</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="logIn">
                   </a> <!-- logIn -->
                   <span class="method-name">logIn</span>
@@ -147,7 +159,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/4m/k83f74rn32s9j27zn30nnf2c0000gp/T/testng-eclipse-406422638/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/4m/k83f74rn32s9j27zn30nnf2c0000gp/T/testng-eclipse-1063777539/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,20 +208,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'signUp')
+data.setCell(0, 1, 'bookingForTour')
 data.setCell(0, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(0, 3, 17108);
+data.setCell(0, 3, 68597);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'logIn')
+data.setCell(1, 1, 'signUp')
 data.setCell(1, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(1, 3, 4505);
+data.setCell(1, 3, 17518);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'logIn')
+data.setCell(2, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
+data.setCell(2, 3, 7341);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,15 +258,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">signUp</span>
-                <span class="method-start">6024 ms</span>
+                <span class="method-start">9639 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">logIn</span>
-                <span class="method-start">23136 ms</span>
+                <span class="method-start">27162 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">bookingForTour</span>
+                <span class="method-start">34505 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">27642 ms</span>
+                <span class="method-start">103104 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
