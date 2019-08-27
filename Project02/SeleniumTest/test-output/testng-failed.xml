@@ -9,7 +9,8 @@
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
           <include name="loadDriver"/>
-          <include name="invalidField"/>
+          <include name="bookingForTour"/>
+          <include name="passwordCheck"/>
         </methods>
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </classes>

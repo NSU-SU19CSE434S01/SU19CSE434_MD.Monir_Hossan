@@ -77,53 +77,59 @@ public class Test_NG {
 	}
 	
 	
-//	@Test(priority=1)
-//	public void skipTest() {
-//		
-//		throw new SkipException("Skip this test method");
-//	}
-//	
-//	@Test(priority=2)
-//	public void signUp() {
-//		
-//		
-//		signup();
-//		
-//	}
-//	
-//	@Test(priority=3 , dependsOnMethods = {"signUp"})
-//	public void signupLogout() {	
-//		logout();
-//	}
-//	
-//	@Test(priority=4)
-//	public void logIn() {
-//		
-//		login();
-//		
-//	}
-//	
-//	@Test(priority=5 , dependsOnMethods = {"logIn"})
+	@Test(priority=3)
+	public void passwordCheck() {
+		
+		throw new SkipException("Skip this test method");
+	}
+	
+	@Test(priority=4)
+	public void signUp() {
+		
+		
+		signup();
+		
+	}
+	
+	@Test(priority=5 , dependsOnMethods = {"signUp"})
+	public void signupLogout() {	
+		logout();
+	}
+
+	@Test(priority=6)
+	public void failedlogin() {	
+		invalidLogin();
+	}
+	
+	
+	@Test(priority=7)
+	public void logIn() {
+		
+		login();
+		
+	}
+	
+//	@Test(priority=8, dependsOnMethods = {"logIn"})
 //	public void signinLogout() {	
 //		logout();
 //	}
-//	
-//	
-//	@Test(priority=6)
-//	public void bookingForTour() {
-//		
-//		tourBooking();
-//
-//	}
-//	
-//	@Test(priority=7)
-//	public void traveoffer() {
-//		
-//		offer();
-//		
-//	}
 	
-	@Test(priority=8)
+	
+	@Test(priority=9)
+	public void bookingForTour() {
+		
+		tourBooking();
+
+	}
+	
+	@Test(priority=10)
+	public void traveoffer() {
+		
+		offer();
+		
+	}
+	
+	@Test(priority=11)
 	public void travelBlog() {
 		
 		blog();
@@ -145,7 +151,7 @@ public class Test_NG {
 			jse.executeScript("scroll(0,200)");
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
 			jse.executeScript("scroll(0,-200)");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			
 			
 		} catch (InterruptedException e) {
@@ -159,6 +165,7 @@ public class Test_NG {
 	public void invalidInput() {
 		
 		try {
+			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[3]/input")).sendKeys("Md Monir");
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[4]/input")).sendKeys("Hossan12");
@@ -175,7 +182,6 @@ public class Test_NG {
 			jse.executeScript("scroll(0,500)");
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
-			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,-200)");
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -184,8 +190,7 @@ public class Test_NG {
 		}
 		
 	}
-	
-	
+
 	
 	
 	public void signup() {
@@ -211,18 +216,7 @@ public class Test_NG {
 			jse.executeScript("scroll(0,200)");
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
-			Thread.sleep(1000);
-			jse = (JavascriptExecutor)driver;
-			jse.executeScript("scroll(0,-500)");
-			Thread.sleep(1000);
-			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).clear();
-			Thread.sleep(1000);
-			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("mdmonirh@gmail.com");
-			Thread.sleep(1000);
-			jse = (JavascriptExecutor)driver;
-			jse.executeScript("scroll(0,200)");
-			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			
 
 			
@@ -252,6 +246,27 @@ public class Test_NG {
 	}
 	
 	
+	public  void invalidLogin() {
+		
+		try {
+			driver.get("https://www.phptravels.net/login");
+			
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[1]/input")).sendKeys("monirmail.com");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[2]/input")).sendKeys("123456");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/label")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
+			Thread.sleep(2000);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+	
 	public void login() {
 		
 		try {
@@ -264,7 +279,7 @@ public class Test_NG {
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/label")).click();
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -305,11 +320,11 @@ public class Test_NG {
 			Select select2 = new Select(driver.findElement(By.id("tourtype")));
 			Thread.sleep(1000);
 			select2.selectByIndex(1);
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			
 			
 			driver.findElement(By.xpath("//*[@id=\"tours\"]/form/div[5]/button")).click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,1200)");
@@ -324,7 +339,7 @@ public class Test_NG {
 			
 			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[2]/div[2]/div/div/form/div/div[2]/button")).click();
 			Thread.sleep(3000);
-			
+
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,1200)");
 			Thread.sleep(2000);
@@ -360,7 +375,7 @@ public class Test_NG {
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"special\"]/div/textarea")).sendKeys("I need some extra facility like field ");			
 			Thread.sleep(2000);
-			
+
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,1200)");
 			Thread.sleep(1000);
@@ -399,7 +414,7 @@ public class Test_NG {
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/div[3]/div[2]/a[2]")).click();
 			Thread.sleep(1000);
-			
+
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0, 500)");
 			Thread.sleep(1000);
@@ -420,7 +435,7 @@ public class Test_NG {
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[1]/a")).click();
 			Thread.sleep(1000);
-			
+
 			jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,800)");
 			Thread.sleep(1000);
