@@ -10,6 +10,7 @@
           <include name="closeBrowser"/>
           <include name="skipTest"/>
           <include name="loadDriver"/>
+          <include name="bookingForTour"/>
         </methods>
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </classes>

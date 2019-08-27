@@ -63,13 +63,13 @@ public class Test_NG {
 	}
 	
 	
-	@Test
+	@Test(priority=1)
 	public void skipTest() {
 		
 		throw new SkipException("Skip this test method");
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void signUp() {
 		
 		
@@ -77,21 +77,38 @@ public class Test_NG {
 		
 	}
 	
-	@Test(priority=2)
+	@Test(priority=3 , dependsOnMethods = {"signUp"})
+	public void signupLogout() {	
+		logout();
+	}
+	
+	@Test(priority=4)
 	public void logIn() {
 		
 		login();
 		
 	}
 	
+	@Test(priority=5 , dependsOnMethods = {"logIn"})
+	public void signinLogout() {	
+		logout();
+	}
 	
-	@Test(priority=3)
+	
+	@Test(priority=6)
 	public void bookingForTour() {
 		
 		tourBooking();
-		
-		System.out.println("Booked for tour");
+
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -134,7 +151,7 @@ public class Test_NG {
 			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
 			Thread.sleep(3000);
 			
-			driver.get("https://www.phptravels.net/account/logout"); 
+
 			
 //			Select select = new Select(driver.findElement(By.cssSelector("body > nav > div > div.collapse.navbar-collapse > ul.nav.navbar-nav.navbar-right.hidden-sm.go-left > ul > li:nth-child(1) > a")));
 //			Thread.sleep(1000);
@@ -150,6 +167,18 @@ public class Test_NG {
 	
 	
 	
+	public void logout() {
+		
+		try {
+			Thread.sleep(1000);
+			driver.get("https://www.phptravels.net/account/logout");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	}
+	
+	
 	public void login() {
 		
 		try {
@@ -162,11 +191,7 @@ public class Test_NG {
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/label")).click();
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
-			
 			Thread.sleep(1000);
-			driver.get("https://www.phptravels.net/account/logout"); 
-			
-
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
