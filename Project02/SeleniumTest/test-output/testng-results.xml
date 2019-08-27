@@ -1,44 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-27T06:22:30Z" name="Default suite" finished-at="2019-08-27T06:23:14Z" duration-ms="44121">
+  <suite started-at="2019-08-27T13:37:46Z" name="Default suite" finished-at="2019-08-27T13:38:18Z" duration-ms="32132">
     <groups>
     </groups>
-    <test started-at="2019-08-27T06:22:30Z" name="Default test" finished-at="2019-08-27T06:23:14Z" duration-ms="44121">
+    <test started-at="2019-08-27T13:37:46Z" name="Default test" finished-at="2019-08-27T13:38:18Z" duration-ms="32132">
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
-        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:30Z" name="loadDriver" finished-at="2019-08-27T12:22:46Z" duration-ms="15800" status="PASS">
+        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:46Z" name="loadDriver" finished-at="2019-08-27T19:37:51Z" duration-ms="5081" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:46Z" name="beforeMethod" finished-at="2019-08-27T12:22:46Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:51Z" name="beforeMethod" finished-at="2019-08-27T19:37:51Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="traveoffer()[pri:7, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:46Z" name="traveoffer" finished-at="2019-08-27T12:22:56Z" duration-ms="10709" status="PASS">
+        <test-method signature="blankField()[pri:1, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:51Z" name="blankField" finished-at="2019-08-27T19:37:54Z" duration-ms="3263" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- traveoffer -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="afterMethod" finished-at="2019-08-27T12:22:56Z" duration-ms="0" status="PASS">
+        </test-method> <!-- blankField -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:54Z" name="afterMethod" finished-at="2019-08-27T19:37:54Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="travelBlog()[pri:8, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="travelBlog" finished-at="2019-08-27T12:23:11Z" duration-ms="14470" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:54Z" name="beforeMethod" finished-at="2019-08-27T19:37:54Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidField()[pri:2, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:37:54Z" name="invalidField" finished-at="2019-08-27T19:38:05Z" duration-ms="10488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidField -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:38:05Z" name="afterMethod" finished-at="2019-08-27T19:38:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:38:05Z" name="beforeMethod" finished-at="2019-08-27T19:38:05Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="travelBlog()[pri:8, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:38:05Z" name="travelBlog" finished-at="2019-08-27T19:38:15Z" duration-ms="10169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- travelBlog -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="beforeMethod" finished-at="2019-08-27T12:22:56Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:23:11Z" name="closeBrowser" finished-at="2019-08-27T12:23:14Z" duration-ms="3120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:23:11Z" name="afterMethod" finished-at="2019-08-27T12:23:11Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:38:15Z" name="afterMethod" finished-at="2019-08-27T19:38:15Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@3af9c5b7]" started-at="2019-08-27T19:38:15Z" name="closeBrowser" finished-at="2019-08-27T19:38:18Z" duration-ms="3108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

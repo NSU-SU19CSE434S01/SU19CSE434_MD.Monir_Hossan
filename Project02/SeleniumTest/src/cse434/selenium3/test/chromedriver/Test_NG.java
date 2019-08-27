@@ -63,6 +63,20 @@ public class Test_NG {
 	}
 	
 	
+	@Test(priority=1)
+	public void blankField() {
+		
+		blankSignupForm();
+	}
+	
+	
+	@Test(priority=2)
+	public void invalidField() {
+		
+		invalidInput();
+	}
+	
+	
 //	@Test(priority=1)
 //	public void skipTest() {
 //		
@@ -101,13 +115,13 @@ public class Test_NG {
 //		tourBooking();
 //
 //	}
-	
-	@Test(priority=7)
-	public void traveoffer() {
-		
-		offer();
-		
-	}
+//	
+//	@Test(priority=7)
+//	public void traveoffer() {
+//		
+//		offer();
+//		
+//	}
 	
 	@Test(priority=8)
 	public void travelBlog() {
@@ -122,6 +136,54 @@ public class Test_NG {
 	
 	
 	
+	public void blankSignupForm() {
+		
+		try {
+			driver.get("https://www.phptravels.net/register");
+			Thread.sleep(1000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,200)");
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
+			jse.executeScript("scroll(0,-200)");
+			Thread.sleep(1000);
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	public void invalidInput() {
+		
+		try {
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[3]/input")).sendKeys("Md Monir");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[4]/input")).sendKeys("Hossan12");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[5]/input")).sendKeys("7823");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("monir@gm");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[7]/input")).sendKeys("12456");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[8]/input")).sendKeys("1236");
+			Thread.sleep(1000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,500)");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[9]/button")).click();
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,-200)");
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 	
 	

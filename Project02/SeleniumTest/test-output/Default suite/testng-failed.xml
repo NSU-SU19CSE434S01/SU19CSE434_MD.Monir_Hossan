@@ -6,16 +6,10 @@
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
         <methods>
           <include name="afterMethod"/>
-          <include name="signinLogout"/>
-          <include name="logIn"/>
-          <include name="signupLogout"/>
-          <include name="traveoffer"/>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
-          <include name="signUp"/>
-          <include name="skipTest"/>
           <include name="loadDriver"/>
-          <include name="bookingForTour"/>
+          <include name="invalidField"/>
         </methods>
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </classes>
