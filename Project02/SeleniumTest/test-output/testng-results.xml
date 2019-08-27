@@ -1,116 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="1" skipped="1">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-27T05:38:21Z" name="Default suite" finished-at="2019-08-27T05:39:14Z" duration-ms="52905">
+  <suite started-at="2019-08-27T06:22:30Z" name="Default suite" finished-at="2019-08-27T06:23:14Z" duration-ms="44121">
     <groups>
     </groups>
-    <test started-at="2019-08-27T05:38:21Z" name="Default test" finished-at="2019-08-27T05:39:14Z" duration-ms="52905">
+    <test started-at="2019-08-27T06:22:30Z" name="Default test" finished-at="2019-08-27T06:23:14Z" duration-ms="44121">
       <class name="cse434.selenium3.test.chromedriver.Test_NG">
-        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:21Z" name="loadDriver" finished-at="2019-08-27T11:38:29Z" duration-ms="8088" status="PASS">
+        <test-method is-config="true" signature="loadDriver()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:30Z" name="loadDriver" finished-at="2019-08-27T12:22:46Z" duration-ms="15800" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:29Z" name="beforeMethod" finished-at="2019-08-27T11:38:29Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:46Z" name="beforeMethod" finished-at="2019-08-27T12:22:46Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="skipTest()[pri:1, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:29Z" name="skipTest" finished-at="2019-08-27T11:38:29Z" duration-ms="4" status="SKIP">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skip this test method]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skip this test methodat cse434.selenium3.test.chromedriver.Test_NG.skipTest(Test_NG.java:69)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method signature="traveoffer()[pri:7, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:46Z" name="traveoffer" finished-at="2019-08-27T12:22:56Z" duration-ms="10709" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- skipTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:29Z" name="afterMethod" finished-at="2019-08-27T11:38:29Z" duration-ms="1" status="PASS">
+        </test-method> <!-- traveoffer -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="afterMethod" finished-at="2019-08-27T12:22:56Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="signUp()[pri:2, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:29Z" name="signUp" finished-at="2019-08-27T11:38:45Z" duration-ms="15943" status="PASS">
+        <test-method signature="travelBlog()[pri:8, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="travelBlog" finished-at="2019-08-27T12:23:11Z" duration-ms="14470" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUp -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:29Z" name="beforeMethod" finished-at="2019-08-27T11:38:29Z" duration-ms="0" status="PASS">
+        </test-method> <!-- travelBlog -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:22:56Z" name="beforeMethod" finished-at="2019-08-27T12:22:56Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:45Z" name="afterMethod" finished-at="2019-08-27T11:38:45Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:45Z" name="beforeMethod" finished-at="2019-08-27T11:38:45Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="signupLogout()[pri:3, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:45Z" name="signupLogout" finished-at="2019-08-27T11:38:48Z" depends-on-methods="cse434.selenium3.test.chromedriver.Test_NG.signUp" duration-ms="2876" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupLogout -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:48Z" name="afterMethod" finished-at="2019-08-27T11:38:48Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:48Z" name="beforeMethod" finished-at="2019-08-27T11:38:48Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="logIn()[pri:4, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:48Z" name="logIn" finished-at="2019-08-27T11:38:54Z" duration-ms="5734" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:54Z" name="afterMethod" finished-at="2019-08-27T11:38:54Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="signinLogout()[pri:5, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:54Z" name="signinLogout" finished-at="2019-08-27T11:38:59Z" depends-on-methods="cse434.selenium3.test.chromedriver.Test_NG.logIn" duration-ms="5891" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signinLogout -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:54Z" name="beforeMethod" finished-at="2019-08-27T11:38:54Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:59Z" name="beforeMethod" finished-at="2019-08-27T11:38:59Z" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:59Z" name="afterMethod" finished-at="2019-08-27T11:38:59Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="bookingForTour()[pri:6, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:38:59Z" name="bookingForTour" finished-at="2019-08-27T11:39:11Z" duration-ms="11322" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: window was already closed  (Session info: chrome=76.0.3809.100)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'System info: host: 'Monirs-MacBook-Pro.local', ip: 'fe80:0:0:0:1065:44fb:bf32:e4b9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/4m/k83f74rn32s...}, goog:chromeOptions: {debuggerAddress: localhost:56054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: bb737420a007bd8fd684279d6ad6b5a1*** Element info: {Using=xpath, value=//*[@id="tchkin"]/div/input}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: window was already closed  (Session info: chrome=76.0.3809.100)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'System info: host: 'Monirs-MacBook-Pro.local', ip: 'fe80:0:0:0:1065:44fb:bf32:e4b9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/4m/k83f74rn32s...}, goog:chromeOptions: {debuggerAddress: localhost:56054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: bb737420a007bd8fd684279d6ad6b5a1*** Element info: {Using=xpath, value=//*[@id="tchkin"]/div/input}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)at cse434.selenium3.test.chromedriver.Test_NG.tourBooking(Test_NG.java:218)at cse434.selenium3.test.chromedriver.Test_NG.bookingForTour(Test_NG.java:101)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookingForTour -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:39:11Z" name="afterMethod" finished-at="2019-08-27T11:39:11Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@37271612]" started-at="2019-08-27T11:39:11Z" name="closeBrowser" finished-at="2019-08-27T11:39:14Z" duration-ms="3007" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closedfrom unknown error: web view not found  (Session info: chrome=76.0.3809.100)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'System info: host: 'Monirs-MacBook-Pro.local', ip: 'fe80:0:0:0:1065:44fb:bf32:e4b9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/4m/k83f74rn32s...}, goog:chromeOptions: {debuggerAddress: localhost:56054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: bb737420a007bd8fd684279d6ad6b5a1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closedfrom unknown error: web view not found  (Session info: chrome=76.0.3809.100)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'System info: host: 'Monirs-MacBook-Pro.local', ip: 'fe80:0:0:0:1065:44fb:bf32:e4b9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '9.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/4m/k83f74rn32s...}, goog:chromeOptions: {debuggerAddress: localhost:56054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: bb737420a007bd8fd684279d6ad6b5a1at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)at cse434.selenium3.test.chromedriver.Test_NG.closeBrowser(Test_NG.java:43)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)at org.testng.TestRunner.afterRun(TestRunner.java:725)at org.testng.TestRunner.run(TestRunner.java:509)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:23:11Z" name="closeBrowser" finished-at="2019-08-27T12:23:14Z" duration-ms="3120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cse434.selenium3.test.chromedriver.Test_NG@6aaceffd]" started-at="2019-08-27T12:23:11Z" name="afterMethod" finished-at="2019-08-27T12:23:11Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- cse434.selenium3.test.chromedriver.Test_NG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

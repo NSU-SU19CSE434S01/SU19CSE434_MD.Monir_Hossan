@@ -63,47 +63,58 @@ public class Test_NG {
 	}
 	
 	
-	@Test(priority=1)
-	public void skipTest() {
+//	@Test(priority=1)
+//	public void skipTest() {
+//		
+//		throw new SkipException("Skip this test method");
+//	}
+//	
+//	@Test(priority=2)
+//	public void signUp() {
+//		
+//		
+//		signup();
+//		
+//	}
+//	
+//	@Test(priority=3 , dependsOnMethods = {"signUp"})
+//	public void signupLogout() {	
+//		logout();
+//	}
+//	
+//	@Test(priority=4)
+//	public void logIn() {
+//		
+//		login();
+//		
+//	}
+//	
+//	@Test(priority=5 , dependsOnMethods = {"logIn"})
+//	public void signinLogout() {	
+//		logout();
+//	}
+//	
+//	
+//	@Test(priority=6)
+//	public void bookingForTour() {
+//		
+//		tourBooking();
+//
+//	}
+	
+	@Test(priority=7)
+	public void traveoffer() {
 		
-		throw new SkipException("Skip this test method");
+		offer();
+		
 	}
 	
-	@Test(priority=2)
-	public void signUp() {
+	@Test(priority=8)
+	public void travelBlog() {
 		
-		
-		signup();
-		
-	}
-	
-	@Test(priority=3 , dependsOnMethods = {"signUp"})
-	public void signupLogout() {	
-		logout();
-	}
-	
-	@Test(priority=4)
-	public void logIn() {
-		
-		login();
+		blog();
 		
 	}
-	
-	@Test(priority=5 , dependsOnMethods = {"logIn"})
-	public void signinLogout() {	
-		logout();
-	}
-	
-	
-	@Test(priority=6)
-	public void bookingForTour() {
-		
-		tourBooking();
-
-	}
-	
-	
-	
 	
 	
 	
@@ -316,6 +327,51 @@ public class Test_NG {
 	}
 	
 	
+	public void offer() {
+		
+		try {
+			driver.get("https://www.phptravels.net");
+			Thread.sleep(1000);
+			
+			driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[2]/a")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/div[3]/div[2]/a[2]")).click();
+			Thread.sleep(1000);
+			
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0, 500)");
+			Thread.sleep(1000);
+			
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
+	
+	public void blog() {
+		
+		try {
+			driver.get("https://www.phptravels.net");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[1]/a")).click();
+			Thread.sleep(1000);
+			
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,800)");
+			Thread.sleep(1000);
+			
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div/div[1]/ul/li[3]/a")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div/div[1]/div/div[2]/div[5]/a/h4")).click();
+			Thread.sleep(1000);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 }
