@@ -53,6 +53,8 @@ The website that I test is :
 
 **Packeges**
 	
+	All in one Packeges
+	- cse434.selenium.test.chromedriver
 
 **Library**
  	
@@ -66,6 +68,7 @@ The website that I test is :
 	- Login
 	- Logout
 	- Booking for a Tour
+	- Admin Login
 	- Check their Offers
 	- Read their Blog
 
@@ -76,7 +79,25 @@ The website that I test is :
 	- JavascriptExecutor for scrolling down and up
 	- Sleep to delay any functionality
 
-	
+**Screen Short**
+
+	<p>
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.55.33%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.56.48%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.04%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.32%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.59.42%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.35%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.49%20AM.png">
+
+		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/consoleReport.png">
+	</p>
 
 
 
