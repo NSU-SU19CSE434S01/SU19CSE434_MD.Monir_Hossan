@@ -89,7 +89,6 @@ public class Test_NG {
 	@Test(priority=4)
 	public void signUp() {
 		
-		
 		signup();
 		
 	}
@@ -131,18 +130,25 @@ public class Test_NG {
 	}
 	
 	@Test(priority=10)
+	public void adminLogin() {
+		
+		loginAsAdmin();
+	}
+	
+	@Test(priority=11)
 	public void traveoffer() {
 		
 		offer();
 		
 	}
 	
-	@Test(priority=11)
+	@Test(priority=12)
 	public void travelBlog() {
 		
 		blog();
 		
 	}
+	
 	
 	
 	
@@ -295,6 +301,39 @@ public class Test_NG {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void loginAsAdmin() {
+		
+		try {
+			Thread.sleep(1000);
+			driver.get("https://www.phptravels.net/admin");
+			driver.findElement(By.xpath("/html/body/div[1]/form[1]/div[1]/input[1]")).sendKeys("admin@phptravels.com");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("/html/body/div[1]/form[1]/div[1]/input[2]")).sendKeys("demoadmin");
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("/html/body/div[1]/form[1]/button")).click();
+			Thread.sleep(3000);
+			jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,1200)");
+			Thread.sleep(000);
+			driver.findElement(By.xpath("//*[@id=\"account\"]/a")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"social-sidebar-menu\"]/li[2]/a")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("//*[@id=\"social-sidebar-menu\"]/li[17]/a")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("//*[@id=\"social-sidebar-menu\"]/li[16]/a")).click();
+//			
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id=\"logout\"]/a")).click();
+			
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
