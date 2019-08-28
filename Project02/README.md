@@ -80,24 +80,18 @@ The website that I test is :
 	- Sleep to delay any functionality
 
 **Screen Short**
-
-	<p>
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.55.33%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.56.48%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.04%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.32%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.59.42%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.35%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.49%20AM.png">
-
-		<img src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/consoleReport.png">
-	</p>
-
-
+<p>
+	 Console Output 
+	<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/consoleReport.png"><br>
+	TestNG Output
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.55.33%20AM.png"><br>
+	All html result
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.56.48%20AM.png"><br>
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.04%20AM.png"><br>
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.57.32%20AM.png"><br>
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2010.59.42%20AM.png"><br>
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.35%20AM.png"><br>
+		<img height=250 , width=100%, src="https://github.com/MdMonirHossan/CSE434/blob/master/Project02/Screen_short/Screen%20Shot%202019-08-28%20at%2011.01.49%20AM.png"><br>
+		
+</p>
 
