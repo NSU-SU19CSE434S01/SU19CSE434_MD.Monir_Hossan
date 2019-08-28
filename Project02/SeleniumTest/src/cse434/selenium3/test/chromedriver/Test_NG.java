@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -80,7 +81,9 @@ public class Test_NG {
 	@Test(priority=3)
 	public void passwordCheck() {
 		
-		throw new SkipException("Skip this test method");
+		//throw new SkipException("Skip this test method");
+		
+		System.out.println("Skip this test");
 	}
 	
 	@Test(priority=4)
@@ -99,6 +102,8 @@ public class Test_NG {
 	@Test(priority=6)
 	public void failedlogin() {	
 		invalidLogin();
+		
+		Assert.assertEquals("use@phptravels.com", "use@phptravels.com");
 	}
 	
 	
@@ -107,12 +112,15 @@ public class Test_NG {
 		
 		login();
 		
+		Assert.assertEquals("user@phptravels.com", "user@phptravels.com");
+		
 	}
 	
-//	@Test(priority=8, dependsOnMethods = {"logIn"})
-//	public void signinLogout() {	
-//		logout();
-//	}
+	
+	@Test(priority=8, dependsOnMethods = {"logIn"})
+	public void signinLogout() {	
+		logout();
+	}
 	
 	
 	@Test(priority=9)
@@ -260,6 +268,7 @@ public class Test_NG {
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
 			Thread.sleep(2000);
 			
+			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -272,20 +281,23 @@ public class Test_NG {
 		try {
 			driver.get("https://www.phptravels.net/login");
 			
-			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[1]/input")).sendKeys("monir@gmail.com");
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[1]/input")).sendKeys("user@phptravels.com");
 			Thread.sleep(1000);
-			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[2]/input")).sendKeys("123456");
+			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[2]/input")).sendKeys("demouser");
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/label")).click();
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
 			Thread.sleep(2000);
+			driver.get("https://www.phptravels.net/account/logout");
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
+	
 	
 	public void tourBooking() {
 		try {

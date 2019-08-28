@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,35 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 1 failed,  1 skipped,  8 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="bookingForTour">bookingForTour</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Default_suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="passwordCheck">passwordCheck</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                    <span class="method-stats">11 methods,   11 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,6 +103,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="blankField">blankField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="bookingForTour">bookingForTour</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -150,7 +127,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="passwordCheck">passwordCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="signUp">signUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cse434.selenium3.test.chromedriver.Test_NG" class="method navigator-link" hash-for-method="signinLogout">signinLogout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -180,117 +167,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">cse434.selenium3.test.chromedriver.Test_NG</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="bookingForTour">
-                  </a> <!-- bookingForTour -->
-                  <span class="method-name">bookingForTour</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;guestform&quot;]/div[1]/div[2]/input&quot;}
-  (Session info: chrome=76.0.3809.100)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;Monirs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8a6:1eb0:d2f5:2446%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;9.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/4m/k83f74rn32s...}, goog:chromeOptions: {debuggerAddress: localhost:49457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: a72fa687c00262d217d057777accb39d
-*** Element info: {Using=xpath, value=//*[@id=&quot;guestform&quot;]/div[1]/div[2]/input}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at cse434.selenium3.test.chromedriver.Test_NG.tourBooking(Test_NG.java:350)
-	at cse434.selenium3.test.chromedriver.Test_NG.bookingForTour(Test_NG.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">cse434.selenium3.test.chromedriver.Test_NG</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="passwordCheck">
-                  </a> <!-- passwordCheck -->
-                  <span class="method-name">passwordCheck</span>
-                  <div class="stack-trace">org.testng.SkipException: Skip this test method
-	at cse434.selenium3.test.chromedriver.Test_NG.passwordCheck(Test_NG.java:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -302,6 +178,13 @@ Session ID: a72fa687c00262d217d057777accb39d
                   <a name="blankField">
                   </a> <!-- blankField -->
                   <span class="method-name">blankField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="bookingForTour">
+                  </a> <!-- bookingForTour -->
+                  <span class="method-name">bookingForTour</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -327,9 +210,23 @@ Session ID: a72fa687c00262d217d057777accb39d
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="passwordCheck">
+                  </a> <!-- passwordCheck -->
+                  <span class="method-name">passwordCheck</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="signUp">
                   </a> <!-- signUp -->
                   <span class="method-name">signUp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signinLogout">
+                  </a> <!-- signinLogout -->
+                  <span class="method-name">signinLogout</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -358,7 +255,7 @@ Session ID: a72fa687c00262d217d057777accb39d
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/4m/k83f74rn32s9j27zn30nnf2c0000gp/T/testng-eclipse-1428579909/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/4m/k83f74rn32s9j27zn30nnf2c0000gp/T/testng-eclipse-403148746/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -407,47 +304,51 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'bookingForTour')
 data.setCell(0, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(0, 3, 69652);
+data.setCell(0, 3, 63400);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'invalidField')
 data.setCell(1, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(1, 3, 11499);
+data.setCell(1, 3, 11511);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'signUp')
 data.setCell(2, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(2, 3, 10212);
+data.setCell(2, 3, 10427);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'travelBlog')
 data.setCell(3, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(3, 3, 10013);
+data.setCell(3, 3, 9736);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'traveoffer')
 data.setCell(4, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(4, 3, 8911);
+data.setCell(4, 3, 8954);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'failedlogin')
+data.setCell(5, 1, 'logIn')
 data.setCell(5, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(5, 3, 6408);
+data.setCell(5, 3, 7321);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'logIn')
+data.setCell(6, 1, 'failedlogin')
 data.setCell(6, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(6, 3, 6054);
+data.setCell(6, 3, 6813);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'blankField')
 data.setCell(7, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(7, 3, 4091);
+data.setCell(7, 3, 4158);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'signupLogout')
+data.setCell(8, 1, 'signinLogout')
 data.setCell(8, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(8, 3, 1988);
+data.setCell(8, 3, 2756);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'passwordCheck')
+data.setCell(9, 1, 'signupLogout')
 data.setCell(9, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
-data.setCell(9, 3, 2);
+data.setCell(9, 3, 2184);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'passwordCheck')
+data.setCell(10, 2, 'cse434.selenium3.test.chromedriver.Test_NG')
+data.setCell(10, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -485,129 +386,139 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">5802 ms</span>
+                <span class="method-start">5532 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">blankField</span>
-                <span class="method-start">5802 ms</span>
+                <span class="method-start">5532 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">9895 ms</span>
+                <span class="method-start">9692 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">9898 ms</span>
+                <span class="method-start">9696 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidField</span>
-                <span class="method-start">9898 ms</span>
+                <span class="method-start">9696 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">21399 ms</span>
+                <span class="method-start">21209 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">21400 ms</span>
+                <span class="method-start">21210 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">passwordCheck</span>
-                <span class="method-start">21402 ms</span>
+                <span class="method-start">21212 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">21405 ms</span>
+                <span class="method-start">21214 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">21406 ms</span>
+                <span class="method-start">21215 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signUp</span>
-                <span class="method-start">21406 ms</span>
+                <span class="method-start">21215 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">31620 ms</span>
+                <span class="method-start">31644 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">31621 ms</span>
+                <span class="method-start">31645 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signupLogout</span>
-                <span class="method-start">31622 ms</span>
+                <span class="method-start">31646 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">33612 ms</span>
+                <span class="method-start">33831 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">33612 ms</span>
+                <span class="method-start">33832 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">failedlogin</span>
-                <span class="method-start">33613 ms</span>
+                <span class="method-start">33832 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">40022 ms</span>
+                <span class="method-start">40646 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">40025 ms</span>
+                <span class="method-start">40647 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">logIn</span>
-                <span class="method-start">40025 ms</span>
+                <span class="method-start">40647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">46081 ms</span>
+                <span class="method-start">47969 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">46082 ms</span>
+                <span class="method-start">47970 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">bookingForTour</span>
-                <span class="method-start">46082 ms</span>
+                <span class="method-name">signinLogout</span>
+                <span class="method-start">47970 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">115737 ms</span>
+                <span class="method-start">50727 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">115738 ms</span>
+                <span class="method-start">50727 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">bookingForTour</span>
+                <span class="method-start">50728 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">114130 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">114131 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">traveoffer</span>
-                <span class="method-start">115738 ms</span>
+                <span class="method-start">114131 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">124651 ms</span>
+                <span class="method-start">123086 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">124651 ms</span>
+                <span class="method-start">123088 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">travelBlog</span>
-                <span class="method-start">124652 ms</span>
+                <span class="method-start">123088 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">134666 ms</span>
+                <span class="method-start">132826 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">134667 ms</span>
+                <span class="method-start">132826 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
